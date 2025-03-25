@@ -15,6 +15,7 @@ namespace PrimarchAssault.External
         private ThingDef _droppedThing;
         private ChallengeDef _challenge;
         private bool _doesQueuePhaseTwo;
+        private float _currentHp;
 
 
 
@@ -25,6 +26,7 @@ namespace PrimarchAssault.External
             _stages = stages;
             _challenge = challenge;
             _doesQueuePhaseTwo = doesQueuePhaseTwo;
+            _currentHp = _challenge.championHp;
         }
 
         public override void ExposeData()
@@ -34,6 +36,7 @@ namespace PrimarchAssault.External
             Scribe_Defs.Look(ref _droppedThing, "droppedThing");
             Scribe_Defs.Look(ref _challenge, "challenge");
             Scribe_Values.Look(ref _doesQueuePhaseTwo, "doesQueuePhaseTwo");
+            Scribe_Values.Look(ref _currentHp, "currentHp");
         }
 
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
@@ -62,6 +65,15 @@ namespace PrimarchAssault.External
             GameComponent_ChallengeManager.Instance.RemoveActiveChampion(pawn.thingIDNumber);
         }
 
+        public void DamageHealthBar(float amount, DamageInfo dinfo)
+        {
+	        _currentHp -= amount;
+	        if (_currentHp <= 0)
+	        {
+		        pawn.Kill(dinfo);
+	        }
+        }
+
         public override void Tick()
         {
             base.Tick();
@@ -77,7 +89,7 @@ namespace PrimarchAssault.External
                 shieldValue = shield.Energy / pawn.GetStatValue(StatDefOf.EnergyShieldEnergyMax);
             }
             
-            GameComponent_ChallengeManager.Instance.HealthBar.UpdateIfWilling(pawn.thingIDNumber, healthValue, shieldValue, _challenge.healthBarRelative, _challenge.shieldBarRelative);
+	        GameComponent_ChallengeManager.Instance.HealthBar.UpdateIfWilling(pawn.thingIDNumber, healthValue, shieldValue, _challenge.healthBarRelative, _challenge.shieldBarRelative);
             
             
             
@@ -98,7 +110,7 @@ namespace PrimarchAssault.External
         private float GetChampionStage(out float apparelValue, out float healthValue)
         {
             apparelValue = (float)pawn.apparel.WornApparel.Select(apparel => apparel.HitPoints / (double)apparel.MaxHitPoints).Average();
-            healthValue = pawn.health.summaryHealth.SummaryHealthPercent;
+            healthValue = _currentHp / _challenge.championHp;
             
             return Math.Min(apparelValue, healthValue);
         }

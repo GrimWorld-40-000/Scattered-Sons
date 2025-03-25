@@ -52,7 +52,7 @@
         </championDetails>
 
         <phaseOneWavesInPriority>
-            <li MayRequireAnyOf="HappyPurging.AgeofDarkness, HappyPurging.AgeofDarknessLite">
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
                 <pawnKinds>
                     <li>GW_SM_DA_SniperScout</li>
                     <li>GW_SM_DA_ShotgunScout</li>
@@ -330,7 +330,7 @@
             <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
                 <stage>.75</stage>
                 <abilitiesToGain>
-                    <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">GWPA_GuillimanReinforcement</li>
+                    <li>GWPA_GuillimanReinforcement</li>
                 </abilitiesToGain>
             </li>
         </abilityStages>

@@ -35,6 +35,8 @@ namespace PrimarchAssault.External
         public List<ChampionEventStage> eventStages;
         public ThingDef championDrop;
 
+        public float championHp;
+        
         private Color primarchColor;
 
         public int healthBarX;

@@ -94,6 +94,7 @@
         <Compile Include="GameConditions\LaserBombardment.cs" />
         <Compile Include="GameConditions\OrbitalBombardment.cs" />
         <Compile Include="GameConditions\PsychicStorm.cs" />
+        <Compile Include="HarmonyPatches\ApplyHarmonyPatches.cs" />
         <Compile Include="HealthBarWindow.cs" />
         <Compile Include="PADefsOf.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
