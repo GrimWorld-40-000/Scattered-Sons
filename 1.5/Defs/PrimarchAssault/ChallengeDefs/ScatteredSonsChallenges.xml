@@ -14,6 +14,7 @@
         <shieldBarY>88</shieldBarY>
         <shieldBarWidth>804</shieldBarWidth>
         <shieldBarHeight>9</shieldBarHeight>
+        <championHp>2000</championHp>
 
         <primarchColor>(16, 97, 56)</primarchColor>
         
@@ -193,6 +194,7 @@
         <shieldBarY>88</shieldBarY>
         <shieldBarWidth>804</shieldBarWidth>
         <shieldBarHeight>9</shieldBarHeight>
+        <championHp>2000</championHp>
 
         <primarchColor>(56, 93, 162)</primarchColor>
 
