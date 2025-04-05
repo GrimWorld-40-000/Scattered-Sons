@@ -35,7 +35,7 @@
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <equippedAngleOffset>0</equippedAngleOffset>
-        <recipeMaker>
+        <!-- <recipeMaker>
             <researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
 			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
 			<skillRequirements>
@@ -45,7 +45,7 @@
 			<recipeUsers Inherit="False">
 				<li>GW_SM_ScatteredSons_WeaponBench</li>
 			</recipeUsers>
-        </recipeMaker>
+        </recipeMaker> -->
 		<costList>
 			<ComponentSpacer>40</ComponentSpacer>
 			<ComponentIndustrial>75</ComponentIndustrial>
@@ -115,7 +115,7 @@
 			<li>GW_EmperorWep</li>
 			<li>GW_GuillimanSword</li>
 		</weaponTags>
-		<recipeMaker>
+		<!-- <recipeMaker>
             <researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
 			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
 			<skillRequirements>
@@ -125,7 +125,7 @@
 			<recipeUsers Inherit="False">
 				<li>GW_SM_ScatteredSons_WeaponBench</li>
 			</recipeUsers>
-        </recipeMaker>
+        </recipeMaker> -->
 		<costList>
 			<ComponentSpacer>40</ComponentSpacer>
 			<ComponentIndustrial>75</ComponentIndustrial>

@@ -4,8 +4,8 @@
         <defName>GWPA_PrimarchChallengeBeacon</defName>
         <label>challenge beacon</label>
         
-        <!-- <description>This building is temporarily disabled! You do not need to use this!</description> -->
-        <description>Can be used to call primarchs to provoke them into attack your base.</description>
+        <description>This building is temporarily disabled! You do not need to use this!</description>
+        <!-- <description>Can be used to call primarchs to provoke them into attack your base.</description> -->
         <thingClass>Building</thingClass>
         <graphicData>
             <texPath>Things/Building/ChallengeBeacon/Primarch_Beacon</texPath>
@@ -45,8 +45,8 @@
         <interactionCellOffset>(0,0,2)</interactionCellOffset>
         <hasInteractionCell>true</hasInteractionCell>
         <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <!-- comment this out to disable -->
-        <designationCategory>GrimworldCategory</designationCategory>
+        <!-- cannot be built -->
+        <!--<designationCategory>GrimworldCategory</designationCategory>-->
         <uiOrder>2100</uiOrder>
         <comps>
             <li Class="CompProperties_Power">

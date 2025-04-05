@@ -85,9 +85,9 @@
 				<li>GW_SS_CombatShield</li>
 			</tags>
 		</apparel>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
@@ -189,9 +189,9 @@
 				<li>GW_SS_CombatShield</li>
 			</tags>
 		</apparel>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>

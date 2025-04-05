@@ -105,9 +105,9 @@
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="GW4KArmor.CompProperties_TriColorMask">
 				<maskCount>2</maskCount>
@@ -164,9 +164,9 @@
 			<Insulation_Heat>10</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
@@ -217,9 +217,9 @@
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="GW4KArmor.CompProperties_TriColorMask">
 				<maskCount>2</maskCount>
@@ -277,9 +277,9 @@
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="GW4KArmor.CompProperties_TriColorMask">
 				<maskCount>3</maskCount>
@@ -350,9 +350,9 @@
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="GW4KArmor.CompProperties_TriColorMask">
 				<maskCount>6</maskCount>
@@ -407,9 +407,9 @@
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
@@ -461,9 +461,9 @@
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
@@ -528,9 +528,9 @@
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker>
+		</recipeMaker> -->
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>

@@ -7,6 +7,7 @@
                 <!-- 30 seconds -->
                 <tickDuration>1800</tickDuration>
                 <condition>GWPA_EMPNet</condition>
+                <endsWhenChampionLeaves>true</endsWhenChampionLeaves>
                 <actionName>emp net</actionName>
                 <eventNotificationText>An EMP net is being cast over your colony!</eventNotificationText>
             </li>
@@ -33,6 +34,7 @@
                 <!-- 30 seconds -->
                 <tickDuration>1800</tickDuration>
                 <condition>GWPA_OrbitalBombardment</condition>
+                <endsWhenChampionLeaves>true</endsWhenChampionLeaves>
                 <actionName>orbital bombardment</actionName>
                 <eventNotificationText>A bombardment has begun on your colony!</eventNotificationText>
             </li>
@@ -46,6 +48,7 @@
                 <!-- 120 seconds -->
                 <tickDuration>7200</tickDuration>
                 <condition>GWPA_LaserBombardment</condition>
+                <endsWhenChampionLeaves>true</endsWhenChampionLeaves>
                 <actionName>laser bombardment</actionName>
                 <eventNotificationText>A laser bombardment has begun on your colony!</eventNotificationText>
             </li>
@@ -80,6 +83,7 @@
                 <!-- 2 hours -->
                 <tickDuration>72000</tickDuration>
                 <condition>GWPA_PsychicStorm</condition>
+                <endsWhenChampionLeaves>true</endsWhenChampionLeaves>
                 <actionName>psychic storm</actionName>
                 <eventNotificationText>A psychic storm has started!</eventNotificationText>
                 <fleckOnChampion>PsychicApplyNeuroquake</fleckOnChampion>

@@ -93,9 +93,9 @@
 		<graphicData>
 			<texPath>Things/Apparel/Armor_ChapterMaster/Shoulderpads/GuillimanW_shoulders</texPath>
 		</graphicData>
-		<recipeMaker>
+		<!-- <recipeMaker>
             <researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
-        </recipeMaker>
+        </recipeMaker> -->
 		<statBases>
 			<WorkToMake>70000</WorkToMake>
 			<MaxHitPoints>1900</MaxHitPoints>
@@ -149,9 +149,9 @@
 		<graphicData>
 			<texPath>Things/Apparel/Armor_Guilliman/Shoulderpads/GuillimanC_shoulders</texPath>
 		</graphicData>
-		<recipeMaker>
+		<!-- <recipeMaker>
             <researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
-        </recipeMaker>
+        </recipeMaker> -->
 		<statBases>
 			<WorkToMake>70000</WorkToMake>
 			<MaxHitPoints>1900</MaxHitPoints>
@@ -200,9 +200,9 @@
 		<graphicData>
 			<texPath>Things/Apparel/ImperialWardenr/Display/LionW_shoulders</texPath>
 		</graphicData>
-		<recipeMaker>
+		<!-- <recipeMaker>
             <researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-        </recipeMaker>
+        </recipeMaker> -->
 		<statBases>
 			<WorkToMake>70000</WorkToMake>
 			<MaxHitPoints>1900</MaxHitPoints>
@@ -255,9 +255,9 @@
 		<graphicData>
 			<texPath>Things/Apparel/LionArmor/Shoulderpads/LionC_shoulders</texPath>
 		</graphicData>
-		<recipeMaker>
+		<!-- <recipeMaker>
             <researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-        </recipeMaker>
+        </recipeMaker> -->
 		<statBases>
 			<WorkToMake>70000</WorkToMake>
 			<MaxHitPoints>1900</MaxHitPoints>

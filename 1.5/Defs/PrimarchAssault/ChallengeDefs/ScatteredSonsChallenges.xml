@@ -14,7 +14,6 @@
         <shieldBarY>88</shieldBarY>
         <shieldBarWidth>804</shieldBarWidth>
         <shieldBarHeight>9</shieldBarHeight>
-        <championHp>2000</championHp>
 
         <primarchColor>(16, 97, 56)</primarchColor>
         
@@ -53,7 +52,7 @@
         </championDetails>
 
         <phaseOneWavesInPriority>
-            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness, HappyPurging.AgeofDarknessLite">
                 <pawnKinds>
                     <li>GW_SM_DA_SniperScout</li>
                     <li>GW_SM_DA_ShotgunScout</li>
@@ -131,8 +130,15 @@
         </escortWavesInPriority>
 
         <championFlinchSeverity>0.3</championFlinchSeverity>
-        
-        <championDrop>PASS_LionSTC</championDrop>
+
+        <championDrops>
+            <GW_SM_LionArmorHelmet>1</GW_SM_LionArmorHelmet>
+            <GW_SM_LionArmor>1</GW_SM_LionArmor>
+            <GW_SM_LionArmorBackpack>1</GW_SM_LionArmorBackpack>
+            <GW_SM_LionArmorShoulderPads>1</GW_SM_LionArmorShoulderPads>
+            <GM_SS_ShieldLionsW>1</GM_SS_ShieldLionsW>
+            <GW_SS_LionSword>1</GW_SS_LionSword>
+        </championDrops>
 
         <abilityStages>
             <li>
@@ -194,7 +200,6 @@
         <shieldBarY>88</shieldBarY>
         <shieldBarWidth>804</shieldBarWidth>
         <shieldBarHeight>9</shieldBarHeight>
-        <championHp>2000</championHp>
 
         <primarchColor>(56, 93, 162)</primarchColor>
 
@@ -310,7 +315,16 @@
 
         <championFlinchSeverity>0.3</championFlinchSeverity>
         
-        <championDrop>PASS_GuillimanSTC</championDrop>
+        <championDrops>
+            <GW_SM_Melee_FlameSword>1</GW_SM_Melee_FlameSword>
+            <GW_SM_GuillimanArmor>1</GW_SM_GuillimanArmor>
+            <GW_SM_GuillimanBackpack>1</GW_SM_GuillimanBackpack>
+            <GW_SM_GuillimanShoulderPads>1</GW_SM_GuillimanShoulderPads>
+            <GW_SM_GuillimanHelmet>1</GW_SM_GuillimanHelmet>
+        </championDrops>
+
+
+
 
         
         <hediffStages>
@@ -332,7 +346,7 @@
             <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
                 <stage>.75</stage>
                 <abilitiesToGain>
-                    <li>GWPA_GuillimanReinforcement</li>
+                    <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">GWPA_GuillimanReinforcement</li>
                 </abilitiesToGain>
             </li>
         </abilityStages>

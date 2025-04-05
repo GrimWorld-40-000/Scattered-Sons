@@ -20,6 +20,8 @@ namespace PrimarchAssault
 
         public static GameComponent_ChallengeManager Instance => _game.GetComponent<GameComponent_ChallengeManager>();
 
+        public readonly Dictionary<int, List<GameConditionDef>> ConditionsCreatedByEvent = new Dictionary<int, List<GameConditionDef>>();
+        
         public ChallengeDef QueuedPhaseOne => _queuedPhaseOne;
 
         private ChallengeDef _queuedPhaseOne;
@@ -158,7 +160,10 @@ namespace PrimarchAssault
             
             if (tickNow <= data.TickToSpawn) return;
             
-            data.ChallengeDef.SpawnChampion(data.IsPhaseTwo, data.IsPhaseTwo? data.ChallengeDef.championDrop: null);
+	        //TODO
+            Log.Message(data.IsPhaseTwo);
+            
+            data.ChallengeDef.SpawnChampion(data.IsPhaseTwo, data.IsPhaseTwo? data.ChallengeDef.championDrops: null);
             
             QueuedChampions.Remove(data);
         }

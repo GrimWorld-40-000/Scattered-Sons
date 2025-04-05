@@ -12,31 +12,28 @@ namespace PrimarchAssault.External
     public class Hediff_Champion: Hediff
     {
         private List<ChampionStage> _stages = new List<ChampionStage>();
-        private ThingDef _droppedThing;
+        private List<ThingDefCountClass> _droppedThings;
         private ChallengeDef _challenge;
         private bool _doesQueuePhaseTwo;
-        private float _currentHp;
 
 
 
         private List<ChampionStage> _tmpStagesToRemove = new List<ChampionStage>();
-        public void SetupHediff(ThingDef droppedThing, List<ChampionStage> stages, ChallengeDef challenge, bool doesQueuePhaseTwo = false)
+        public void SetupHediff(List<ThingDefCountClass> droppedThings, List<ChampionStage> stages, ChallengeDef challenge, bool doesQueuePhaseTwo = false)
         {
-            _droppedThing = droppedThing;
+            _droppedThings = droppedThings;
             _stages = stages;
             _challenge = challenge;
             _doesQueuePhaseTwo = doesQueuePhaseTwo;
-            _currentHp = _challenge.championHp;
         }
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Collections.Look(ref _stages, "stages", LookMode.Deep);
-            Scribe_Defs.Look(ref _droppedThing, "droppedThing");
+            Scribe_Collections.Look(ref _droppedThings, "droppedThings", LookMode.Deep);
             Scribe_Defs.Look(ref _challenge, "challenge");
             Scribe_Values.Look(ref _doesQueuePhaseTwo, "doesQueuePhaseTwo");
-            Scribe_Values.Look(ref _currentHp, "currentHp");
         }
 
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
@@ -46,7 +43,44 @@ namespace PrimarchAssault.External
             //Trigger all on-kill effects
             _stages?.Where(stage => stage is ChampionEventStage { triggerOnChampionKilled: true }).Do(stage => stage.Apply(pawn, pawn.Corpse.Map)) ;
 
+<<<<<<< Updated upstream
+
+            if (pawn.MapHeld != null)
+            {
+	            if (GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent.ContainsKey(pawn.MapHeld.info.Tile))
+	            {
+		            foreach (GameCondition condition in GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent[pawn.MapHeld.info.Tile].SelectMany(conditionDef => pawn.MapHeld.gameConditionManager.ActiveConditions.Where(condition => condition.def == conditionDef)))
+		            {
+			            condition.End();
+		            }
+	            }
+            }
+            
+            
+            
             if (_droppedThing != null) GenSpawn.Spawn(_droppedThing, pawn.Position, pawn.Corpse.Map);
+=======
+            if (_droppedThings != null)
+            {
+	            foreach (ThingDefCountClass droppedThing in _droppedThings)
+	            {
+		            // Thing thing = ThingMaker.MakeThing(droppedThing.thingDef);
+		            // thing.stackCount = 
+		            for (int i = 0; i < droppedThing.count; i++)
+		            {
+			            ThingDef stuff = null;
+
+			            if (droppedThing.thingDef.MadeFromStuff)
+			            {
+				            stuff = DefDatabase<ThingDef>.GetNamed("HP_Adamantium");
+			            }
+				            
+			            GenPlace.TryPlaceThing(ThingMaker.MakeThing(droppedThing.thingDef, stuff), pawn.Position, pawn.Corpse.Map, ThingPlaceMode.Near);
+		            }
+	            }
+
+            }
+>>>>>>> Stashed changes
 
             if (_doesQueuePhaseTwo)
             {
@@ -65,18 +99,24 @@ namespace PrimarchAssault.External
             GameComponent_ChallengeManager.Instance.RemoveActiveChampion(pawn.thingIDNumber);
         }
 
+<<<<<<< Updated upstream
+=======
         public void DamageHealthBar(float amount, DamageInfo dinfo)
         {
 	        _currentHp -= amount;
-	        if (_currentHp <= 0)
-	        {
-		        pawn.Kill(dinfo);
-	        }
         }
 
+>>>>>>> Stashed changes
         public override void Tick()
         {
             base.Tick();
+            
+            if (_currentHp <= 0)
+            {
+	            pawn.Kill(null);
+	            return;
+            }
+            
             float percent = GetChampionStage(out float shieldValue, out float healthValue);
 
             if (pawn.TryGetComp(out CompGlower glower))
@@ -89,7 +129,7 @@ namespace PrimarchAssault.External
                 shieldValue = shield.Energy / pawn.GetStatValue(StatDefOf.EnergyShieldEnergyMax);
             }
             
-	        GameComponent_ChallengeManager.Instance.HealthBar.UpdateIfWilling(pawn.thingIDNumber, healthValue, shieldValue, _challenge.healthBarRelative, _challenge.shieldBarRelative);
+            GameComponent_ChallengeManager.Instance.HealthBar.UpdateIfWilling(pawn.thingIDNumber, healthValue, shieldValue, _challenge.healthBarRelative, _challenge.shieldBarRelative);
             
             
             
@@ -110,7 +150,7 @@ namespace PrimarchAssault.External
         private float GetChampionStage(out float apparelValue, out float healthValue)
         {
             apparelValue = (float)pawn.apparel.WornApparel.Select(apparel => apparel.HitPoints / (double)apparel.MaxHitPoints).Average();
-            healthValue = _currentHp / _challenge.championHp;
+            healthValue = pawn.health.summaryHealth.SummaryHealthPercent;
             
             return Math.Min(apparelValue, healthValue);
         }
