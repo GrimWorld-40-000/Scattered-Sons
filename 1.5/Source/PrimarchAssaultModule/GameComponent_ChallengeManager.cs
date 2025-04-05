@@ -66,7 +66,9 @@ namespace PrimarchAssault
         }
 
         public bool IsPhaseOneQueued => _queuedPhaseOne != null;
+        public bool IsPhaseTwoQueued => !_queuedPhaseTwos.NullOrEmpty();
 
+        public ChallengeDef QueuedPhaseTwo => _queuedPhaseTwos.NullOrEmpty() ? null : _queuedPhaseTwos.First().Key;
 
         /// <summary>
         /// Cannot start a challenge if any phase 1 is queued, or its phase 2 is queued
@@ -91,7 +93,9 @@ namespace PrimarchAssault
         
         public void StartPhaseTwo(ChallengeDef def)
         {
-            QueuedPhaseTwos[def] = Find.TickManager.TicksGame + def.ticksUntilRevenge.RandomInRange;
+	        //TODO Phase one is removed
+            // QueuedPhaseTwos[def] = Find.TickManager.TicksGame + def.ticksUntilRevenge.RandomInRange;
+            QueuedPhaseTwos[def] = Find.TickManager.TicksGame + def.ticksUntilArrival.RandomInRange;
         }
 
         public override void GameComponentTick()
@@ -160,8 +164,6 @@ namespace PrimarchAssault
             
             if (tickNow <= data.TickToSpawn) return;
             
-	        //TODO
-            Log.Message(data.IsPhaseTwo);
             
             data.ChallengeDef.SpawnChampion(data.IsPhaseTwo, data.IsPhaseTwo? data.ChallengeDef.championDrops: null);
             

@@ -75,7 +75,9 @@ namespace PrimarchAssault.External
                 effector.Cleanup();
             }
             
-            GameComponent_ChallengeManager.Instance.StartPhaseOne(challengeDef);
+            //TODO Phase one is removed
+            //GameComponent_ChallengeManager.Instance.StartPhaseOne(challengeDef);
+            GameComponent_ChallengeManager.Instance.StartPhaseTwo(challengeDef);
         }
     }
 }

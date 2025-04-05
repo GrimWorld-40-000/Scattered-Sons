@@ -33,15 +33,10 @@ namespace PrimarchAssault.External
         public List<ChampionAbilityStage> abilityStages;
         public List<ChampionHediffStage> hediffStages;
         public List<ChampionEventStage> eventStages;
-<<<<<<< Updated upstream
-        public ThingDef championDrop;
-
-=======
         public List<ThingDefCountClass> championDrops;
         
         public float championHp;
         
->>>>>>> Stashed changes
         private Color primarchColor;
 
         public int healthBarX;

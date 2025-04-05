@@ -24,6 +24,13 @@ namespace PrimarchAssault.AssaultEvent
 
             if (Props.endsWhenChampionLeaves)
             {
+
+	            if (!GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent.ContainsKey(map.Tile) || GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent[map.Tile] == null)
+	            {
+		            GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent[map.Tile] =
+			            new List<GameConditionDef>();
+	            }
+	            
 	            List<GameConditionDef> conditions = GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent.GetValueSafe(map.Tile);
 
 	            conditions.Add(Props.condition);

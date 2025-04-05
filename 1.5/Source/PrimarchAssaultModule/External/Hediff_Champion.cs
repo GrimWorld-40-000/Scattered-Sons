@@ -15,6 +15,7 @@ namespace PrimarchAssault.External
         private List<ThingDefCountClass> _droppedThings;
         private ChallengeDef _challenge;
         private bool _doesQueuePhaseTwo;
+        private float _currentHp;
 
 
 
@@ -25,6 +26,7 @@ namespace PrimarchAssault.External
             _stages = stages;
             _challenge = challenge;
             _doesQueuePhaseTwo = doesQueuePhaseTwo;
+            _currentHp = challenge.championHp;
         }
 
         public override void ExposeData()
@@ -34,6 +36,7 @@ namespace PrimarchAssault.External
             Scribe_Collections.Look(ref _droppedThings, "droppedThings", LookMode.Deep);
             Scribe_Defs.Look(ref _challenge, "challenge");
             Scribe_Values.Look(ref _doesQueuePhaseTwo, "doesQueuePhaseTwo");
+            Scribe_Values.Look(ref _currentHp, "currentHp");
         }
 
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
@@ -43,7 +46,6 @@ namespace PrimarchAssault.External
             //Trigger all on-kill effects
             _stages?.Where(stage => stage is ChampionEventStage { triggerOnChampionKilled: true }).Do(stage => stage.Apply(pawn, pawn.Corpse.Map)) ;
 
-<<<<<<< Updated upstream
 
             if (pawn.MapHeld != null)
             {
@@ -58,8 +60,6 @@ namespace PrimarchAssault.External
             
             
             
-            if (_droppedThing != null) GenSpawn.Spawn(_droppedThing, pawn.Position, pawn.Corpse.Map);
-=======
             if (_droppedThings != null)
             {
 	            foreach (ThingDefCountClass droppedThing in _droppedThings)
@@ -80,7 +80,6 @@ namespace PrimarchAssault.External
 	            }
 
             }
->>>>>>> Stashed changes
 
             if (_doesQueuePhaseTwo)
             {
@@ -99,14 +98,11 @@ namespace PrimarchAssault.External
             GameComponent_ChallengeManager.Instance.RemoveActiveChampion(pawn.thingIDNumber);
         }
 
-<<<<<<< Updated upstream
-=======
         public void DamageHealthBar(float amount, DamageInfo dinfo)
         {
 	        _currentHp -= amount;
         }
 
->>>>>>> Stashed changes
         public override void Tick()
         {
             base.Tick();

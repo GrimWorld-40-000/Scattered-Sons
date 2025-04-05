@@ -8,17 +8,23 @@ namespace PrimarchAssault
         public override AlertReport GetReport()
         {
             //return AlertReport.Active;
-            return GameComponent_ChallengeManager.Instance.IsPhaseOneQueued ? AlertReport.Active: AlertReport.Inactive;
+            //TODO Phase one is removed
+            //return GameComponent_ChallengeManager.Instance.IsPhaseOneQueued ? AlertReport.Active: AlertReport.Inactive;
+            return GameComponent_ChallengeManager.Instance.IsPhaseTwoQueued ? AlertReport.Active: AlertReport.Inactive;
         }
 
         public override string GetLabel()
         {
-            return "GWPA.Incoming".Translate(GameComponent_ChallengeManager.Instance.QueuedPhaseOne?.LabelCap ?? "No event is queued. You shouldn't see this.");
+	        //TODO Phase one is removed
+            // return "GWPA.Incoming".Translate(GameComponent_ChallengeManager.Instance.QueuedPhaseOne?.LabelCap ?? "No event is queued. You shouldn't see this.");
+            return "GWPA.Incoming".Translate(GameComponent_ChallengeManager.Instance.QueuedPhaseTwo?.LabelCap ?? "No event is queued. You shouldn't see this.");
         }
 
         public override TaggedString GetExplanation()
         {
-            return "GWPA.IncomingDescription".Translate(GameComponent_ChallengeManager.Instance.QueuedPhaseOne?.championName ?? "Nobody is coming. You shouldn't see this.");
+	        //TODO Phase one is removed
+            // return "GWPA.IncomingDescription".Translate(GameComponent_ChallengeManager.Instance.QueuedPhaseOne?.championName ?? "Nobody is coming. You shouldn't see this.");
+            return "GWPA.IncomingDescription".Translate(GameComponent_ChallengeManager.Instance.QueuedPhaseTwo?.championName ?? "Nobody is coming. You shouldn't see this.");
         }
     }
 }
