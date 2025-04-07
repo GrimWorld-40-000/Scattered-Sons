@@ -8,7 +8,7 @@
 	
 	<ThingDef Abstract="true" Name="GW_SM_ScatteredSonsBackpackBase" ParentName="ArmorMachineableBase">
         <techLevel>Spacer</techLevel>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
 			<skillRequirements>
 				<Crafting>20</Crafting>
@@ -17,7 +17,7 @@
 			<recipeUsers Inherit="false">
 				<li>GW_SM_ScatteredSons_ArmorBench</li>
 			</recipeUsers>
-		</recipeMaker>
+		</recipeMaker> -->
 		<uiIconScale>1.6</uiIconScale>
 		<equippedStatOffsets>
 			<VEF_MassCarryCapacity>50</VEF_MassCarryCapacity>
@@ -54,7 +54,7 @@
     </ThingDef>
 	
 	<!-- chapter master -->
-	<ThingDef ParentName="GW_SM_ScatteredSonsBackpackBase">
+	<ThingDef Name="GW_SM_ChapterMasterBackpack" ParentName="GW_SM_ScatteredSonsBackpackBase">
         <defName>GW_SM_ChapterMasterBackpack</defName>
 		<label>Imperial Regent backpack</label>
 		<description>The backpack of the Armor of Fate. Even a Primarch’s armor needs a power supply to work optimally. \n\nThe suits of armor worn by the replica Primarchs are practically works of art - not merely protection for their wearer, but as a tribute to the Imperium’s greatest heroes. A tech-priest who was strident enough to suggest trying to improve them narrowly avoided execution as a tech-heretic.</description>
@@ -132,10 +132,44 @@
         </modExtensions>
     </ThingDef>
 	
+	<ThingDef ParentName="GW_SM_ImperialWardenrBackpack">
+		<defName>GW_SM_ChapterMasterBackpack_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ChapterMasterBackpack>1</GW_SM_ChapterMasterBackpack>
+		</costList>
+		<label>Imperial Regent Backpack (stripped)</label>
+		<description>The backpack of the Armor of Fate. Even a Primarch’s armor needs a power supply to work optimally. \n\nThe suits of armor worn by the replica Primarchs are practically works of art - not merely protection for their wearer, but as a tribute to the Imperium’s greatest heroes. A tech-priest who was strident enough to suggest trying to improve them narrowly avoided execution as a tech-heretic.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
 	<!-- guilliman -->
-	<ThingDef ParentName="GW_SM_ScatteredSonsBackpackBase">
+	<ThingDef Name="GW_SM_GuillimanBackpack" ParentName="GW_SM_ScatteredSonsBackpackBase">
         <defName>GW_SM_GuillimanBackpack</defName>
-		<label>Armor of Fate backpack</label>
+		<label>Armor of Fate Backpack</label>
 		<description>The backpack of the Armor of Fate. Even a Primarch’s armor needs a power supply to work optimally. \n\nThe suits of armor worn by the replica Primarchs are practically works of art - not merely protection for their wearer, but as a tribute to the Imperium’s greatest heroes. A tech-priest who was strident enough to suggest trying to improve them narrowly avoided execution as a tech-heretic.</description>
 		<graphicData>
 			<texPath>Things/Apparel/Armor_Guilliman/GuillimanC_backpack</texPath>
@@ -206,8 +240,42 @@
 		</comps>
     </ThingDef>
 	
+	<ThingDef ParentName="GW_SM_GuillimanBackpack">
+		<defName>GW_SM_GuillimanBackpack_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_GuillimanBackpack>1</GW_SM_GuillimanBackpack>
+		</costList>
+		<label>Armor of Fate Backpack (stripped)</label>
+		<description>The backpack of the Armor of Fate. Even a Primarch’s armor needs a power supply to work optimally. \n\nThe suits of armor worn by the replica Primarchs are practically works of art - not merely protection for their wearer, but as a tribute to the Imperium’s greatest heroes. A tech-priest who was strident enough to suggest trying to improve them narrowly avoided execution as a tech-heretic.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
 	<!-- imperial warden -->
-	<ThingDef ParentName="GW_SM_ScatteredSonsBackpackBase">
+	<ThingDef Name="GW_SM_ImperialWardenrBackpack" ParentName="GW_SM_ScatteredSonsBackpackBase">
         <defName>GW_SM_ImperialWardenrBackpack</defName>
 		<label>Imperial Warden backpack</label>
 		<description>A heavy backpack worn by the copies of Lion El’Jonson. It is meticulously replicated from the mysterious armor that the Lion wore upon his return to the Imperium. \n\nThe Lion’s legion, the Dark Angels, suffered a great schism during the Horus Heresy. The heretic Dark Angels, who became known as Fallen Angels, were defeated in such a titanic battle that Caliban itself was destroyed - torn apart by a Warp rift. \n\nThe Fallen Angels were scattered across time and space. The loyalist Dark Angels, calling themselves the Unforgiven, hunted them across the galaxy in their fortress-monastery, which was converted into a great starship - “the Rock”.</description>
@@ -284,8 +352,42 @@
         </modExtensions>
     </ThingDef>
 	
+	<ThingDef ParentName="GW_SM_ImperialWardenrBackpack">
+		<defName>GW_SM_ImperialWardenrBackpack_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ImperialWardenrBackpack>1</GW_SM_ImperialWardenrBackpack>
+		</costList>
+		<label>Imperial Warden Backpack (stripped)</label>
+		<description>A heavy backpack worn by the copies of Lion El’Jonson. It is meticulously replicated from the mysterious armor that the Lion wore upon his return to the Imperium. \n\nThe Lion’s legion, the Dark Angels, suffered a great schism during the Horus Heresy. The heretic Dark Angels, who became known as Fallen Angels, were defeated in such a titanic battle that Caliban itself was destroyed - torn apart by a Warp rift. \n\nThe Fallen Angels were scattered across time and space. The loyalist Dark Angels, calling themselves the Unforgiven, hunted them across the galaxy in their fortress-monastery, which was converted into a great starship - “the Rock”.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
 	<!-- Lion Armor -->
-	<ThingDef ParentName="GW_SM_ScatteredSonsBackpackBase">
+	<ThingDef Name="GW_SM_LionArmorBackpack" ParentName="GW_SM_ScatteredSonsBackpackBase">
         <defName>GW_SM_LionArmorBackpack</defName>
 		<label>Lion's Backpack</label>
 		<description>A heavy backpack worn by the copies of Lion El’Jonson. It is meticulously replicated from the mysterious armor that the Lion wore upon his return to the Imperium. \n\nThe Lion’s legion, the Dark Angels, suffered a great schism during the Horus Heresy. The heretic Dark Angels, who became known as Fallen Angels, were defeated in such a titanic battle that Caliban itself was destroyed - torn apart by a Warp rift. \n\nThe Fallen Angels were scattered across time and space. The loyalist Dark Angels, calling themselves the Unforgiven, hunted them across the galaxy in their fortress-monastery, which was converted into a great starship - “the Rock”.</description>
@@ -357,4 +459,41 @@
 			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
 		</comps>
     </ThingDef>
+
+
+	<ThingDef ParentName="GW_SM_LionArmorBackpack">
+		<defName>GW_SM_LionArmorBackpack_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_LionArmorBackpack>1</GW_SM_LionArmorBackpack>
+		</costList>
+		<label>Lion's Backpack (stripped)</label>
+		<description>A heavy backpack worn by the copies of Lion El’Jonson. It is meticulously replicated from the mysterious armor that the Lion wore upon his return to the Imperium. \n\nThe Lion’s legion, the Dark Angels, suffered a great schism during the Horus Heresy. The heretic Dark Angels, who became known as Fallen Angels, were defeated in such a titanic battle that Caliban itself was destroyed - torn apart by a Warp rift. \n\nThe Fallen Angels were scattered across time and space. The loyalist Dark Angels, calling themselves the Unforgiven, hunted them across the galaxy in their fortress-monastery, which was converted into a great starship - “the Rock”.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+
+
 </Defs>

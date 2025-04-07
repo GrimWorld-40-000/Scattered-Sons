@@ -95,7 +95,7 @@
 		</modExtensions>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_ScatteredSons_ArmorBase">
+	<ThingDef Name="GW_SM_ChapterMasterArmor" ParentName="GW_ScatteredSons_ArmorBase">
 		<defName>GW_SM_ChapterMasterArmor</defName>
 		<label>Imperial Regent armor</label>
 		<description>A carefully-crafted replica of the Armor of Fate, the Power Armor worn by the Imperial Regent Roboute Guilliman. It would be safe to consider this design to be the pinnacle of Power Armor technology - an opponent would need a large volume of anti-armor fire to even faze the wearer. \n\nSpecial security measures are interlaced within the armor’s systems - it cannot be reproduced without them. First, the armor can only be worn by the first person to wear it. Second, the armor will cease functioning if another, identical suit is detected in its vicinity under the same faction - this is an attempt to stop “techno-barbarians” from becoming too powerful. \n\nThe original Armor of Fate was even further enhanced by the power of Ynnead, the nascent Eldar god of the dead. Combined with the advanced life-preserving technology built into the armor by the Adeptus Mechanicus, the Armor of Fate healed the grievously-wounded Primarch and restored him to full strength.</description>
@@ -158,7 +158,41 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_ScatteredSons_ArmorBase">
+	<ThingDef ParentName="GW_SM_ChapterMasterArmor">
+		<defName>GW_SM_ChapterMasterArmor_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ChapterMasterArmor>1</GW_SM_ChapterMasterArmor>
+		</costList>
+		<label>Imperial Regent armor (stripped)</label>
+		<description>A carefully-crafted replica of the Armor of Fate, the Power Armor worn by the Imperial Regent Roboute Guilliman. It would be safe to consider this design to be the pinnacle of Power Armor technology - an opponent would need a large volume of anti-armor fire to even faze the wearer. \n\nSpecial security measures are interlaced within the armor’s systems - it cannot be reproduced without them. First, the armor can only be worn by the first person to wear it. Second, the armor will cease functioning if another, identical suit is detected in its vicinity under the same faction - this is an attempt to stop “techno-barbarians” from becoming too powerful. \n\nThe original Armor of Fate was even further enhanced by the power of Ynnead, the nascent Eldar god of the dead. Combined with the advanced life-preserving technology built into the armor by the Adeptus Mechanicus, the Armor of Fate healed the grievously-wounded Primarch and restored him to full strength.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_GuillimanArmor" ParentName="GW_ScatteredSons_ArmorBase">
 		<defName>GW_SM_GuillimanArmor</defName>
 		<label>Armor of Fate</label>
 		<description>A carefully-crafted replica of the Armor of Fate, the Power Armor worn by the Imperial Regent Roboute Guilliman. It would be safe to consider this design to be the pinnacle of Power Armor technology - an opponent would need a large volume of anti-armor fire to even faze the wearer. \n\nSpecial security measures are interlaced within the armor’s systems - it cannot be reproduced without them. First, the armor can only be worn by the first person to wear it. Second, the armor will cease functioning if another, identical suit is detected in its vicinity under the same faction - this is an attempt to stop “techno-barbarians” from becoming too powerful. \n\nThe original Armor of Fate was even further enhanced by the power of Ynnead, the nascent Eldar god of the dead. Combined with the advanced life-preserving technology built into the armor by the Adeptus Mechanicus, the Armor of Fate healed the grievously-wounded Primarch and restored him to full strength.</description>
@@ -217,9 +251,43 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_ScatteredSons_ArmorBase">
+	<ThingDef ParentName="GW_SM_GuillimanArmor">
+		<defName>GW_SM_GuillimanArmor_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_GuillimanArmor>1</GW_SM_GuillimanArmor>
+		</costList>
+		<label>Armor of Fate (stripped)</label>
+		<description>A carefully-crafted replica of the Armor of Fate, the Power Armor worn by the Imperial Regent Roboute Guilliman. It would be safe to consider this design to be the pinnacle of Power Armor technology - an opponent would need a large volume of anti-armor fire to even faze the wearer. \n\nSpecial security measures are interlaced within the armor’s systems - it cannot be reproduced without them. First, the armor can only be worn by the first person to wear it. Second, the armor will cease functioning if another, identical suit is detected in its vicinity under the same faction - this is an attempt to stop “techno-barbarians” from becoming too powerful. \n\nThe original Armor of Fate was even further enhanced by the power of Ynnead, the nascent Eldar god of the dead. Combined with the advanced life-preserving technology built into the armor by the Adeptus Mechanicus, the Armor of Fate healed the grievously-wounded Primarch and restored him to full strength.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_ImperialWardenrArmor" ParentName="GW_ScatteredSons_ArmorBase">
 		<defName>GW_SM_ImperialWardenrArmor</defName>
-		<label>imperial Warden armor</label>
+		<label>Imperial Warden armor</label>
 		<description>A replica of the mysterious armor worn by Lion El’Jonson upon his return in the 41st Millennium. It is able to turn away both blade and bullet, and its prodigious size inspires great fear in the enemys hearts. \n\nSpecial security measures are interlaced within the armor’s systems - it cannot be reproduced without them. First, the armor can only be worn by the first person to wear it. Second, the armor will cease functioning if another, identical suit is detected in its vicinity under the same faction - this is an attempt to stop “techno-barbarians” from becoming too powerful. \n\nLion El’Jonson, also known simply as The Lion, is the Primarch of the Dark Angels, a chapter of Space Marines. The Dark Angels were originally a Space Marine Legion, founded on Terra during the Unification Wars - indeed, they were the 1st Legion.</description>
 		<graphicData>
 			<texPath>Things/Apparel/ImperialWardenr/Display/LionW_torso</texPath>
@@ -300,7 +368,41 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_ScatteredSons_ArmorBase">
+	<ThingDef ParentName="GW_SM_ImperialWardenrArmor">
+		<defName>GW_SM_ImperialWardenrArmor_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ImperialWardenrArmor>1</GW_SM_ImperialWardenrArmor>
+		</costList>
+		<label>Imperial Warden armor (stripped)</label>
+		<description>A replica of the mysterious armor worn by Lion El’Jonson upon his return in the 41st Millennium. It is able to turn away both blade and bullet, and its prodigious size inspires great fear in the enemys hearts. \n\nSpecial security measures are interlaced within the armor’s systems - it cannot be reproduced without them. First, the armor can only be worn by the first person to wear it. Second, the armor will cease functioning if another, identical suit is detected in its vicinity under the same faction - this is an attempt to stop “techno-barbarians” from becoming too powerful. \n\nLion El’Jonson, also known simply as The Lion, is the Primarch of the Dark Angels, a chapter of Space Marines. The Dark Angels were originally a Space Marine Legion, founded on Terra during the Unification Wars - indeed, they were the 1st Legion.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_LionArmor" ParentName="GW_ScatteredSons_ArmorBase">
 		<defName>GW_SM_LionArmor</defName>
 		<label>Lion's Armor</label>
 		<description>A replica of the mysterious armor worn by Lion El’Jonson upon his return in the 41st Millennium. It is able to turn away both blade and bullet, and its prodigious size inspires great fear in the enemys hearts. \n\nSpecial security measures are interlaced within the armor’s systems - it cannot be reproduced without them. First, the armor can only be worn by the first person to wear it. Second, the armor will cease functioning if another, identical suit is detected in its vicinity under the same faction - this is an attempt to stop “techno-barbarians” from becoming too powerful. \n\nLion El’Jonson, also known simply as The Lion, is the Primarch of the Dark Angels, a chapter of Space Marines. The Dark Angels were originally a Space Marine Legion, founded on Terra during the Unification Wars - indeed, they were the 1st Legion.</description>
@@ -376,6 +478,40 @@
 				</apparelSetEffect>
 			</li>
 		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_SM_LionArmor">
+		<defName>GW_SM_LionArmor_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_LionArmor>1</GW_SM_LionArmor>
+		</costList>
+		<label>Lion's Armor (stripped)</label>
+		<description>A replica of the mysterious armor worn by Lion El’Jonson upon his return in the 41st Millennium. It is able to turn away both blade and bullet, and its prodigious size inspires great fear in the enemys hearts. \n\nSpecial security measures are interlaced within the armor’s systems - it cannot be reproduced without them. First, the armor can only be worn by the first person to wear it. Second, the armor will cease functioning if another, identical suit is detected in its vicinity under the same faction - this is an attempt to stop “techno-barbarians” from becoming too powerful. \n\nLion El’Jonson, also known simply as The Lion, is the Primarch of the Dark Angels, a chapter of Space Marines. The Dark Angels were originally a Space Marine Legion, founded on Terra during the Unification Wars - indeed, they were the 1st Legion.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
 	</ThingDef>
 
 

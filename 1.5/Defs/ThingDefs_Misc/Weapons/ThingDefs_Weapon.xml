@@ -94,7 +94,7 @@
         </tools>
         <comps>
             <li Class="CompProperties_Biocodable">
-                <biocodeOnEquip>True</biocodeOnEquip>
+                <biocodeOnEquip>False</biocodeOnEquip>
             </li>
             <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
         </comps>
@@ -189,7 +189,7 @@
 		</tools>
         <comps>
             <li Class="CompProperties_Biocodable">
-                <biocodeOnEquip>True</biocodeOnEquip>
+                <biocodeOnEquip>False</biocodeOnEquip>
             </li>
             <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
         </comps>

@@ -146,7 +146,7 @@ namespace PrimarchAssault.External
         private float GetChampionStage(out float apparelValue, out float healthValue)
         {
             apparelValue = (float)pawn.apparel.WornApparel.Select(apparel => apparel.HitPoints / (double)apparel.MaxHitPoints).Average();
-            healthValue = pawn.health.summaryHealth.SummaryHealthPercent;
+            healthValue = _currentHp / _challenge.championHp;
             
             return Math.Min(apparelValue, healthValue);
         }

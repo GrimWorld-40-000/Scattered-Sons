@@ -7,7 +7,7 @@
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>1</drawSize>
 		</graphicData>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
 			<skillRequirements>
 				<Crafting>20</Crafting>
@@ -16,7 +16,7 @@
 			<recipeUsers Inherit="False">
 				<li>GW_SM_ScatteredSons_ArmorBench</li>
 			</recipeUsers>
-		</recipeMaker>
+		</recipeMaker> -->
 		<uiIconScale>1.6</uiIconScale>
 		<equippedStatOffsets>
 			<Beauty>50</Beauty>
@@ -62,7 +62,7 @@
 		</comps>
     </ThingDef>
 	
-	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+	<ThingDef Name="GW_SM_ChapterMasterHelmet" ParentName="GW_ScatteredSonsHelmetBase">
 		<defName>GW_SM_ChapterMasterHelmet</defName>
 		<label>Imperial Regent helmet</label>
 		<description>A helmet built for the Armor of Fate. While not commonly worn, as the Lord Commander of the Imperium generally wished to show his face to spur on his armies, it is just as protective as the armor itself is. \n\nAt first unknown to the fleet, the tech-priests here are also field-testing a project created by Belisarius Cawl. The goal of this project is to recreate the Primarchs using the best candidates available, giving the Imperium the leadership it needs to survive. \n\nSo far, he has been disappointed.</description>
@@ -121,7 +121,41 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+	<ThingDef ParentName="GW_SM_ChapterMasterHelmet">
+		<defName>GW_SM_ChapterMasterHelmet_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ChapterMasterHelmet>1</GW_SM_ChapterMasterHelmet>
+		</costList>
+		<label>Imperial Regent helmet (stripped)</label>
+		<description>A helmet built for the Armor of Fate. While not commonly worn, as the Lord Commander of the Imperium generally wished to show his face to spur on his armies, it is just as protective as the armor itself is. \n\nAt first unknown to the fleet, the tech-priests here are also field-testing a project created by Belisarius Cawl. The goal of this project is to recreate the Primarchs using the best candidates available, giving the Imperium the leadership it needs to survive. \n\nSo far, he has been disappointed.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_GuillimanHelmet" ParentName="GW_ScatteredSonsHelmetBase">
 		<defName>GW_SM_GuillimanHelmet</defName>
 		<label>Armor of Fate's helmet</label>
 		<description>A helmet built for the Armor of Fate. While not commonly worn, as the Lord Commander of the Imperium generally wished to show his face to spur on his armies, it is just as protective as the armor itself is. \n\nAt first unknown to the fleet, the tech-priests here are also field-testing a project created by Belisarius Cawl. The goal of this project is to recreate the Primarchs using the best candidates available, giving the Imperium the leadership it needs to survive. \n\nSo far, he has been disappointed.</description>
@@ -175,8 +209,42 @@
 		</comps>
 	</ThingDef>
 	
+	<ThingDef ParentName="GW_SM_GuillimanHelmet">
+		<defName>GW_SM_GuillimanHelmet_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_GuillimanHelmet>1</GW_SM_GuillimanHelmet>
+		</costList>
+		<label>Armor of Fate's helmet (stripped)</label>
+		<description>A helmet built for the Armor of Fate. While not commonly worn, as the Lord Commander of the Imperium generally wished to show his face to spur on his armies, it is just as protective as the armor itself is. \n\nAt first unknown to the fleet, the tech-priests here are also field-testing a project created by Belisarius Cawl. The goal of this project is to recreate the Primarchs using the best candidates available, giving the Imperium the leadership it needs to survive. \n\nSo far, he has been disappointed.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
 	<!-- Imperial Warden Hood -->
-	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+	<ThingDef Name="GW_SM_ImperialWardenHood" ParentName="GW_ScatteredSonsHelmetBase">
 		<defName>GW_SM_ImperialWardenHood</defName>
 		<label>Imperial Warden hood</label>
 		<description>A non-standard hood worn by some copies of the Lion. Though not as protective as the helmet the armor is supposed to be worn with, some of the Primarchs insist on wearing them instead. \n\nThe false Primarchs are selected only from the best Space Marines, and receive the best possible treatment and equipment. However, they also undergo a death of personality, their minds obliterated and replaced by that of the Primarch they imitate.</description>
@@ -233,8 +301,42 @@
 		</comps>
 	</ThingDef>
 	
+	<ThingDef ParentName="GW_SM_ImperialWardenHood">
+		<defName>GW_SM_ImperialWardenHood_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ImperialWardenHood>1</GW_SM_ImperialWardenHood>
+		</costList>
+		<label>Imperial Warden helmet (stripped)</label>
+		<description>A non-standard hood worn by some copies of the Lion. Though not as protective as the helmet the armor is supposed to be worn with, some of the Primarchs insist on wearing them instead. \n\nThe false Primarchs are selected only from the best Space Marines, and receive the best possible treatment and equipment. However, they also undergo a death of personality, their minds obliterated and replaced by that of the Primarch they imitate.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
 	<!-- Imperial Warden Hooded -->
-	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+	<ThingDef Name="GW_SM_ImperialWardenHooded" ParentName="GW_ScatteredSonsHelmetBase">
 		<defName>GW_SM_ImperialWardenHooded</defName>
 		<label>Imperial Warden hooded helmet</label>
 		<description>A modified helmet worn with a hood. A sort of compromise, this helmet strikes a balance between protection and the wearer’s wishes for a hood. \n\nEvery Primarch slain on the rimworlds is another crippling blow to the isolated Imperial fleet. It only serves to remind them that the real Primarchs are either dead or far away - their true gene-fathers would not have fallen to mere techno-barbarians.</description>
@@ -293,8 +395,42 @@
 		</comps>
 	</ThingDef>
 	
-	<!-- Imperial Warden Hooded -->
-	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+	<ThingDef ParentName="GW_SM_ImperialWardenHooded">
+		<defName>GW_SM_ImperialWardenHooded_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ImperialWardenHooded>1</GW_SM_ImperialWardenHooded>
+		</costList>
+		<label>Imperial Warden hooded helmet (stripped)</label>
+		<description>A modified helmet worn with a hood. A sort of compromise, this helmet strikes a balance between protection and the wearer’s wishes for a hood. \n\nEvery Primarch slain on the rimworlds is another crippling blow to the isolated Imperial fleet. It only serves to remind them that the real Primarchs are either dead or far away - their true gene-fathers would not have fallen to mere techno-barbarians.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<!-- Imperial Warden Helmet -->
+	<ThingDef Name="GW_SM_ImperialWardenHelmet" ParentName="GW_ScatteredSonsHelmetBase">
 		<defName>GW_SM_ImperialWardenHelmet</defName>
 		<label>Imperial Warden helmet</label>
 		<description>A magnificent, winged helmet worn with the Lion’s armor. The great wings only add to the Primarch’s towering stature, inspiring awe and terror in enemy ranks.\n\nAfter a Horus Heresy-era civil war within the Dark Angels and the defeat of Luther, the Arch-Betrayer, the Lion was rendered comatose and Caliban destroyed. It was only ten thousand years later that the Lion awoke to a much-decayed Imperium, and set out trying to save it.</description>
@@ -366,7 +502,41 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+	<ThingDef ParentName="GW_SM_ImperialWardenHelmet">
+		<defName>GW_SM_ImperialWardenHelmet_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ImperialWardenHelmet>1</GW_SM_ImperialWardenHelmet>
+		</costList>
+		<label>Imperial Warden helmet (stripped)</label>
+		<description>A magnificent, winged helmet worn with the Lion’s armor. The great wings only add to the Primarch’s towering stature, inspiring awe and terror in enemy ranks.\n\nAfter a Horus Heresy-era civil war within the Dark Angels and the defeat of Luther, the Arch-Betrayer, the Lion was rendered comatose and Caliban destroyed. It was only ten thousand years later that the Lion awoke to a much-decayed Imperium, and set out trying to save it.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_LionArmorHood" ParentName="GW_ScatteredSonsHelmetBase">
 		<defName>GW_SM_LionArmorHood</defName>
 		<label>Lion's Hood</label>
 		<description>A non-standard hood worn by some copies of the Lion. Though not as protective as the helmet the armor is supposed to be worn with, some of the Primarchs insist on wearing them instead. \n\nThe false Primarchs are selected only from the best Space Marines, and receive the best possible treatment and equipment. However, they also undergo a death of personality, their minds obliterated and replaced by that of the Primarch they imitate.</description>
@@ -418,7 +588,41 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+	<ThingDef ParentName="GW_SM_LionArmorHood">
+		<defName>GW_SM_LionArmorHood_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_LionArmorHood>1</GW_SM_LionArmorHood>
+		</costList>
+		<label>Lion's Hood (stripped)</label>
+		<description>A non-standard hood worn by some copies of the Lion. Though not as protective as the helmet the armor is supposed to be worn with, some of the Primarchs insist on wearing them instead. \n\nThe false Primarchs are selected only from the best Space Marines, and receive the best possible treatment and equipment. However, they also undergo a death of personality, their minds obliterated and replaced by that of the Primarch they imitate.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_LionArmorHooded" ParentName="GW_ScatteredSonsHelmetBase">
 		<defName>GW_SM_LionArmorHooded</defName>
 		<label>Lion's Hooded Helmet</label>
 		<description>A modified helmet worn with a hood. A sort of compromise, this helmet strikes a balance between protection and the wearer’s wishes for a hood. \n\nEvery Primarch slain on the rimworlds is another crippling blow to the isolated Imperial fleet. It only serves to remind them that the real Primarchs are either dead or far away - their true gene-fathers would not have fallen to mere techno-barbarians.</description>
@@ -472,7 +676,41 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+	<ThingDef ParentName="GW_SM_LionArmorHood">
+		<defName>GW_SM_LionArmorHooded_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_LionArmorHooded>1</GW_SM_LionArmorHooded>
+		</costList>
+		<label>Lion's Hooded Helmet (stripped)</label>
+		<description>A modified helmet worn with a hood. A sort of compromise, this helmet strikes a balance between protection and the wearer’s wishes for a hood. \n\nEvery Primarch slain on the rimworlds is another crippling blow to the isolated Imperial fleet. It only serves to remind them that the real Primarchs are either dead or far away - their true gene-fathers would not have fallen to mere techno-barbarians.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_LionArmorHelmet" ParentName="GW_ScatteredSonsHelmetBase">
 		<defName>GW_SM_LionArmorHelmet</defName>
 		<label>Lion's Helmet</label>
 		<description>A magnificent, winged helmet worn with the Lion’s armor. The great wings only add to the Primarch’s towering stature, inspiring awe and terror in enemy ranks.\n\nAfter a Horus Heresy-era civil war within the Dark Angels and the defeat of Luther, the Arch-Betrayer, the Lion was rendered comatose and Caliban destroyed. It was only ten thousand years later that the Lion awoke to a much-decayed Imperium, and set out trying to save it.</description>
@@ -537,6 +775,40 @@
 			</li>
 			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
 		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_SM_LionArmorHelmet">
+		<defName>GW_SM_LionArmorHelmet_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_LionArmorHelmet>1</GW_SM_LionArmorHelmet>
+		</costList>
+		<label>Lion's Helmet (stripped)</label>
+		<description>A magnificent, winged helmet worn with the Lion’s armor. The great wings only add to the Primarch’s towering stature, inspiring awe and terror in enemy ranks.\n\nAfter a Horus Heresy-era civil war within the Dark Angels and the defeat of Luther, the Arch-Betrayer, the Lion was rendered comatose and Caliban destroyed. It was only ten thousand years later that the Lion awoke to a much-decayed Imperium, and set out trying to save it.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
 	</ThingDef>
 
 </Defs>

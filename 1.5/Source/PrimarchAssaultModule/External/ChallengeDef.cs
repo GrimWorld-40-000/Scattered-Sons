@@ -199,7 +199,7 @@ namespace PrimarchAssault.External
             //Create Champion
             Pawn champion = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
                 championDetails.possiblePawnKinds.RandomElement(), mustBeCapableOfViolence: true,
-                biocodeWeaponChance: 1, biocodeApparelChance: 1, forcedTraits: championDetails.forcedTraits,
+                biocodeWeaponChance: 0, biocodeApparelChance: 1, forcedTraits: championDetails.forcedTraits,
                 forcedXenotype: championDetails.GetFirstValidXenotypeOrNull(),
                 faction: faction,
                 fixedBiologicalAge: championDetails.forcedBiologicalAge,

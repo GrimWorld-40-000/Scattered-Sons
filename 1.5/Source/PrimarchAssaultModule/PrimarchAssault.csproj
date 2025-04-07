@@ -73,6 +73,7 @@
         <Compile Include="Abilities\RallyingCry.cs" />
         <Compile Include="Abilities\TacticalBombardment.cs" />
         <Compile Include="Alert_ChallengeIncoming.cs" />
+        <Compile Include="ApplyHarmonyPatches.cs" />
         <Compile Include="AssaultEvent\AssaultEventAction.cs" />
         <Compile Include="AssaultEvent\AssaultEventActionProperties.cs" />
         <Compile Include="AssaultEvent\GameConditionEvent.cs" />

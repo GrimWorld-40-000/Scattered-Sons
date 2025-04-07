@@ -1,6 +1,6 @@
 <Defs>
 
-	 <ApparelLayerDef>
+	<ApparelLayerDef>
         <defName>GW_Shoulder</defName>
         <label>shoulder</label>
         <drawOrder>550</drawOrder>
@@ -14,7 +14,7 @@
 	
 	<ThingDef Abstract="true" Name="GW_SS_ShoulderBase" ParentName="ArmorMachineableBase">
         <techLevel>Spacer</techLevel>
-		<recipeMaker>
+		<!-- <recipeMaker>
 			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
 			<skillRequirements>
 				<Crafting>20</Crafting>
@@ -23,7 +23,7 @@
 			<recipeUsers Inherit="false">
 				<li>GW_SM_ScatteredSons_ArmorBench</li>
 			</recipeUsers>
-		</recipeMaker>
+		</recipeMaker> -->
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
@@ -86,7 +86,7 @@
 	    </modExtensions>
     </ThingDef>
 	
-	<ThingDef ParentName="GW_SS_ShoulderBase">
+	<ThingDef Name="GW_SM_ChapterMasterShoulderPads" ParentName="GW_SS_ShoulderBase">
 		<defName>GW_SM_ChapterMasterShoulderPads</defName>
 		<label>Imperial Regent shoulder pads</label>
 		<description>The shoulder plates of the Armor of Fate. On the right shoulder is a golden depiction of the Aquila, the symbol that represents the entire Imperium of Man. On the left is a more decorated version of the Ultramarines insignia - the Greek letter Omega - which symbolizes the chapter he was Primarch of.\n\nThe copies of Guilliman all look like him, talk like him, and fight like him. But despite Belisarius Cawl’s best efforts, they are not him, and perhaps never can be.</description>
@@ -142,7 +142,41 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_SS_ShoulderBase">
+	<ThingDef ParentName="GW_SM_ChapterMasterShoulderPads">
+		<defName>GW_SM_ChapterMasterShoulderPads_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ChapterMasterShoulderPads>1</GW_SM_ChapterMasterShoulderPads>
+		</costList>
+		<label>Imperial Regent shoulder pads (stripped)</label>
+		<description>The shoulder plates of the Armor of Fate. On the right shoulder is a golden depiction of the Aquila, the symbol that represents the entire Imperium of Man. On the left is a more decorated version of the Ultramarines insignia - the Greek letter Omega - which symbolizes the chapter he was Primarch of.\n\nThe copies of Guilliman all look like him, talk like him, and fight like him. But despite Belisarius Cawl’s best efforts, they are not him, and perhaps never can be.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_GuillimanShoulderPads" ParentName="GW_SS_ShoulderBase">
 		<defName>GW_SM_GuillimanShoulderPads</defName>
 		<label>Armor of Fate's Shoulders</label>
 		<description>The shoulder plates of the Armor of Fate. On the right shoulder is a golden depiction of the Aquila, the symbol that represents the entire Imperium of Man. On the left is a more decorated version of the Ultramarines insignia - the Greek letter Omega - which symbolizes the chapter he was Primarch of.\n\nThe copies of Guilliman all look like him, talk like him, and fight like him. But despite Belisarius Cawl’s best efforts, they are not him, and perhaps never can be.</description>
@@ -193,7 +227,41 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_SS_ShoulderBase">
+	<ThingDef ParentName="GW_SM_GuillimanShoulderPads">
+		<defName>GW_SM_GuillimanShoulderPads_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_GuillimanShoulderPads>1</GW_SM_GuillimanShoulderPads>
+		</costList>
+		<label>Armor of Fate's Shoulders (stripped)</label>
+		<description>The shoulder plates of the Armor of Fate. On the right shoulder is a golden depiction of the Aquila, the symbol that represents the entire Imperium of Man. On the left is a more decorated version of the Ultramarines insignia - the Greek letter Omega - which symbolizes the chapter he was Primarch of.\n\nThe copies of Guilliman all look like him, talk like him, and fight like him. But despite Belisarius Cawl’s best efforts, they are not him, and perhaps never can be.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_ImperialWardenrShoulderPads" ParentName="GW_SS_ShoulderBase">
 		<defName>GW_SM_ImperialWardenrShoulderPads</defName>
 		<label>Imperial Warden shoulders</label>
 		<description>The shoulder pads of Lion El’Jonson, also known as The Lion. Sure enough, the right shoulder bears an ornate depiction of a lion’s head, while the left shoulder has a more ornate version of the Dark Angels insignia - a sword with wings.\n\nThe Lion was raised on the planet of Caliban, a beautiful yet Warp-tainted world due to its proximity to the Eye of Terror, a giant Chaos rift. Orders of noble knights ruled the world and did battle with the Great Beasts of the forest, until Lion El’Jonson united the various knightly orders and wiped out the Great Beasts for good.</description>
@@ -248,7 +316,41 @@
 		</comps>
 	</ThingDef>
 	
-	<ThingDef ParentName="GW_SS_ShoulderBase">
+	<ThingDef ParentName="GW_SM_ImperialWardenrShoulderPads">
+		<defName>GW_SM_ImperialWardenrShoulderPads_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_ImperialWardenrShoulderPads>1</GW_SM_ImperialWardenrShoulderPads>
+		</costList>
+		<label>Imperial Warden shoulders (stripped)</label>
+		<description>The shoulder pads of Lion El’Jonson, also known as The Lion. Sure enough, the right shoulder bears an ornate depiction of a lion’s head, while the left shoulder has a more ornate version of the Dark Angels insignia - a sword with wings.\n\nThe Lion was raised on the planet of Caliban, a beautiful yet Warp-tainted world due to its proximity to the Eye of Terror, a giant Chaos rift. Orders of noble knights ruled the world and did battle with the Great Beasts of the forest, until Lion El’Jonson united the various knightly orders and wiped out the Great Beasts for good.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef Name="GW_SM_LionArmorShoulderPads" ParentName="GW_SS_ShoulderBase">
 		<defName>GW_SM_LionArmorShoulderPads</defName>
 		<label>Lion's Shoulders</label>
 		<description>The shoulder pads of Lion El’Jonson, also known as The Lion. Sure enough, the right shoulder bears an ornate depiction of a lion’s head, while the left shoulder has a more ornate version of the Dark Angels insignia - a sword with wings.\n\nThe Lion was raised on the planet of Caliban, a beautiful yet Warp-tainted world due to its proximity to the Eye of Terror, a giant Chaos rift. Orders of noble knights ruled the world and did battle with the Great Beasts of the forest, until Lion El’Jonson united the various knightly orders and wiped out the Great Beasts for good.</description>
@@ -297,6 +399,40 @@
 			</li>
 			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
 		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_SM_LionArmorShoulderPads">
+		<defName>GW_SM_LionArmorShoulderPads_Paintable</defName>
+		<costList Inherit="false">
+			<GW_SM_LionArmorShoulderPads>1</GW_SM_LionArmorShoulderPads>
+		</costList>
+		<label>Lion's Shoulders (stripped)</label>
+		<description>The shoulder pads of Lion El’Jonson, also known as The Lion. Sure enough, the right shoulder bears an ornate depiction of a lion’s head, while the left shoulder has a more ornate version of the Dark Angels insignia - a sword with wings.\n\nThe Lion was raised on the planet of Caliban, a beautiful yet Warp-tainted world due to its proximity to the Eye of Terror, a giant Chaos rift. Orders of noble knights ruled the world and did battle with the Great Beasts of the forest, until Lion El’Jonson united the various knightly orders and wiped out the Great Beasts for good.
+
+The paint has been stripped for recoloring.</description>
+		
+		<comps>
+            <li Class="GW4KArmor.CompProperties_TriColorMask">
+                <maskCount>4</maskCount>
+                <defaultPalette>
+                    <colorA>(255, 255, 255)</colorA>
+					<colorB>(255, 255, 255)</colorB>
+					<colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </comps>
+        <statBases>
+			<WorkToMake>200</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
 	</ThingDef>
 
 </Defs>
