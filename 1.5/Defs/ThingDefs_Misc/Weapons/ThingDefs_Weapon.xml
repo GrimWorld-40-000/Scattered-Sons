@@ -23,29 +23,18 @@
         <statBases>
 			<MaxHitPoints>5000</MaxHitPoints>
             <WorkToMake>9000</WorkToMake>
-            <Mass>5</Mass>
-			<MarketValue>6000</MarketValue>
+            <Mass>4</Mass>
+			<MarketValue>4000</MarketValue>
         </statBases>
 		<equippedStatOffsets>
-            <MoveSpeed>1</MoveSpeed>
-			<Beauty>150</Beauty> 
+			<MeleeHitChance>1</MeleeHitChance>
         </equippedStatOffsets>
 		<relicChance>1</relicChance>
 		<thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <equippedAngleOffset>0</equippedAngleOffset>
-        <recipeMaker>
-            <researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-			<skillRequirements>
-				<Crafting>20</Crafting>
-				<Intellectual>15</Intellectual>
-			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>GW_SM_ScatteredSons_WeaponBench</li>
-			</recipeUsers>
-        </recipeMaker>
+        <recipeMaker IsNull="True" />
 		<costList>
 			<ComponentSpacer>40</ComponentSpacer>
 			<ComponentIndustrial>75</ComponentIndustrial>
@@ -67,29 +56,30 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>30</power>
-                <cooldownTime>1.3</cooldownTime>
+                <power>18</power>
+                <cooldownTime>2</cooldownTime>
 				<chanceFactor>0.07</chanceFactor>
+				<armorPenetration>0.17</armorPenetration>
             </li>
             <li>
                 <label>point</label>
                 <capacities>
                     <li>Stab</li>
                 </capacities>
-                <power>80</power>
-                <cooldownTime>1.2</cooldownTime>
+                <power>50</power>
+                <cooldownTime>2.8</cooldownTime>
 				<chanceFactor>0.5</chanceFactor>
-				<armorPenetration>3.3</armorPenetration>
+				<armorPenetration>0.85</armorPenetration>
             </li>
             <li>
                 <label>edge</label>
                 <capacities>
                     <li>Cut</li>
                 </capacities>
-                <power>100</power>
-                <cooldownTime>1.0</cooldownTime>
+                <power>46</power>
+                <cooldownTime>3.0</cooldownTime>
 				<chanceFactor>1</chanceFactor>
-				<armorPenetration>2.7</armorPenetration>
+				<armorPenetration>0.8</armorPenetration>
             </li>
         </tools>
         <comps>
@@ -115,17 +105,7 @@
 			<li>GW_EmperorWep</li>
 			<li>GW_GuillimanSword</li>
 		</weaponTags>
-		<recipeMaker>
-            <researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
-			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-			<skillRequirements>
-				<Crafting>20</Crafting>
-				<Intellectual>15</Intellectual>
-			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>GW_SM_ScatteredSons_WeaponBench</li>
-			</recipeUsers>
-        </recipeMaker>
+		<recipeMaker IsNull="True" />
 		<costList>
 			<ComponentSpacer>40</ComponentSpacer>
 			<ComponentIndustrial>75</ComponentIndustrial>
@@ -149,7 +129,7 @@
 			<MaxHitPoints>5000</MaxHitPoints>
             <WorkToMake>9000</WorkToMake>
             <Mass>12</Mass>
-			<MarketValue>6000</MarketValue>
+			<MarketValue>4000</MarketValue>
         </statBases>
 		<equippedStatOffsets>
             <MoveSpeed>0.50</MoveSpeed>
@@ -163,29 +143,56 @@
 		</weaponClasses>
 		<tools>
 			<li>
-				<label>pommel</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>80</power>
-				<cooldownTime>1.8</cooldownTime>
-			</li>
-			<li>
-				<label>blade</label>
-				<capacities>
-					<li>Cut</li>
-				</capacities>
-				<power>170</power>
-				<cooldownTime>1.8</cooldownTime>
-			</li>
-			<li>
-				<label>point</label>
-				<capacities>
-					<li>Stab</li>
-				</capacities>
-				<power>130</power>
-				<cooldownTime>1.8</cooldownTime>
-			</li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>2</cooldownTime>
+				<chanceFactor>0.07</chanceFactor>
+				<armorPenetration>0.17</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>45</power>
+                <cooldownTime>2.5</cooldownTime>
+				<chanceFactor>0.5</chanceFactor>
+				<armorPenetration>0.70</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>42</power>
+                <cooldownTime>2.8</cooldownTime>
+				<chanceFactor>1</chanceFactor>
+				<armorPenetration>0.65</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+            </li>
 		</tools>
         <comps>
             <li Class="CompProperties_Biocodable">
