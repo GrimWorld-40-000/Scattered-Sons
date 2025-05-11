@@ -43,15 +43,20 @@
 			<HP_Auramite>110</HP_Auramite>
 		</costList>
 		<statBases>
-			<StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor>
-			<Mass>7</Mass>
+			<!-- <StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor> -->
+			<MarketValue>2000</MarketValue>
+			<Mass>4</Mass>
+			<MaxHitPoints>800</MaxHitPoints>
+			<ArmorRating_Sharp>.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.55</ArmorRating_Blunt>
+			<ArmorRating_Heat>.70</ArmorRating_Heat>
 			<Bulk MayRequire="CETeam.CombatExtended">8</Bulk>
 			<WornBulk MayRequire="CETeam.CombatExtended">5</WornBulk>
 		</statBases>
 		<equippedStatOffsets>
 			<ReloadSpeed MayRequire="CETeam.CombatExtended">-0.2</ReloadSpeed>
 			<MeleeHitChance>-1</MeleeHitChance>
-			<ShootingAccuracyPawn>-0.15</ShootingAccuracyPawn>
+			<ShootingAccuracyPawn>-4</ShootingAccuracyPawn>
 			<AimingAccuracy MayRequire="CETeam.CombatExtended">-0.08</AimingAccuracy>
 			<Suppressability MayRequire="CETeam.CombatExtended">-0.25</Suppressability>
 			<MeleeCritChance MayRequire="CETeam.CombatExtended">-0.05</MeleeCritChance>
@@ -104,7 +109,7 @@
 			</li>
 			<li Class="GWParryShield.CompProperties_GW_Parryable">
 				<parryHediff>GW_LionsParry</parryHediff><!-- the parry hediff-->
-				<parryChance>0.50</parryChance> <!-- 0.20 = 20% -->
+				<parryChance>0.20</parryChance> <!-- 0.20 = 20% -->
 				<parryWindow>30</parryWindow>
 				<parryCooldown>180</parryCooldown>
 			</li>

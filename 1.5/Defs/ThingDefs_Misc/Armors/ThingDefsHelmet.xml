@@ -136,9 +136,8 @@
 			<wornGraphicPath>Things/Apparel/Armor_Guilliman/Helmet/GuillimanC_helmet</wornGraphicPath>
 		</apparel>		
 		<equippedStatOffsets>
-			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
-			<AimingDelayFactor>-0.3</AimingDelayFactor>
-			<SocialImpact>1.00</SocialImpact>
+			<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
+			<MentalBreakThreshold>-0.05</MentalBreakThreshold>
 		</equippedStatOffsets>
 		<tickerType>Normal</tickerType> 
 		<costList>
@@ -154,14 +153,15 @@
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
-			<MaxHitPoints>2500</MaxHitPoints>
-			<Mass>2</Mass>
+			<MaxHitPoints>850</MaxHitPoints>
+			<MarketValue>1600</MarketValue>
+			<Mass>1</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>3.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>2.50</ArmorRating_Blunt>
-			<ArmorRating_Heat>1.70</ArmorRating_Heat>
+			<ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
 			<Insulation_Cold>10</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
+			<Insulation_Heat>2</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<recipeMaker>
@@ -381,7 +381,8 @@
 			<wornGraphicPath>Things/Apparel/LionArmor/Helmet/LionC_hood</wornGraphicPath>
 		</apparel>		
 		<equippedStatOffsets>
-			<SocialImpact>2.00</SocialImpact>
+			<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
+			<MoveSpeed>0.1</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>20</ComponentSpacer>
@@ -396,14 +397,15 @@
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
-			<MaxHitPoints>2500</MaxHitPoints>
-			<Mass>2</Mass>
+			<MaxHitPoints>850</MaxHitPoints>
+			<MarketValue>1600</MarketValue>
+			<Mass>1</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>3.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>2.50</ArmorRating_Blunt>
-			<ArmorRating_Heat>1.70</ArmorRating_Heat>
+			<ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
 			<Insulation_Cold>10</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
+			<Insulation_Heat>2</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
@@ -433,9 +435,8 @@
 			<wornGraphicPath>Things/Apparel/LionArmor/Helmet/LionC_hooded</wornGraphicPath>
 		</apparel>		
 		<equippedStatOffsets>
-			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
-			<AimingDelayFactor>-0.3</AimingDelayFactor>
-			<SocialImpact>1.00</SocialImpact>
+			<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
+			<MoveSpeed>0.1</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>20</ComponentSpacer>
@@ -450,14 +451,15 @@
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
-			<MaxHitPoints>2500</MaxHitPoints>
-			<Mass>2</Mass>
+			<MaxHitPoints>850</MaxHitPoints>
+			<MarketValue>1600</MarketValue>
+			<Mass>1</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>3.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>2.50</ArmorRating_Blunt>
-			<ArmorRating_Heat>1.70</ArmorRating_Heat>
+			<ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
 			<Insulation_Cold>10</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
+			<Insulation_Heat>2</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
@@ -500,9 +502,8 @@
 			<wornGraphicPath>Things/Apparel/LionArmor/Helmet/LionC_helmet</wornGraphicPath>
 		</apparel>		
 		<equippedStatOffsets>
-			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
-			<AimingDelayFactor>-0.3</AimingDelayFactor>
-			<SocialImpact>1.00</SocialImpact>
+			<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
+			<MoveSpeed>0.1</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>20</ComponentSpacer>
@@ -517,14 +518,15 @@
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
-			<MaxHitPoints>2500</MaxHitPoints>
-			<Mass>2</Mass>
+			<MaxHitPoints>850</MaxHitPoints>
+			<MarketValue>1600</MarketValue>
+			<Mass>1</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>3.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>2.50</ArmorRating_Blunt>
-			<ArmorRating_Heat>1.70</ArmorRating_Heat>
+			<ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
 			<Insulation_Cold>10</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
+			<Insulation_Heat>2</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 

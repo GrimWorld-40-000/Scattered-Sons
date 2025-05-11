@@ -18,7 +18,7 @@
 				<stunDuration>120</stunDuration>
 				
 				<isNullifyDamage>true</isNullifyDamage>
-				<nullifyDamageChance>0.10</nullifyDamageChance>
+				<nullifyDamageChance>0.50</nullifyDamageChance>
 				
 				<isReduceDamageTakenWhenParry>true</isReduceDamageTakenWhenParry>
 				<damageReduction>0.20</damageReduction>
@@ -29,11 +29,11 @@
 				<debuffDuration>120</debuffDuration>				
 				
 				<isReflectDamage>true</isReflectDamage>
-				<reflectDamageMultiplier>0.50</reflectDamageMultiplier>
-				<reflectDamageChance>0.05</reflectDamageChance>
+				<reflectDamageMultiplier>1.00</reflectDamageMultiplier>
+				<reflectDamageChance>0.2</reflectDamageChance>
 				
-				<isKnockbackAttacker>true</isKnockbackAttacker>
-				<knockbackDistance>2.0</knockbackDistance>
+				<isKnockbackAttacker>false</isKnockbackAttacker>
+				<knockbackDistance>0.0</knockbackDistance>
 				
 				<isReflectProjectile>true</isReflectProjectile>
 				<reflectProjectileChance>0.40</reflectProjectileChance>

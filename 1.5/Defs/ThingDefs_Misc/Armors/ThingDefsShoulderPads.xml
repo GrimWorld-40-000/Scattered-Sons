@@ -154,19 +154,21 @@
         </recipeMaker>
 		<statBases>
 			<WorkToMake>70000</WorkToMake>
-			<MaxHitPoints>1900</MaxHitPoints>
-			<Mass>4</Mass>
+			<MaxHitPoints>900</MaxHitPoints>
+			<MarketValue>1400</MarketValue>
+			<Mass>2</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>4.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>3.50</ArmorRating_Blunt>
-			<ArmorRating_Heat>3.50</ArmorRating_Heat>
-			<Insulation_Cold>10</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
+			<ArmorRating_Sharp>.70</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>.45</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
 		<equippedStatOffsets>
-			<SocialImpact>2.00</SocialImpact>
+			<SocialImpact>.20</SocialImpact>
+			<MentalBreakThreshold>-0.05</MentalBreakThreshold>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>25</ComponentSpacer>
@@ -260,19 +262,21 @@
         </recipeMaker>
 		<statBases>
 			<WorkToMake>70000</WorkToMake>
-			<MaxHitPoints>1900</MaxHitPoints>
-			<Mass>4</Mass>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<MarketValue>1400</MarketValue>
+			<Mass>2</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>4.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>3.50</ArmorRating_Blunt>
-			<ArmorRating_Heat>3.50</ArmorRating_Heat>
-			<Insulation_Cold>10</Insulation_Cold>
-			<Insulation_Heat>10</Insulation_Heat>
+			<ArmorRating_Sharp>.70</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>.45</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
 		<equippedStatOffsets>
-			<SocialImpact>2.00</SocialImpact>
+			<SocialImpact>.20</SocialImpact>
+			<MoveSpeed>.1</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>25</ComponentSpacer>
