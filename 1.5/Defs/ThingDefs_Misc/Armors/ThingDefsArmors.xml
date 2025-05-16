@@ -289,7 +289,7 @@
 						<li>GW_SM_ImperialWardenHood</li>
 						<li>GW_SM_ImperialWardenrShoulderPads</li>
 					</allApparels>
-					<hediff>GW40k_SS_BattleFrenzy_MeleeHood</hediff>
+					<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
 				</apparelSetEffect>
 			</li>
 			<li Class="BM_ApparelSet.CompProperties_ApparelSet">
@@ -299,7 +299,7 @@
 						<li>GW_SM_ImperialWardenHooded</li>
 						<li>GW_SM_ImperialWardenrShoulderPads</li>
 					</allApparels>
-					<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
+					<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
 				</apparelSetEffect>
 			</li>
 		</comps>
