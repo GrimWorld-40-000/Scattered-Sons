@@ -24,7 +24,8 @@
 	<ThingDef ParentName="GWSSShieldBase">
 		<defName>GM_SS_ShieldLionsW</defName>
 		<label>Emperor's Shield</label>
-		<description>A master-crafted copy of the personal shield of the Emperor. Just as the true Lion came across the Emperor's Shield in Mirror-Caliban and used it to great effect in battle, so do the copies of the Lion wield these shields to defeat the enemes attacks. \n\nThe Imperial remnants are greatly troubled with Cawl's work - to some, it approaches blasphemy and heresy to attempt to replicate the Master of Mankind's greatness. Others believe it disrespects the memory of the Primarch's name - akin to raising the dead and bidding them dance like marionettes.</description>
+		<description>A master-crafted copy of the personal shield of the Emperor. Just as the true Lion came across the Emperor's Shield in Mirror-Caliban and used it to great effect in battle, so do the copies of the Lion wield these shields to defeat the enemes attacks. \n\nThe Imperial remnants are greatly troubled with Cawl's work - to some, it approaches blasphemy and heresy to attempt to replicate the Master of Mankind's greatness. Others believe it disrespects the memory of the Primarch's name - akin to raising the dead and bidding them dance like marionettes.
+		\n\n&lt;color=#FFFF00&gt;Parry Stat&lt;/color&gt;\nParry Chance: 20%\nParry Cooldown: 2s\nStun Duration: 2s\nDamage Reduction: 20%\nDamage Nullify Chance: 50%\nPose Break duration: 2s\nReflect Damage Chance: 20%\nReflect Multiplier: 100%\nKnockback: No\nReflect Projectile chance: 40%</description>
 		<graphicData>
 			<texPath>Things/Apparel/LionArmor/LionShield/Preview/LionW_shield</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -134,7 +135,8 @@
 	<ThingDef ParentName="GWSSShieldBase">
 		<defName>GM_SS_ShieldLionsC</defName>
 		<label>Imperial Warden shield</label>
-		<description>A master-crafted copy of the personal shield of the Emperor. Just as the true Lion came across the Emperor's Shield in Mirror-Caliban and used it to great effect in battle, so do the copies of the Lion wield these shields to defeat the enemes attacks. \n\nThe Imperial remnants are greatly troubled with Cawl's work - to some, it approaches blasphemy and heresy to attempt to replicate the Master of Mankind's greatness. Others believe it disrespects the memory of the Primarch's name - akin to raising the dead and bidding them dance like marionettes.</description>
+		<description>A master-crafted copy of the personal shield of the Emperor. Just as the true Lion came across the Emperor's Shield in Mirror-Caliban and used it to great effect in battle, so do the copies of the Lion wield these shields to defeat the enemes attacks. \n\nThe Imperial remnants are greatly troubled with Cawl's work - to some, it approaches blasphemy and heresy to attempt to replicate the Master of Mankind's greatness. Others believe it disrespects the memory of the Primarch's name - akin to raising the dead and bidding them dance like marionettes.
+		\n\n&lt;color=#FFFF00&gt;Parry Stat&lt;/color&gt;\nParry Chance: 20%\nParry Cooldown: 2s\nStun Duration: 2s\nDamage Reduction: 20%\nDamage Nullify Chance: 50%\nPose Break duration: 2s\nReflect Damage Chance: 20%\nReflect Multiplier: 100%\nKnockback: No\nReflect Projectile chance: 40%</description>
 		<graphicData>
 			<texPath>Things/Apparel/LionArmor/LionShield/Preview/LionC_shield</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
