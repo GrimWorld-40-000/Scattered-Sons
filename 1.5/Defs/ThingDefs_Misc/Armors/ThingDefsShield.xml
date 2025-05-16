@@ -8,7 +8,7 @@
 			<MaxHitPoints>3000</MaxHitPoints>
 		</statBases>
 		<stuffCategories Inherit="False">
-			<li>Imperial_Metals</li>
+			<!-- <li>Imperial_Metals</li> -->
 		</stuffCategories>
 		<recipeMaker>
 			<skillRequirements>
@@ -31,7 +31,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<costStuffCount>400</costStuffCount>
+		<!-- <costStuffCount>400</costStuffCount> -->
 		<costList>
 			<ComponentSpacer>10</ComponentSpacer>
 			<ComponentIndustrial>25</ComponentIndustrial>
@@ -142,7 +142,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>Cutout</shaderType>
 		</graphicData>
-		<costStuffCount>400</costStuffCount>
+		<!-- <costStuffCount>400</costStuffCount> -->
 		<costList>
 			<ComponentSpacer>10</ComponentSpacer>
 			<ComponentIndustrial>25</ComponentIndustrial>
