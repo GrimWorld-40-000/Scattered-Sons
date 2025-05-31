@@ -8,9 +8,9 @@
    </supportedVersions>
    <modDependencies>
 		<li>
-			<packageId>Grimworld.Framework</packageId>
-			<displayName>Grimworld 40,000 - Framework</displayName>
-			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3119805903</steamWorkshopUrl>
+			<packageId>CVNGrimworld.Framework</packageId>
+			<displayName>CVN/GrimWorld 40,000 - Ocularis Terribus</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3483499637</steamWorkshopUrl>
 		</li>
 		<li>
 			<packageId>Grimworld.Core</packageId>
