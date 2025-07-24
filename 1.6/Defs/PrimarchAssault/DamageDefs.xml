@@ -1,0 +1,15 @@
+<Defs>
+    <DamageDef>
+        <defName>GWPA_ArmorTrauma</defName>
+        <label>behind armor trauma</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been killed through their armor.</deathMessage>
+        <hediff>Bruise</hediff>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Blunt</impactSoundType>
+        <overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+        <isRanged>false</isRanged>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+</Defs>

@@ -1,0 +1,130 @@
+<Defs>
+
+	<PawnKindDef Abstract="True" Name="GWPA_LionBase">
+		<label>Primarch</label>
+		<labelMale>Primarch</labelMale>
+		<labelFemale>Primarch</labelFemale>
+		<labelPlural>Primarchs</labelPlural>
+		<race>GWPA_PrimarchRace</race>
+		<defaultFactionType>OutlanderCivil</defaultFactionType>
+		<combatPower>500</combatPower>
+		<minGenerationAge>24</minGenerationAge>
+		<maxGenerationAge>48</maxGenerationAge>
+		<isFighter>true</isFighter>
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>GWPA_Lion</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<preventIdeo>true</preventIdeo>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<invNutrition>10.0</invNutrition>
+		<gearHealthRange>1~1</gearHealthRange>
+		<itemQuality>Legendary</itemQuality>
+		<weaponMoney>6000~6000</weaponMoney>
+		<weaponTags>
+			<li>GW_LionSword</li>
+		</weaponTags>
+		<apparelTags>
+			<li>GW_LionArmor</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>GW_SM_LionArmor</li>
+			<li>GW_SM_LionArmorBackpack</li>
+			<li>GW_SM_LionArmorShoulderPads</li>
+			<li>GM_SS_ShieldLionsW</li>
+		</apparelRequired>
+		<initialWillRange>100~100</initialWillRange>
+		<initialResistanceRange>100~100</initialResistanceRange>
+		<humanPregnancyChance>0</humanPregnancyChance>
+        <modExtensions>
+            <li Class="GW4KArmor.DefaultPaletteExtension">
+                <defaultPalette>
+                    <colorA>(16, 97, 56)</colorA>
+                    <colorB>(16, 97, 56)</colorB>
+                    <colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </modExtensions>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GWPA_LionBase">
+		<defName>GWPA_LionHooded</defName>
+		<apparelRequired>
+			<li>GW_SM_LionArmorHooded</li>
+		</apparelRequired>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GWPA_LionBase">
+		<defName>GWPA_LionHelmed</defName>
+		<apparelRequired>
+			<li>GW_SM_LionArmorHelmet</li>
+		</apparelRequired>
+	</PawnKindDef>
+
+
+
+
+	<PawnKindDef>
+		<defName>GWPA_Guilliman</defName>
+		<label>Primarch</label>
+		<labelMale>Primarch</labelMale>
+		<labelFemale>Primarch</labelFemale>
+		<labelPlural>Primarchs</labelPlural>
+		<race>GWPA_PrimarchRace</race>
+		<defaultFactionType>OutlanderCivil</defaultFactionType>
+		<combatPower>500</combatPower>
+		<minGenerationAge>24</minGenerationAge>
+		<maxGenerationAge>48</maxGenerationAge>
+		<isFighter>true</isFighter>
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>GWPA_Guilliman</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<preventIdeo>true</preventIdeo>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<invNutrition>10.0</invNutrition>
+		<gearHealthRange>1~1</gearHealthRange>
+		<itemQuality>Legendary</itemQuality>
+		<weaponMoney>800000~800000</weaponMoney>
+		<weaponTags>
+			<li>GW_GuillimanSword</li>
+		</weaponTags>
+		<apparelTags>
+			<li>GW_GuillimanArmor</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>GW_SM_GuillimanArmor</li>
+			<li>GW_SM_GuillimanBackpack</li>
+			<li>GW_SM_GuillimanShoulderPads</li>
+			<li>GW_SM_GuillimanHelmet</li>
+		</apparelRequired>
+		<initialWillRange>100~100</initialWillRange>
+		<initialResistanceRange>100~100</initialResistanceRange>
+		<humanPregnancyChance>0</humanPregnancyChance>
+        <modExtensions>
+            <li Class="GW4KArmor.DefaultPaletteExtension">
+                <defaultPalette>
+                    <colorA>(56, 93, 162)</colorA>
+                    <colorB>(56, 93, 162)</colorB>
+                    <colorC>(192, 157, 88)</colorC>
+                </defaultPalette>
+            </li>
+        </modExtensions>
+	</PawnKindDef>
+	
+
+</Defs>

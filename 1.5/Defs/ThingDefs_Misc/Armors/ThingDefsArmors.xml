@@ -168,21 +168,16 @@
 		<recipeMaker>
 			<researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
 		</recipeMaker>
-		<equippedStatOffsets>
-			<InjuryHealingFactor>0.5</InjuryHealingFactor>
-			<MentalBreakThreshold>-0.05</MentalBreakThreshold>
-		</equippedStatOffsets>
 		<statBases>
 			<WorkToMake>150000</WorkToMake>
-			<MaxHitPoints>1200</MaxHitPoints>
-			<MarketValue>6000</MarketValue>
+			<MaxHitPoints>2500</MaxHitPoints>
 			<Mass>11</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>1.50</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.83</ArmorRating_Blunt>
-			<ArmorRating_Heat>1.00</ArmorRating_Heat>
-			<Insulation_Cold>40</Insulation_Cold>
-			<Insulation_Heat>14</Insulation_Heat>
+			<ArmorRating_Sharp>4.00</ArmorRating_Sharp>
+			<ArmorRating_Blunt>3.50</ArmorRating_Blunt>
+			<ArmorRating_Heat>3.50</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>20</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType>
@@ -289,7 +284,7 @@
 						<li>GW_SM_ImperialWardenHood</li>
 						<li>GW_SM_ImperialWardenrShoulderPads</li>
 					</allApparels>
-					<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+					<hediff>GW40k_SS_BattleFrenzy_MeleeHood</hediff>
 				</apparelSetEffect>
 			</li>
 			<li Class="BM_ApparelSet.CompProperties_ApparelSet">
@@ -299,7 +294,7 @@
 						<li>GW_SM_ImperialWardenHooded</li>
 						<li>GW_SM_ImperialWardenrShoulderPads</li>
 					</allApparels>
-					<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
+					<hediff>GW40k_SS_BattleFrenzy_MeleeHooded</hediff>
 				</apparelSetEffect>
 			</li>
 		</comps>
@@ -315,24 +310,19 @@
 		<recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
 		</recipeMaker>
-		<equippedStatOffsets>
-			<PainShockThreshold>0.1</PainShockThreshold>
-			<MoveSpeed>0.1</MoveSpeed>
-		</equippedStatOffsets>
 		<statBases>
 			<WorkToMake>150000</WorkToMake>
-			<MaxHitPoints>1200</MaxHitPoints>
-			<MarketValue>6000</MarketValue>
+			<MaxHitPoints>2500</MaxHitPoints>
 			<Mass>11</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>1.50</ArmorRating_Sharp>
-			<ArmorRating_Blunt>0.83</ArmorRating_Blunt>
-			<ArmorRating_Heat>1.00</ArmorRating_Heat>
-			<Insulation_Cold>40</Insulation_Cold>
-			<Insulation_Heat>14</Insulation_Heat>
+			<ArmorRating_Sharp>4.00</ArmorRating_Sharp>
+			<ArmorRating_Blunt>3.50</ArmorRating_Blunt>
+			<ArmorRating_Heat>3.50</ArmorRating_Heat>
+			<Insulation_Cold>20</Insulation_Cold>
+			<Insulation_Heat>20</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
-		<tickerType>Normal</tickerType>
+		<tickerType>Normal</tickerType> 
 		<costList>
 			<ComponentSpacer>40</ComponentSpacer>
 			<ComponentIndustrial>70</ComponentIndustrial>

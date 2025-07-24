@@ -20,8 +20,6 @@ namespace PrimarchAssault
 
         public static GameComponent_ChallengeManager Instance => _game.GetComponent<GameComponent_ChallengeManager>();
 
-        public readonly Dictionary<int, List<GameConditionDef>> ConditionsCreatedByEvent = new Dictionary<int, List<GameConditionDef>>();
-        
         public ChallengeDef QueuedPhaseOne => _queuedPhaseOne;
 
         private ChallengeDef _queuedPhaseOne;

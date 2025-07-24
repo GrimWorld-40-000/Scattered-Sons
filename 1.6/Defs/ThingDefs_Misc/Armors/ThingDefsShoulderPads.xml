@@ -1,0 +1,306 @@
+<Defs>
+
+	 <ApparelLayerDef>
+        <defName>GW_Shoulder</defName>
+        <label>shoulder</label>
+        <drawOrder>550</drawOrder>
+    </ApparelLayerDef>
+
+    <ThingCategoryDef>
+        <defName>GW_ArmorShoulderPad</defName>
+        <label>shoulder pads</label>
+        <parent>ApparelArmor</parent>
+    </ThingCategoryDef>
+	
+	<ThingDef Abstract="true" Name="GW_SS_ShoulderBase" ParentName="ArmorMachineableBase">
+        <techLevel>Spacer</techLevel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>20</Crafting>
+				<Intellectual>15</Intellectual>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>1.10</drawSize>
+		</graphicData>
+		<uiIconScale>1.6</uiIconScale>
+		<equippedStatOffsets>
+			<Beauty>50</Beauty>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>GW_ArmorShoulderPad</li>
+		</thingCategories>
+		<apparel>
+			<tags>
+				<li>RoyalTier7</li>
+			</tags>
+			<drawData>
+				<defaultData>
+					<layer>75</layer> <!--70-77 is over helmet and under gun-->
+				</defaultData>
+                <!--<scale>1.5</scale> Uncomment these to increase size while equipped
+                <childScale>1.5</childScale>-->
+            </drawData>
+			<countsAsClothingForNudity>true</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Neck</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li MayRequire="ceteam.combatextended">Hands</li>
+			</bodyPartGroups>
+			<layers>
+				<li>GW_Shoulder</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+				<li>PrestigeCombatGear</li>
+			</defaultOutfitTags>
+		</apparel>			
+	    <modExtensions>
+            <li Class="CombatExtended.PartialArmorExt" MayRequire="ceteam.combatextended">
+                <stats>		  				  
+                    <li>
+                        <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+                        <parts>
+                            <li>Hand</li>
+                        </parts>
+                    </li>
+                    <li>
+                        <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+                        <parts>
+                            <li>Hand</li>
+                        </parts>
+                    </li>
+                </stats>
+            </li>
+			<li Class="VFECore.ApparelDrawPosExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+				<hideHead>false</hideHead>
+            </li>
+	    </modExtensions>
+    </ThingDef>
+	
+	<ThingDef ParentName="GW_SS_ShoulderBase">
+		<defName>GW_SM_ChapterMasterShoulderPads</defName>
+		<label>Imperial Regent shoulder pads</label>
+		<description>The shoulder plates of the Armor of Fate. On the right shoulder is a golden depiction of the Aquila, the symbol that represents the entire Imperium of Man. On the left is a more decorated version of the Ultramarines insignia - the Greek letter Omega - which symbolizes the chapter he was Primarch of.\n\nThe copies of Guilliman all look like him, talk like him, and fight like him. But despite Belisarius Cawl’s best efforts, they are not him, and perhaps never can be.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Armor_ChapterMaster/Shoulderpads/GuillimanW_shoulders</texPath>
+		</graphicData>
+		<recipeMaker>
+            <researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
+        </recipeMaker>
+		<statBases>
+			<WorkToMake>70000</WorkToMake>
+			<MaxHitPoints>1900</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType> 
+		<equippedStatOffsets>
+			<SocialImpact>2.00</SocialImpact>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>25</ComponentSpacer>
+			<ComponentIndustrial>37</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>450</Plasteel>
+			<Steel>750</Steel>
+			<Uranium>190</Uranium>
+			<HP_Ceramite>310</HP_Ceramite>
+			<HP_Adamantium>220</HP_Adamantium>
+			<HP_Auramite>80</HP_Auramite>
+		</costList>
+		<apparel>
+			<wornGraphicPath>Things/Apparel/Armor_ChapterMaster/Shoulderpads/GuillimanW_shoulders</wornGraphicPath>
+			<tags>
+				<li>GW_ChapterMaster</li>
+			</tags>
+		</apparel>
+		<comps>
+			<li Class="GW4KArmor.CompProperties_TriColorMask">
+				<maskCount>2</maskCount>
+				<palettePresets>GW_SM_ShoulderChapterPalettes</palettePresets>
+				<defaultPalette>
+					<colorA>(250, 176, 67)</colorA>
+					<colorB>(250, 176, 67)</colorB>
+					<colorC>(180, 65, 74)</colorC>
+				</defaultPalette>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_SS_ShoulderBase">
+		<defName>GW_SM_GuillimanShoulderPads</defName>
+		<label>Armor of Fate's Shoulders</label>
+		<description>The shoulder plates of the Armor of Fate. On the right shoulder is a golden depiction of the Aquila, the symbol that represents the entire Imperium of Man. On the left is a more decorated version of the Ultramarines insignia - the Greek letter Omega - which symbolizes the chapter he was Primarch of.\n\nThe copies of Guilliman all look like him, talk like him, and fight like him. But despite Belisarius Cawl’s best efforts, they are not him, and perhaps never can be.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Armor_Guilliman/Shoulderpads/GuillimanC_shoulders</texPath>
+		</graphicData>
+		<recipeMaker>
+            <researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
+        </recipeMaker>
+		<statBases>
+			<WorkToMake>70000</WorkToMake>
+			<MaxHitPoints>900</MaxHitPoints>
+			<MarketValue>1400</MarketValue>
+			<Mass>2</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>.70</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>.45</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType> 
+		<equippedStatOffsets>
+			<SocialImpact>.20</SocialImpact>
+			<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>25</ComponentSpacer>
+			<ComponentIndustrial>37</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>450</Plasteel>
+			<Steel>750</Steel>
+			<Uranium>190</Uranium>
+			<HP_Ceramite>310</HP_Ceramite>
+			<HP_Adamantium>220</HP_Adamantium>
+			<HP_Auramite>80</HP_Auramite>
+		</costList>
+		<apparel>
+			<wornGraphicPath>Things/Apparel/Armor_Guilliman/Shoulderpads/GuillimanC_shoulders</wornGraphicPath>
+			<tags>
+				<li>GW_Guilliman</li>
+			</tags>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_Biocodable">
+				<biocodeOnEquip>True</biocodeOnEquip>
+			</li>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_SS_ShoulderBase">
+		<defName>GW_SM_ImperialWardenrShoulderPads</defName>
+		<label>Imperial Warden shoulders</label>
+		<description>The shoulder pads of Lion El’Jonson, also known as The Lion. Sure enough, the right shoulder bears an ornate depiction of a lion’s head, while the left shoulder has a more ornate version of the Dark Angels insignia - a sword with wings.\n\nThe Lion was raised on the planet of Caliban, a beautiful yet Warp-tainted world due to its proximity to the Eye of Terror, a giant Chaos rift. Orders of noble knights ruled the world and did battle with the Great Beasts of the forest, until Lion El’Jonson united the various knightly orders and wiped out the Great Beasts for good.</description>
+		<graphicData>
+			<texPath>Things/Apparel/ImperialWardenr/Display/LionW_shoulders</texPath>
+		</graphicData>
+		<recipeMaker>
+            <researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+        </recipeMaker>
+		<statBases>
+			<WorkToMake>70000</WorkToMake>
+			<MaxHitPoints>1900</MaxHitPoints>
+			<Mass>4</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>2.00</SocialImpact>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>25</ComponentSpacer>
+			<ComponentIndustrial>37</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>450</Plasteel>
+			<Steel>750</Steel>
+			<Uranium>190</Uranium>
+			<HP_Ceramite>310</HP_Ceramite>
+			<HP_Adamantium>220</HP_Adamantium>
+			<HP_Auramite>80</HP_Auramite>
+		</costList>
+		<apparel>
+			<wornGraphicPath>Things/Apparel/ImperialWardenr/Shoulders/LionW_shoulders</wornGraphicPath>
+			<tags>
+				<li>GW_ImperialWardenr</li>
+			</tags>
+		</apparel>
+		<comps>
+			<li Class="GW4KArmor.CompProperties_TriColorMask">
+				<maskCount>3</maskCount>
+				<palettePresets>GW_SM_ShoulderChapterPalettes</palettePresets>
+				<defaultPalette>
+					<colorA>(250, 176, 67)</colorA>
+					<colorB>(250, 176, 67)</colorB>
+					<colorC>(180, 65, 74)</colorC>
+				</defaultPalette>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_SS_ShoulderBase">
+		<defName>GW_SM_LionArmorShoulderPads</defName>
+		<label>Lion's Shoulders</label>
+		<description>The shoulder pads of Lion El’Jonson, also known as The Lion. Sure enough, the right shoulder bears an ornate depiction of a lion’s head, while the left shoulder has a more ornate version of the Dark Angels insignia - a sword with wings.\n\nThe Lion was raised on the planet of Caliban, a beautiful yet Warp-tainted world due to its proximity to the Eye of Terror, a giant Chaos rift. Orders of noble knights ruled the world and did battle with the Great Beasts of the forest, until Lion El’Jonson united the various knightly orders and wiped out the Great Beasts for good.</description>
+		<graphicData>
+			<texPath>Things/Apparel/LionArmor/Shoulderpads/LionC_shoulders</texPath>
+		</graphicData>
+		<recipeMaker>
+            <researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+        </recipeMaker>
+		<statBases>
+			<WorkToMake>70000</WorkToMake>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<MarketValue>1400</MarketValue>
+			<Mass>2</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>.70</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.45</ArmorRating_Blunt>
+			<ArmorRating_Heat>.45</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType> 
+		<equippedStatOffsets>
+			<SocialImpact>.20</SocialImpact>
+			<MoveSpeed>.1</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>25</ComponentSpacer>
+			<ComponentIndustrial>37</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>450</Plasteel>
+			<Steel>750</Steel>
+			<Uranium>190</Uranium>
+			<HP_Ceramite>310</HP_Ceramite>
+			<HP_Adamantium>220</HP_Adamantium>
+			<HP_Auramite>80</HP_Auramite>
+		</costList>
+		<apparel>
+			<wornGraphicPath>Things/Apparel/LionArmor/Shoulderpads/LionC_shoulders</wornGraphicPath>
+			<tags>
+				<li>LionArmor</li>
+			</tags>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_Biocodable">
+				<biocodeOnEquip>True</biocodeOnEquip>
+			</li>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+		</comps>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,544 @@
+<Defs>
+	
+	<ThingDef Abstract="true" Name="GW_ScatteredSonsHelmetBase" ParentName="ArmorHelmetMakeableBase">
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>20</Crafting>
+				<Intellectual>15</Intellectual>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<uiIconScale>1.6</uiIconScale>
+		<equippedStatOffsets>
+			<Beauty>50</Beauty>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
+		</equippedStatOffsets>
+		<apparel>
+			<drawData>
+				<dataNorth>
+					<offset>(0.0, 0.1, 0.0)</offset>
+				</dataNorth>
+				<dataSouth>
+					<offset>(0.0, 0.001, 0.0)</offset>
+				</dataSouth>
+                <!--<scale>1.5</scale> Uncomment these to increase size while equipped
+                <childScale>1.5</childScale>-->
+            </drawData>
+			<tags>
+				<li>Spacer</li>
+				<li>EVA</li>
+				<li>RoyalTier7</li>
+				<li>PrestigeCombatGear</li>
+			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<layers>
+				<li>EyeCover</li>
+				<li MayRequire="ceteam.combatextended">StrappedHead</li>
+				<li MayRequire="ceteam.combatextended">OnHead</li>
+				<li>Overhead</li> <!--Needs to be last for the tool to properly label this a helmet-->
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>		
+		<comps>
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+    </ThingDef>
+	
+	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+		<defName>GW_SM_ChapterMasterHelmet</defName>
+		<label>Imperial Regent helmet</label>
+		<description>A helmet built for the Armor of Fate. While not commonly worn, as the Lord Commander of the Imperium generally wished to show his face to spur on his armies, it is just as protective as the armor itself is. \n\nAt first unknown to the fleet, the tech-priests here are also field-testing a project created by Belisarius Cawl. The goal of this project is to recreate the Primarchs using the best candidates available, giving the Imperium the leadership it needs to survive. \n\nSo far, he has been disappointed.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Armor_ChapterMaster/Helmet/GuillimanW_helmet</texPath>
+		</graphicData>
+		<uiIconPath>Things/Apparel/Armor_ChapterMaster/Helmet/GuillimanW_helmet</uiIconPath>
+		<apparel>
+			<tags>
+				<li>GW_ChapterMaster</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/Armor_ChapterMaster/Helmet/GuillimanW_helmet</wornGraphicPath>
+		</apparel>		
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<AimingDelayFactor>-0.3</AimingDelayFactor>
+			<SocialImpact>1.00</SocialImpact>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<GW_ComponentRelic>1</GW_ComponentRelic>
+			<Plasteel>400</Plasteel>
+			<Steel>600</Steel>
+			<Uranium>100</Uranium>
+			<HP_Ceramite>300</HP_Ceramite>
+			<HP_Adamantium>240</HP_Adamantium>
+			<HP_Auramite>110</HP_Auramite>
+		</costList>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>2500</MaxHitPoints>
+			<Mass>2</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>3.00</ArmorRating_Sharp>
+			<ArmorRating_Blunt>2.50</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.70</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType> 
+		<recipeMaker>
+			<researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
+		</recipeMaker>
+		<comps>
+			<li Class="GW4KArmor.CompProperties_TriColorMask">
+				<maskCount>2</maskCount>
+				<palettePresets>GW_SM_HelmetChapterPalettes</palettePresets>
+				<defaultPalette>
+					<colorA>(250, 176, 67)</colorA>
+					<colorB>(250, 176, 67)</colorB>
+					<colorC>(180, 65, 74)</colorC>
+				</defaultPalette>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+		<defName>GW_SM_GuillimanHelmet</defName>
+		<label>Armor of Fate's helmet</label>
+		<description>A helmet built for the Armor of Fate. While not commonly worn, as the Lord Commander of the Imperium generally wished to show his face to spur on his armies, it is just as protective as the armor itself is. \n\nAt first unknown to the fleet, the tech-priests here are also field-testing a project created by Belisarius Cawl. The goal of this project is to recreate the Primarchs using the best candidates available, giving the Imperium the leadership it needs to survive. \n\nSo far, he has been disappointed.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Armor_Guilliman/Helmet/GuillimanC_helmet</texPath>			
+		</graphicData>
+		<uiIconPath>Things/Apparel/Armor_Guilliman/Helmet/GuillimanC_helmet</uiIconPath>
+		<apparel>
+			<tags>
+				<li>GW_Guilliman</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/Armor_Guilliman/Helmet/GuillimanC_helmet</wornGraphicPath>
+		</apparel>		
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
+			<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+		</equippedStatOffsets>
+		<tickerType>Normal</tickerType> 
+		<costList>
+			<ComponentSpacer>20</ComponentSpacer>
+			<ComponentIndustrial>45</ComponentIndustrial>
+			<GW_ComponentRelic>1</GW_ComponentRelic>
+			<Plasteel>400</Plasteel>
+			<Steel>600</Steel>
+			<Uranium>100</Uranium>
+			<HP_Ceramite>300</HP_Ceramite>
+			<HP_Adamantium>240</HP_Adamantium>
+			<HP_Auramite>110</HP_Auramite>
+		</costList>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>850</MaxHitPoints>
+			<MarketValue>1600</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Biocodable">
+				<biocodeOnEquip>True</biocodeOnEquip>
+			</li>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Imperial Warden Hood -->
+	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+		<defName>GW_SM_ImperialWardenHood</defName>
+		<label>Imperial Warden hood</label>
+		<description>A non-standard hood worn by some copies of the Lion. Though not as protective as the helmet the armor is supposed to be worn with, some of the Primarchs insist on wearing them instead. \n\nThe false Primarchs are selected only from the best Space Marines, and receive the best possible treatment and equipment. However, they also undergo a death of personality, their minds obliterated and replaced by that of the Primarch they imitate.</description>
+		<graphicData>
+			<texPath>Things/Apparel/ImperialWardenr/Display/LionW_hood</texPath>
+		</graphicData>
+		<uiIconPath>Things/Apparel/ImperialWardenr/Display/LionW_hood</uiIconPath>
+		<apparel>
+			<tags>
+				<li>GW_ImperialWardenr</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/ImperialWardenr/Head_Hood/LionW_hood</wornGraphicPath>
+		</apparel>		
+		<equippedStatOffsets>
+			<SocialImpact>1.00</SocialImpact>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<GW_ComponentRelic>1</GW_ComponentRelic>
+			<Plasteel>400</Plasteel>
+			<Steel>600</Steel>
+			<Uranium>100</Uranium>
+			<HP_Ceramite>300</HP_Ceramite>
+			<HP_Adamantium>240</HP_Adamantium>
+			<HP_Auramite>110</HP_Auramite>
+		</costList>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>2500</MaxHitPoints>
+			<Mass>2</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>3.00</ArmorRating_Sharp>
+			<ArmorRating_Blunt>2.50</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.70</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+		</recipeMaker>
+		<comps>
+			<li Class="GW4KArmor.CompProperties_TriColorMask">
+				<maskCount>2</maskCount>
+				<palettePresets>GW_SM_HelmetChapterPalettes</palettePresets>
+				<defaultPalette>
+					<colorA>(250, 176, 67)</colorA>
+					<colorB>(250, 176, 67)</colorB>
+					<colorC>(180, 65, 74)</colorC>
+				</defaultPalette>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Imperial Warden Hooded -->
+	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+		<defName>GW_SM_ImperialWardenHooded</defName>
+		<label>Imperial Warden hooded helmet</label>
+		<description>A modified helmet worn with a hood. A sort of compromise, this helmet strikes a balance between protection and the wearer’s wishes for a hood. \n\nEvery Primarch slain on the rimworlds is another crippling blow to the isolated Imperial fleet. It only serves to remind them that the real Primarchs are either dead or far away - their true gene-fathers would not have fallen to mere techno-barbarians.</description>
+		<graphicData>
+			<texPath>Things/Apparel/ImperialWardenr/Display/LionW_hooded</texPath>
+		</graphicData>
+		<uiIconPath>Things/Apparel/ImperialWardenr/Display/LionW_hooded</uiIconPath>
+		<apparel>
+			<tags>
+				<li>GW_ImperialWardenr</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/ImperialWardenr/Head_Hooded/LionW_hooded</wornGraphicPath>
+		</apparel>		
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<AimingDelayFactor>-0.3</AimingDelayFactor>
+			<SocialImpact>1.00</SocialImpact>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<GW_ComponentRelic>1</GW_ComponentRelic>
+			<Plasteel>400</Plasteel>
+			<Steel>600</Steel>
+			<Uranium>100</Uranium>
+			<HP_Ceramite>300</HP_Ceramite>
+			<HP_Adamantium>240</HP_Adamantium>
+			<HP_Auramite>110</HP_Auramite>
+		</costList>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>2500</MaxHitPoints>
+			<Mass>2</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>3.00</ArmorRating_Sharp>
+			<ArmorRating_Blunt>2.50</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.70</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+		</recipeMaker>
+		<comps>
+			<li Class="GW4KArmor.CompProperties_TriColorMask">
+				<maskCount>3</maskCount>
+				<palettePresets>GW_SM_HelmetChapterPalettes</palettePresets>
+				<defaultPalette>
+					<colorA>(250, 176, 67)</colorA>
+					<colorB>(250, 176, 67)</colorB>
+					<colorC>(180, 65, 74)</colorC>
+				</defaultPalette>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<!-- Imperial Warden Hooded -->
+	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+		<defName>GW_SM_ImperialWardenHelmet</defName>
+		<label>Imperial Warden helmet</label>
+		<description>A magnificent, winged helmet worn with the Lion’s armor. The great wings only add to the Primarch’s towering stature, inspiring awe and terror in enemy ranks.\n\nAfter a Horus Heresy-era civil war within the Dark Angels and the defeat of Luther, the Arch-Betrayer, the Lion was rendered comatose and Caliban destroyed. It was only ten thousand years later that the Lion awoke to a much-decayed Imperium, and set out trying to save it.</description>
+		<graphicData>
+			<texPath>Things/Apparel/ImperialWardenr/Head_Helmet/LionW_helmet</texPath>
+		</graphicData>
+		<uiIconPath>Things/Apparel/ImperialWardenr/Head_Helmet/LionW_helmet</uiIconPath>
+		<apparel>
+			<drawData>
+				<defaultData>
+					<offset>(0.0, 0.0, 0.25)</offset>
+				</defaultData>
+				<dataNorth>
+					<offset>(0.0, 0.1, 0.25)</offset>
+				</dataNorth>
+				<dataSouth>
+					<offset>(0.0, 0.001, 0.25)</offset>
+				</dataSouth>
+                <!--<scale>1.5</scale> Uncomment these to increase size while equipped
+                <childScale>1.5</childScale>-->
+            </drawData>
+			<tags>
+				<li>GW_ImperialWardenr</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/ImperialWardenr/Head_Helmet/LionW_helmet</wornGraphicPath>
+		</apparel>		
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<AimingDelayFactor>-0.3</AimingDelayFactor>
+			<SocialImpact>1.00</SocialImpact>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<GW_ComponentRelic>1</GW_ComponentRelic>
+			<Plasteel>400</Plasteel>
+			<Steel>600</Steel>
+			<Uranium>100</Uranium>
+			<HP_Ceramite>300</HP_Ceramite>
+			<HP_Adamantium>240</HP_Adamantium>
+			<HP_Auramite>110</HP_Auramite>
+		</costList>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>2500</MaxHitPoints>
+			<Mass>2</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>3.00</ArmorRating_Sharp>
+			<ArmorRating_Blunt>2.50</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.70</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+		</recipeMaker>
+		<comps>
+			<li Class="GW4KArmor.CompProperties_TriColorMask">
+				<maskCount>6</maskCount>
+				<palettePresets>GW_SM_HelmetChapterPalettes</palettePresets>
+				<defaultPalette>
+					<colorA>(250, 176, 67)</colorA>
+					<colorB>(250, 176, 67)</colorB>
+					<colorC>(180, 65, 74)</colorC>
+				</defaultPalette>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+		<defName>GW_SM_LionArmorHood</defName>
+		<label>Lion's Hood</label>
+		<description>A non-standard hood worn by some copies of the Lion. Though not as protective as the helmet the armor is supposed to be worn with, some of the Primarchs insist on wearing them instead. \n\nThe false Primarchs are selected only from the best Space Marines, and receive the best possible treatment and equipment. However, they also undergo a death of personality, their minds obliterated and replaced by that of the Primarch they imitate.</description>
+		<graphicData>
+			<texPath>Things/Apparel/LionArmor/Helmet/LionC_hood</texPath>			
+		</graphicData>
+		<uiIconPath>Things/Apparel/LionArmor/Helmet/LionC_hood</uiIconPath>
+		<apparel>
+			<tags>
+				<li>LionArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/LionArmor/Helmet/LionC_hood</wornGraphicPath>
+		</apparel>		
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
+			<MoveSpeed>0.1</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>20</ComponentSpacer>
+			<ComponentIndustrial>45</ComponentIndustrial>
+			<GW_ComponentRelic>1</GW_ComponentRelic>
+			<Plasteel>400</Plasteel>
+			<Steel>600</Steel>
+			<Uranium>100</Uranium>
+			<HP_Ceramite>300</HP_Ceramite>
+			<HP_Adamantium>240</HP_Adamantium>
+			<HP_Auramite>110</HP_Auramite>
+		</costList>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>850</MaxHitPoints>
+			<MarketValue>1600</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType> 
+		<recipeMaker>
+			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Biocodable">
+				<biocodeOnEquip>True</biocodeOnEquip>
+			</li>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+		<defName>GW_SM_LionArmorHooded</defName>
+		<label>Lion's Hooded Helmet</label>
+		<description>A modified helmet worn with a hood. A sort of compromise, this helmet strikes a balance between protection and the wearer’s wishes for a hood. \n\nEvery Primarch slain on the rimworlds is another crippling blow to the isolated Imperial fleet. It only serves to remind them that the real Primarchs are either dead or far away - their true gene-fathers would not have fallen to mere techno-barbarians.</description>
+		<graphicData>
+			<texPath>Things/Apparel/LionArmor/Helmet/LionC_hooded</texPath>			
+		</graphicData>
+		<uiIconPath>Things/Apparel/LionArmor/Helmet/LionC_hooded</uiIconPath>
+		<apparel>
+			<tags>
+				<li>LionArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/LionArmor/Helmet/LionC_hooded</wornGraphicPath>
+		</apparel>		
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
+			<MoveSpeed>0.1</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>20</ComponentSpacer>
+			<ComponentIndustrial>45</ComponentIndustrial>
+			<GW_ComponentRelic>1</GW_ComponentRelic>
+			<Plasteel>400</Plasteel>
+			<Steel>600</Steel>
+			<Uranium>100</Uranium>
+			<HP_Ceramite>300</HP_Ceramite>
+			<HP_Adamantium>240</HP_Adamantium>
+			<HP_Auramite>110</HP_Auramite>
+		</costList>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>850</MaxHitPoints>
+			<MarketValue>1600</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType> 
+		<recipeMaker>
+			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Biocodable">
+				<biocodeOnEquip>True</biocodeOnEquip>
+			</li>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GW_ScatteredSonsHelmetBase">
+		<defName>GW_SM_LionArmorHelmet</defName>
+		<label>Lion's Helmet</label>
+		<description>A magnificent, winged helmet worn with the Lion’s armor. The great wings only add to the Primarch’s towering stature, inspiring awe and terror in enemy ranks.\n\nAfter a Horus Heresy-era civil war within the Dark Angels and the defeat of Luther, the Arch-Betrayer, the Lion was rendered comatose and Caliban destroyed. It was only ten thousand years later that the Lion awoke to a much-decayed Imperium, and set out trying to save it.</description>
+		<graphicData>
+			<texPath>Things/Apparel/LionArmor/Helmet/LionC_helmet</texPath>			
+		</graphicData>
+		<uiIconPath>Things/Apparel/LionArmor/Helmet/LionC_helmet</uiIconPath>
+		<apparel>
+			<drawData>
+				<defaultData>
+					<offset>(0.0, 0.0, 0.25)</offset>
+				</defaultData>
+				<dataNorth>
+					<offset>(0.0, 0.1, 0.25)</offset>
+				</dataNorth>
+				<dataSouth>
+					<offset>(0.0, 0.001, 0.25)</offset>
+				</dataSouth>
+                <!--<scale>1.5</scale> Uncomment these to increase size while equipped
+                <childScale>1.5</childScale>-->
+            </drawData>
+			<tags>
+				<li>LionArmor</li>
+			</tags>
+			<wornGraphicPath>Things/Apparel/LionArmor/Helmet/LionC_helmet</wornGraphicPath>
+		</apparel>		
+		<equippedStatOffsets>
+			<ToxicEnvironmentResistance>0.75</ToxicEnvironmentResistance>
+			<MoveSpeed>0.1</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>20</ComponentSpacer>
+			<ComponentIndustrial>45</ComponentIndustrial>
+			<GW_ComponentRelic>1</GW_ComponentRelic>
+			<Plasteel>400</Plasteel>
+			<Steel>600</Steel>
+			<Uranium>100</Uranium>
+			<HP_Ceramite>300</HP_Ceramite>
+			<HP_Adamantium>240</HP_Adamantium>
+			<HP_Auramite>110</HP_Auramite>
+		</costList>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<MaxHitPoints>850</MaxHitPoints>
+			<MarketValue>1600</MarketValue>
+			<Mass>1</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.65</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.74</ArmorRating_Heat>
+			<Insulation_Cold>10</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType> 
+		<recipeMaker>
+			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Biocodable">
+				<biocodeOnEquip>True</biocodeOnEquip>
+			</li>
+			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+		</comps>
+	</ThingDef>
+
+</Defs>

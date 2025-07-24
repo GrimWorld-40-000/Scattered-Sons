@@ -1,0 +1,55 @@
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Even More Linkables</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="GW_SM_ScatteredSons_ArmorBench"]/comps</xpath>
+      <value>	  
+			<li Class="CompProperties_AffectedByFacilities">
+					<linkableFacilities>
+						<li>HobbesLink_CNCMachine</li>
+						<li>HobbesLink_3DPrinter</li>
+						<li>HobbesLink_RobotAssistant</li>
+						<li>HobbesLink_Lathe</li>
+						<li>HobbesLink_Spacer_Lathe</li>
+						<li>HobbesLink_Vice</li>
+						<li>HobbesLink_ConveyorBelt</li>
+						<li>HobbesLink_IndustrialOven</li>
+						<li>HobbesLink_Centrifuge</li>
+						<li>HobbesLink_LaserEngraver</li>
+						<li>HobbesLink_Incinerator</li>
+					</linkableFacilities>
+				</li>
+      </value>
+    </match>
+  </Operation>
+	<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Even More Linkables</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="GW_SM_ScatteredSons_WeaponBench"]/comps</xpath>
+      <value>	  
+			<li Class="CompProperties_AffectedByFacilities">
+					<linkableFacilities>
+						<li>HobbesLink_CNCMachine</li>
+						<li>HobbesLink_3DPrinter</li>
+						<li>HobbesLink_RobotAssistant</li>
+						<li>HobbesLink_Lathe</li>
+						<li>HobbesLink_Spacer_Lathe</li>
+						<li>HobbesLink_Vice</li>
+						<li>HobbesLink_ConveyorBelt</li>
+						<li>HobbesLink_IndustrialOven</li>
+						<li>HobbesLink_Centrifuge</li>
+						<li>HobbesLink_LaserEngraver</li>
+						<li>HobbesLink_Incinerator</li>
+					</linkableFacilities>
+				</li>
+      </value>
+    </match>
+  </Operation>
+
+
+</Patch>

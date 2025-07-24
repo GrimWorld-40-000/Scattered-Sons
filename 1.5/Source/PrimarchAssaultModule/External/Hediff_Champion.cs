@@ -43,20 +43,6 @@ namespace PrimarchAssault.External
             //Trigger all on-kill effects
             _stages?.Where(stage => stage is ChampionEventStage { triggerOnChampionKilled: true }).Do(stage => stage.Apply(pawn, pawn.Corpse.Map)) ;
 
-
-            if (pawn.MapHeld != null)
-            {
-	            if (GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent.ContainsKey(pawn.MapHeld.info.Tile))
-	            {
-		            foreach (GameCondition condition in GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent[pawn.MapHeld.info.Tile].SelectMany(conditionDef => pawn.MapHeld.gameConditionManager.ActiveConditions.Where(condition => condition.def == conditionDef)))
-		            {
-			            condition.End();
-		            }
-	            }
-            }
-            
-            
-            
             if (_droppedThing != null) GenSpawn.Spawn(_droppedThing, pawn.Position, pawn.Corpse.Map);
 
             if (_doesQueuePhaseTwo)

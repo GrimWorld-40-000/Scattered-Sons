@@ -1,0 +1,177 @@
+<Defs>
+	<HediffDef>
+		<defName>GWPA_Champion</defName>
+		<hediffClass>PrimarchAssault.External.Hediff_Champion</hediffClass>
+		<label>champion</label>
+		<description>This pawn is the leader of a champion assault.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+                <becomeVisible>false</becomeVisible>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<Flammability>0</Flammability>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>GWPA_ArmorFlinch</defName>
+		<hediffClass>PrimarchAssault.External.Hediff_ArmorFlinch</hediffClass>
+		<label>armor flinch</label>
+		<description>Completely absorbed damage causes minor bruising under armor which can eventually kill.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+                <becomeVisible>false</becomeVisible>
+				<minSeverity>1</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>GWPA_RallyingCry</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>rallying cry</label>
+		<description>This pawn is boosting the power of nearby pawns.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+                <becomeVisible>true</becomeVisible>
+				<minSeverity>1</minSeverity>
+			</li>
+		</stages>
+		<comps>
+			<li Class="PrimarchAssault.Abilities.HediffCompProperties_RallyingCry">
+				<rallyHediff>GWPA_Rallied</rallyHediff>
+				<rallyRange>30</rallyRange>
+			</li>
+		</comps>
+		
+	</HediffDef>
+
+
+
+	
+	
+	<HediffDef>
+		<defName>GWPA_Rallied</defName>
+		<label>rallied</label>
+		<description>The call of your leader is inspiring you to fight.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(85, 196, 109)</defaultLabelColor>
+		<initialSeverity>1</initialSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+				<disappearsAfterTicks>2500</disappearsAfterTicks>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>1.3</MoveSpeed>
+					<ShootingAccuracyPawn>1.3</ShootingAccuracyPawn>
+					<MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+					<IncomingDamageFactor>0.8</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+
+	<HediffDef>
+		<defName>GWPA_Rage</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>rage</label>
+		<description>Pure rage is driving this pawn forward.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+                <becomeVisible>true</becomeVisible>
+				<minSeverity>1</minSeverity>
+				<statFactors>
+					<MoveSpeed>1.5</MoveSpeed>
+					<ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+					<RestFallRateFactor>1.2</RestFallRateFactor>
+					<MeleeWeapon_CooldownMultiplier>0.7</MeleeWeapon_CooldownMultiplier>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="PrimarchAssault.Abilities.HediffCompProperties_Rage" />
+		</comps>
+	</HediffDef>
+
+
+
+	
+	<HediffDef>
+		<defName>GWPA_PowerHealing</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>power healing</label>
+		<description>Painkillers, nanomachines, and a drug cocktail potent enough to kill a thrumbo are being used to rapidly repair tissue and stitch this pawn back together.</description>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks>900</disappearsAfterTicks> <!-- 15 seconds -->
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+		</comps>
+		<stages>
+		  <li>
+			<minSeverity>0</minSeverity>
+			<regeneration>20000</regeneration>
+			<statFactors>
+				<MoveSpeed>0.01</MoveSpeed>
+				<ShootingAccuracyPawn>0.2</ShootingAccuracyPawn>
+				<MeleeWeapon_CooldownMultiplier>10</MeleeWeapon_CooldownMultiplier>
+				<IncomingDamageFactor>0.8</IncomingDamageFactor>
+			</statFactors>
+		  </li>
+		</stages>
+	</HediffDef>
+
+	  
+	<HediffDef ParentName="DiseaseBase">
+		<defName>GPWA_PsychicStormSuppression</defName>
+		<label>psychic storm</label>
+		<description>The effect of a psychic storm. Conscious is dulled and neural entropy will build up wildly.</description>
+		<isBad>true</isBad>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="HediffCompProperties">
+				<compClass>PrimarchAssault.External.HediffComp_PsychicStormSuppression</compClass>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMaxCurveOverride>
+						<points>
+							<li>0, 1</li>
+							<li>1, 0.75</li>
+						</points>
+						</setMaxCurveOverride>
+						<setMaxCurveEvaluateStat>PsychicSensitivity</setMaxCurveEvaluateStat>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

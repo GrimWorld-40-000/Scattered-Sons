@@ -1,0 +1,8 @@
+<Defs>
+  <SongDef>
+    <defName>GWPA_PrimarchAssault</defName>
+    <clipPath>Songs/PrimarchAssaultTheme</clipPath>
+    <volume>1.00</volume>
+    <commonality>0</commonality>
+  </SongDef>
+</Defs>
