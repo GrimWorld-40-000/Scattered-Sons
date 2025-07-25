@@ -98,16 +98,16 @@
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
 			</li>
-			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit" />
-			<li Class="GW4KArmor.CompProperties_TriColorMask">
-				<maskCount>3</maskCount>
-				<palettePresets>GW_CS_ShoulderChapterPalettesCustodes</palettePresets>
-				<defaultPalette>
-					<colorA>(199, 160, 82)</colorA>
-					<colorB>(149, 38, 34)</colorB>
-					<colorC>(85, 194, 206)</colorC>
-				</defaultPalette>
-			</li>
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit" /> -->
+			<!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+				<!-- <maskCount>3</maskCount> -->
+				<!-- <palettePresets>GW_CS_ShoulderChapterPalettesCustodes</palettePresets> -->
+				<!-- <defaultPalette> -->
+					<!-- <colorA>(199, 160, 82)</colorA> -->
+					<!-- <colorB>(149, 38, 34)</colorB> -->
+					<!-- <colorC>(85, 194, 206)</colorC> -->
+				<!-- </defaultPalette> -->
+			<!-- </li> -->
 			<li Class="GWParryShield.CompProperties_GW_Parryable">
 				<parryHediff>GW_LionsParry</parryHediff><!-- the parry hediff-->
 				<parryChance>0.20</parryChance> <!-- 0.20 = 20% -->
@@ -116,7 +116,7 @@
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
 			</li>
@@ -203,7 +203,7 @@
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
 			</li>
-			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit" />
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit" /> -->
 			<li Class="GWParryShield.CompProperties_GW_Parryable">
 				<parryHediff>GW_LionsParry</parryHediff><!-- the parry hediff-->
 				<parryChance>0.50</parryChance> <!-- 0.20 = 20% -->
@@ -212,7 +212,7 @@
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
 			</li>

@@ -22,6 +22,7 @@
 			<Beauty>50</Beauty>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
 			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.6</VacuumResistance>
 		</equippedStatOffsets>
 		<apparel>
 			<drawData>
@@ -109,15 +110,15 @@
 			<researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
 		</recipeMaker>
 		<comps>
-			<li Class="GW4KArmor.CompProperties_TriColorMask">
-				<maskCount>2</maskCount>
-				<palettePresets>GW_SM_HelmetChapterPalettes</palettePresets>
-				<defaultPalette>
-					<colorA>(250, 176, 67)</colorA>
-					<colorB>(250, 176, 67)</colorB>
-					<colorC>(180, 65, 74)</colorC>
-				</defaultPalette>
-			</li>
+			<!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+				<!-- <maskCount>2</maskCount> -->
+				<!-- <palettePresets>GW_SM_HelmetChapterPalettes</palettePresets> -->
+				<!-- <defaultPalette> -->
+					<!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+				<!-- </defaultPalette> -->
+			<!-- </li> -->
 		</comps>
 	</ThingDef>
 	
@@ -171,7 +172,7 @@
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
 			</li>
-			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
 		</comps>
 	</ThingDef>
 	
@@ -221,15 +222,15 @@
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
 		</recipeMaker>
 		<comps>
-			<li Class="GW4KArmor.CompProperties_TriColorMask">
-				<maskCount>2</maskCount>
-				<palettePresets>GW_SM_HelmetChapterPalettes</palettePresets>
-				<defaultPalette>
-					<colorA>(250, 176, 67)</colorA>
-					<colorB>(250, 176, 67)</colorB>
-					<colorC>(180, 65, 74)</colorC>
-				</defaultPalette>
-			</li>
+			<!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+				<!-- <maskCount>2</maskCount> -->
+				<!-- <palettePresets>GW_SM_HelmetChapterPalettes</palettePresets> -->
+				<!-- <defaultPalette> -->
+					<!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+				<!-- </defaultPalette> -->
+			<!-- </li> -->
 		</comps>
 	</ThingDef>
 	
@@ -281,15 +282,15 @@
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
 		</recipeMaker>
 		<comps>
-			<li Class="GW4KArmor.CompProperties_TriColorMask">
-				<maskCount>3</maskCount>
-				<palettePresets>GW_SM_HelmetChapterPalettes</palettePresets>
-				<defaultPalette>
-					<colorA>(250, 176, 67)</colorA>
-					<colorB>(250, 176, 67)</colorB>
-					<colorC>(180, 65, 74)</colorC>
-				</defaultPalette>
-			</li>
+			<!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+				<!-- <maskCount>3</maskCount> -->
+				<!-- <palettePresets>GW_SM_HelmetChapterPalettes</palettePresets> -->
+				<!-- <defaultPalette> -->
+					<!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+				<!-- </defaultPalette> -->
+			<!-- </li> -->
 		</comps>
 	</ThingDef>
 	
@@ -354,15 +355,15 @@
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
 		</recipeMaker>
 		<comps>
-			<li Class="GW4KArmor.CompProperties_TriColorMask">
-				<maskCount>6</maskCount>
-				<palettePresets>GW_SM_HelmetChapterPalettes</palettePresets>
-				<defaultPalette>
-					<colorA>(250, 176, 67)</colorA>
-					<colorB>(250, 176, 67)</colorB>
-					<colorC>(180, 65, 74)</colorC>
-				</defaultPalette>
-			</li>
+			<!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+				<!-- <maskCount>6</maskCount> -->
+				<!-- <palettePresets>GW_SM_HelmetChapterPalettes</palettePresets> -->
+				<!-- <defaultPalette> -->
+					<!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+				<!-- </defaultPalette> -->
+			<!-- </li> -->
 		</comps>
 	</ThingDef>
 	
@@ -416,7 +417,7 @@
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
 			</li>
-			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
 		</comps>
 	</ThingDef>
 	
@@ -470,7 +471,7 @@
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
 			</li>
-			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
 		</comps>
 	</ThingDef>
 	
@@ -537,7 +538,7 @@
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
 			</li>
-			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
 		</comps>
 	</ThingDef>
 

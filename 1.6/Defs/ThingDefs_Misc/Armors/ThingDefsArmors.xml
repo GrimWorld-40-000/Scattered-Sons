@@ -26,6 +26,7 @@
 			<Beauty>50</Beauty>			
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
 			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.2</VacuumResistance>
 		</equippedStatOffsets>
 		<apparel>
 			<drawData>
@@ -72,7 +73,7 @@
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
 			</li>
@@ -136,15 +137,15 @@
 			</tags>
 		</apparel>
 		<comps>
-			<li Class="GW4KArmor.CompProperties_TriColorMask">
-				<maskCount>4</maskCount>
-				<palettePresets>GW_SM_TorsoChapterPalettes</palettePresets>
-				<defaultPalette>
-					<colorA>(250, 176, 67)</colorA>
-					<colorB>(250, 176, 67)</colorB>
-					<colorC>(180, 65, 74)</colorC>
-				</defaultPalette>
-			</li>
+			<!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+				<!-- <maskCount>4</maskCount> -->
+				<!-- <palettePresets>GW_SM_TorsoChapterPalettes</palettePresets> -->
+				<!-- <defaultPalette> -->
+					<!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+				<!-- </defaultPalette> -->
+			<!-- </li> -->
 			<li Class="BM_ApparelSet.CompProperties_ApparelSet">
 				<apparelSetEffect>
 					<allApparels>
@@ -262,15 +263,15 @@
 			</tags>
 		</apparel>
 		<comps>
-			<li Class="GW4KArmor.CompProperties_TriColorMask">
-				<maskCount>4</maskCount>
-				<palettePresets>GW_SM_TorsoChapterPalettes</palettePresets>
-				<defaultPalette>
-					<colorA>(250, 176, 67)</colorA>
-					<colorB>(250, 176, 67)</colorB>
-					<colorC>(180, 65, 74)</colorC>
-				</defaultPalette>
-			</li>
+			<!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+				<!-- <maskCount>4</maskCount> -->
+				<!-- <palettePresets>GW_SM_TorsoChapterPalettes</palettePresets> -->
+				<!-- <defaultPalette> -->
+					<!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+				<!-- </defaultPalette> -->
+			<!-- </li> -->
 			<li Class="BM_ApparelSet.CompProperties_ApparelSet">
 				<apparelSetEffect>
 					<allApparels>

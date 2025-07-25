@@ -86,7 +86,7 @@
             <li Class="CompProperties_Biocodable">
                 <biocodeOnEquip>True</biocodeOnEquip>
             </li>
-            <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+            <!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
         </comps>
     </ThingDef>
 
@@ -198,7 +198,7 @@
             <li Class="CompProperties_Biocodable">
                 <biocodeOnEquip>True</biocodeOnEquip>
             </li>
-            <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+            <!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
         </comps>
 		<thingSetMakerTags>
 			<li>RewardStandardLowFreq</li>

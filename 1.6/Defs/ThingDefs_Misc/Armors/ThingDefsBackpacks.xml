@@ -22,6 +22,7 @@
 		<equippedStatOffsets>
 			<VEF_MassCarryCapacity>50</VEF_MassCarryCapacity>
 			<Beauty>50</Beauty>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.2</VacuumResistance>
 		</equippedStatOffsets>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -114,18 +115,18 @@
 			</tags>
 		</apparel>
 		<comps>
-            <li Class="GW4KArmor.CompProperties_TriColorMask">
-                <maskCount>2</maskCount>
-                <palettePresets>GW_SM_BackpackChapterPalettes</palettePresets>
-                <defaultPalette>
-                    <colorA>(250, 176, 67)</colorA>
-					<colorB>(250, 176, 67)</colorB>
-					<colorC>(180, 65, 74)</colorC>
-                </defaultPalette>
-            </li>
+            <!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+                <!-- <maskCount>2</maskCount> -->
+                <!-- <palettePresets>GW_SM_BackpackChapterPalettes</palettePresets> -->
+                <!-- <defaultPalette> -->
+                    <!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+                <!-- </defaultPalette> -->
+            <!-- </li> -->
         </comps>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
             </li>
@@ -195,7 +196,7 @@
 			</tags>
 		</apparel>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
             </li>
@@ -204,7 +205,7 @@
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
 			</li>
-			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
 		</comps>
     </ThingDef>
 	
@@ -268,18 +269,18 @@
 			</tags>
 		</apparel>
 		<comps>
-            <li Class="GW4KArmor.CompProperties_TriColorMask">
-                <maskCount>2</maskCount>
-                <palettePresets>GW_SM_BackpackChapterPalettes</palettePresets>
-                <defaultPalette>
-                    <colorA>(250, 176, 67)</colorA>
-					<colorB>(250, 176, 67)</colorB>
-					<colorC>(180, 65, 74)</colorC>
-                </defaultPalette>
-            </li>
+            <!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+                <!-- <maskCount>2</maskCount> -->
+                <!-- <palettePresets>GW_SM_BackpackChapterPalettes</palettePresets> -->
+                <!-- <defaultPalette> -->
+                    <!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+                <!-- </defaultPalette> -->
+            <!-- </li> -->
         </comps>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
             </li>
@@ -349,7 +350,7 @@
 			</tags>
 		</apparel>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<li Class="VEF.Apparels.ApparelExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
             </li>
@@ -358,7 +359,7 @@
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
 			</li>
-			<li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li>
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
 		</comps>
     </ThingDef>
 </Defs>
