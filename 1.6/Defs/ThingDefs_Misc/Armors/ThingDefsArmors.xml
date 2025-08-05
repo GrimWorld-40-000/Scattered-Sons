@@ -106,17 +106,22 @@
 		<recipeMaker>
 			<researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
 		</recipeMaker>
+		<equippedStatOffsets>
+			<InjuryHealingFactor>0.5</InjuryHealingFactor>
+			<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+		</equippedStatOffsets>
 		<statBases>
 			<WorkToMake>150000</WorkToMake>
-			<MaxHitPoints>4000</MaxHitPoints>
+			<MaxHitPoints>1200</MaxHitPoints>
+			<MarketValue>6000</MarketValue>
 			<Mass>11</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>4.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>3.50</ArmorRating_Blunt>
-			<ArmorRating_Heat>3.50</ArmorRating_Heat>
-			<Insulation_Cold>30</Insulation_Cold>
-			<Insulation_Heat>30</Insulation_Heat>
-			<EquipDelay>15</EquipDelay>
+			<ArmorRating_Sharp>1.50</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.83</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.00</ArmorRating_Heat>
+			<Insulation_Cold>40</Insulation_Cold>
+			<Insulation_Heat>14</Insulation_Heat>
+			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
 		<costList>
@@ -234,14 +239,15 @@
 		</recipeMaker>
 		<statBases>
 			<WorkToMake>150000</WorkToMake>
-			<MaxHitPoints>2500</MaxHitPoints>
+			<MaxHitPoints>1200</MaxHitPoints>
+			<MarketValue>6000</MarketValue>
 			<Mass>11</Mass>
 			<Flammability>0.0</Flammability>
-			<ArmorRating_Sharp>4.00</ArmorRating_Sharp>
-			<ArmorRating_Blunt>3.50</ArmorRating_Blunt>
-			<ArmorRating_Heat>3.50</ArmorRating_Heat>
-			<Insulation_Cold>20</Insulation_Cold>
-			<Insulation_Heat>20</Insulation_Heat>
+			<ArmorRating_Sharp>1.50</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.83</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.00</ArmorRating_Heat>
+			<Insulation_Cold>40</Insulation_Cold>
+			<Insulation_Heat>14</Insulation_Heat>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
