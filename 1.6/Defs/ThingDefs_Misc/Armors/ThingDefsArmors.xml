@@ -26,7 +26,7 @@
 			<Beauty>50</Beauty>			
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
 			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
-			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.2</VacuumResistance>
+			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.6</VacuumResistance>
 		</equippedStatOffsets>
 		<apparel>
 			<drawData>
