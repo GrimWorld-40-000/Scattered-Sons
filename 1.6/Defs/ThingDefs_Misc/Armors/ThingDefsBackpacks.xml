@@ -22,7 +22,7 @@
 		<equippedStatOffsets>
 			<VEF_MassCarryCapacity>50</VEF_MassCarryCapacity>
 			<Beauty>50</Beauty>
-			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.2</VacuumResistance>
+			<!-- <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.2</VacuumResistance> -->
 		</equippedStatOffsets>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
