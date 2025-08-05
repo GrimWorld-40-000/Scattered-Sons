@@ -1,0 +1,36 @@
+<Defs>
+    <ThingDef Name="GWPA_Primarch" ParentName="Human">
+        <defName>GWPA_PrimarchRace</defName>
+        <label>primarch</label>
+        <description>A genetically engineered son of the God Emperor of Man.</description>
+        <race>
+            <lifeExpectancy>40000</lifeExpectancy>
+            <baseHealthScale>20</baseHealthScale>
+            <baseBodySize>3.6</baseBodySize>
+            <ageGenerationCurve>
+                <points>
+                    <li>(50,0)</li>
+                    <li>(1000,1)</li>
+                    <li>(12000,0)</li>
+                </points>
+            </ageGenerationCurve>
+        </race>
+        
+        <comps>
+            <li Class="CompProperties_Shield">
+                <maxDrawSize>2.5</maxDrawSize>
+                <energyLossPerDamage>0.0005</energyLossPerDamage>
+                <blocksRangedWeapons>false</blocksRangedWeapons>
+                <!--Vulnerable for 20 seconds-->
+                <startingTicksToReset>1200</startingTicksToReset>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>5</glowRadius>
+                <glowColor>(239, 234, 74, 80)</glowColor>
+            </li>
+            <li Class="PrimarchAssault.External.CompProperties_Aura">
+                <radius>5</radius>
+            </li>
+        </comps>
+    </ThingDef>
+</Defs>

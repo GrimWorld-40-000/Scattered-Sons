@@ -1,0 +1,365 @@
+<Defs>
+
+	<ApparelLayerDef>
+		<defName>Backpack</defName>
+		<label>backpack</label>
+		<drawOrder>220</drawOrder>
+	</ApparelLayerDef>
+	
+	<ThingDef Abstract="true" Name="GW_SM_ScatteredSonsBackpackBase" ParentName="ArmorMachineableBase">
+        <techLevel>Spacer</techLevel>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>20</Crafting>
+				<Intellectual>15</Intellectual>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_ArmorBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<uiIconScale>1.6</uiIconScale>
+		<equippedStatOffsets>
+			<VEF_MassCarryCapacity>50</VEF_MassCarryCapacity>
+			<Beauty>50</Beauty>
+			<!-- <VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.2</VacuumResistance> -->
+		</equippedStatOffsets>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>1</drawSize>
+		</graphicData>
+		<thingCategories>
+			<li>ApparelArmor</li>
+		</thingCategories>
+		<apparel>
+			<tags>
+				<li>RoyalTier7</li>
+				<li>Spacer</li>
+			</tags>
+			<useWornGraphicMask>true</useWornGraphicMask>
+			<countsAsClothingForNudity>false</countsAsClothingForNudity>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Neck</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Backpack</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+				<li>PrestigeCombatGear</li>
+			</defaultOutfitTags>
+		</apparel>			    
+    </ThingDef>
+	
+	<!-- chapter master -->
+	<ThingDef ParentName="GW_SM_ScatteredSonsBackpackBase">
+        <defName>GW_SM_ChapterMasterBackpack</defName>
+		<label>Imperial Regent backpack</label>
+		<description>The backpack of the Armor of Fate. Even a Primarch’s armor needs a power supply to work optimally. \n\nThe suits of armor worn by the replica Primarchs are practically works of art - not merely protection for their wearer, but as a tribute to the Imperium’s greatest heroes. A tech-priest who was strident enough to suggest trying to improve them narrowly avoided execution as a tech-heretic.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Armor_ChapterMaster/GuillimanW_backpack</texPath>
+		</graphicData>
+		<recipeMaker>
+            <researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
+        </recipeMaker>
+        <statBases>
+			<WorkToMake>90000</WorkToMake>
+			<MaxHitPoints>3000</MaxHitPoints>
+			<Mass>5</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>.8</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>.6</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<tickerType>Normal</tickerType> 
+		<equippedStatOffsets>
+			<MoveSpeed>0.8</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>20</ComponentSpacer>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<GW_ComponentRelic>2</GW_ComponentRelic>
+			<Plasteel>330</Plasteel>
+			<Steel>690</Steel>
+			<Uranium>150</Uranium>
+			<HP_Ceramite>200</HP_Ceramite>
+			<HP_Adamantium>170</HP_Adamantium>
+			<HP_Auramite>50</HP_Auramite>
+		</costList>
+		<apparel>
+			<drawData>
+				<dataNorth>
+					<offset>(0.0, 0.4, 0.23)</offset>
+				</dataNorth>
+				<dataSouth>
+					<offset>(0.0, -0.1, 0.23)</offset>
+				</dataSouth>
+                <dataWest>
+                    <offset>(0.0, 0.15, 0.23)</offset>
+                </dataWest>
+                <dataEast>
+                    <offset>(0.0, 0.15, 0.23)</offset>
+                </dataEast>
+                <!--<scale>1.5</scale> Uncomment these to increase size while equipped
+                <childScale>1.5</childScale>-->
+            </drawData>
+            <wornGraphicPath>Things/Apparel/Armor_ChapterMaster/GuillimanW_backpack</wornGraphicPath>
+			<tags>
+                <li>GW_ChapterMaster</li>
+			</tags>
+		</apparel>
+		<comps>
+            <!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+                <!-- <maskCount>2</maskCount> -->
+                <!-- <palettePresets>GW_SM_BackpackChapterPalettes</palettePresets> -->
+                <!-- <defaultPalette> -->
+                    <!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+                <!-- </defaultPalette> -->
+            <!-- </li> -->
+        </comps>
+		<modExtensions>
+			<li Class="VEF.Apparels.ApparelExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+				<hideHead>false</hideHead>
+            </li>
+        </modExtensions>
+    </ThingDef>
+	
+	<!-- guilliman -->
+	<ThingDef ParentName="GW_SM_ScatteredSonsBackpackBase">
+        <defName>GW_SM_GuillimanBackpack</defName>
+		<label>Armor of Fate backpack</label>
+		<description>The backpack of the Armor of Fate. Even a Primarch’s armor needs a power supply to work optimally. \n\nThe suits of armor worn by the replica Primarchs are practically works of art - not merely protection for their wearer, but as a tribute to the Imperium’s greatest heroes. A tech-priest who was strident enough to suggest trying to improve them narrowly avoided execution as a tech-heretic.</description>
+		<graphicData>
+			<texPath>Things/Apparel/Armor_Guilliman/GuillimanC_backpack</texPath>
+		</graphicData>
+		<recipeMaker>
+            <researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
+        </recipeMaker>
+        <statBases>
+			<WorkToMake>90000</WorkToMake>
+			<MaxHitPoints>900</MaxHitPoints>
+			<MarketValue>1500</MarketValue>
+			<Mass>2</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>.8</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>.6</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<CarryingCapacity>15</CarryingCapacity>
+			<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+		</equippedStatOffsets>
+		<tickerType>Normal</tickerType> 
+		<costList>
+			<ComponentSpacer>20</ComponentSpacer>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<GW_ComponentRelic>2</GW_ComponentRelic>
+			<Plasteel>330</Plasteel>
+			<Steel>690</Steel>
+			<Uranium>150</Uranium>
+			<HP_Ceramite>200</HP_Ceramite>
+			<HP_Adamantium>170</HP_Adamantium>
+			<HP_Auramite>50</HP_Auramite>
+		</costList>
+		<apparel>
+			<drawData>
+				<dataNorth>
+					<offset>(0.0, 0.4, 0.23)</offset>
+				</dataNorth>
+				<dataSouth>
+					<offset>(0.0, -0.1, 0.23)</offset>
+				</dataSouth>
+                <dataWest>
+                    <offset>(0.0, 0.15, 0.23)</offset>
+                </dataWest>
+                <dataEast>
+                    <offset>(0.0, 0.15, 0.23)</offset>
+                </dataEast>
+                <!--<scale>1.5</scale> Uncomment these to increase size while equipped
+                <childScale>1.5</childScale>-->
+            </drawData>
+            <wornGraphicPath>Things/Apparel/Armor_Guilliman/GuillimanC_backpack</wornGraphicPath>
+			<tags>
+                <li>GW_Guilliman</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VEF.Apparels.ApparelExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+				<hideHead>false</hideHead>
+            </li>
+        </modExtensions>
+		<comps>
+			<li Class="CompProperties_Biocodable">
+				<biocodeOnEquip>True</biocodeOnEquip>
+			</li>
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
+		</comps>
+    </ThingDef>
+	
+	<!-- imperial warden -->
+	<ThingDef ParentName="GW_SM_ScatteredSonsBackpackBase">
+        <defName>GW_SM_ImperialWardenrBackpack</defName>
+		<label>Imperial Warden backpack</label>
+		<description>A heavy backpack worn by the copies of Lion El’Jonson. It is meticulously replicated from the mysterious armor that the Lion wore upon his return to the Imperium. \n\nThe Lion’s legion, the Dark Angels, suffered a great schism during the Horus Heresy. The heretic Dark Angels, who became known as Fallen Angels, were defeated in such a titanic battle that Caliban itself was destroyed - torn apart by a Warp rift. \n\nThe Fallen Angels were scattered across time and space. The loyalist Dark Angels, calling themselves the Unforgiven, hunted them across the galaxy in their fortress-monastery, which was converted into a great starship - “the Rock”.</description>
+		<graphicData>
+			<texPath>Things/Apparel/ImperialWardenr/Display/LionW_backpack</texPath>
+		</graphicData>
+		<recipeMaker>
+            <researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+        </recipeMaker>
+        <statBases>
+			<WorkToMake>90000</WorkToMake>
+			<MaxHitPoints>900</MaxHitPoints>
+			<MarketValue>1500</MarketValue>
+			<Mass>2</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>.8</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>.6</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>0.8</MoveSpeed>
+		</equippedStatOffsets>
+		<costList>
+			<ComponentSpacer>20</ComponentSpacer>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<GW_ComponentRelic>2</GW_ComponentRelic>
+			<Plasteel>330</Plasteel>
+			<Steel>690</Steel>
+			<Uranium>150</Uranium>
+			<HP_Ceramite>200</HP_Ceramite>
+			<HP_Adamantium>170</HP_Adamantium>
+			<HP_Auramite>50</HP_Auramite>
+		</costList>
+		<apparel>
+			<drawData>
+				<dataNorth>
+					<offset>(0.0, 0.4, 0.29)</offset>
+				</dataNorth>
+				<dataSouth>
+					<offset>(0.0, -0.1, 0.29)</offset>
+				</dataSouth>
+                <dataWest>
+                    <offset>(0.0, 0.15, 0.29)</offset>
+                </dataWest>
+                <dataEast>
+                    <offset>(0.0, 0.15, 0.29)</offset>
+                </dataEast>
+                <!--<scale>1.5</scale> Uncomment these to increase size while equipped
+                <childScale>1.5</childScale>-->
+            </drawData>
+            <wornGraphicPath>Things/Apparel/ImperialWardenr/LionW_backpack</wornGraphicPath>
+			<tags>
+                <li>GW_ImperialWardenr</li>
+			</tags>
+		</apparel>
+		<comps>
+            <!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
+                <!-- <maskCount>2</maskCount> -->
+                <!-- <palettePresets>GW_SM_BackpackChapterPalettes</palettePresets> -->
+                <!-- <defaultPalette> -->
+                    <!-- <colorA>(250, 176, 67)</colorA> -->
+					<!-- <colorB>(250, 176, 67)</colorB> -->
+					<!-- <colorC>(180, 65, 74)</colorC> -->
+                <!-- </defaultPalette> -->
+            <!-- </li> -->
+        </comps>
+		<modExtensions>
+			<li Class="VEF.Apparels.ApparelExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+				<hideHead>false</hideHead>
+            </li>
+        </modExtensions>
+    </ThingDef>
+	
+	<!-- Lion Armor -->
+	<ThingDef ParentName="GW_SM_ScatteredSonsBackpackBase">
+        <defName>GW_SM_LionArmorBackpack</defName>
+		<label>Lion's Backpack</label>
+		<description>A heavy backpack worn by the copies of Lion El’Jonson. It is meticulously replicated from the mysterious armor that the Lion wore upon his return to the Imperium. \n\nThe Lion’s legion, the Dark Angels, suffered a great schism during the Horus Heresy. The heretic Dark Angels, who became known as Fallen Angels, were defeated in such a titanic battle that Caliban itself was destroyed - torn apart by a Warp rift. \n\nThe Fallen Angels were scattered across time and space. The loyalist Dark Angels, calling themselves the Unforgiven, hunted them across the galaxy in their fortress-monastery, which was converted into a great starship - “the Rock”.</description>
+		<graphicData>
+			<texPath>Things/Apparel/LionArmor/LionC_backpack</texPath>
+		</graphicData>
+		<recipeMaker>
+            <researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
+        </recipeMaker>
+        <statBases>
+			<WorkToMake>90000</WorkToMake>
+			<MaxHitPoints>900</MaxHitPoints>
+			<MarketValue>1500</MarketValue>
+			<Mass>2</Mass>
+			<Flammability>0.0</Flammability>
+			<ArmorRating_Sharp>.8</ArmorRating_Sharp>
+			<ArmorRating_Blunt>.5</ArmorRating_Blunt>
+			<ArmorRating_Heat>.6</ArmorRating_Heat>
+			<Insulation_Cold>12</Insulation_Cold>
+			<Insulation_Heat>7</Insulation_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<CarryingCapacity>15</CarryingCapacity>
+			<MoveSpeed>0.1</MoveSpeed>
+		</equippedStatOffsets>
+		<tickerType>Normal</tickerType> 
+		<costList>
+			<ComponentSpacer>20</ComponentSpacer>
+			<ComponentIndustrial>25</ComponentIndustrial>
+			<GW_ComponentRelic>2</GW_ComponentRelic>
+			<Plasteel>330</Plasteel>
+			<Steel>690</Steel>
+			<Uranium>150</Uranium>
+			<HP_Ceramite>200</HP_Ceramite>
+			<HP_Adamantium>170</HP_Adamantium>
+			<HP_Auramite>50</HP_Auramite>
+		</costList>
+		<apparel>
+			<drawData>
+				<dataNorth>
+					<offset>(0.0, 0.4, 0.29)</offset>
+				</dataNorth>
+				<dataSouth>
+					<offset>(0.0, -0.1, 0.29)</offset>
+				</dataSouth>
+                <dataWest>
+                    <offset>(0.0, 0.15, 0.29)</offset>
+                </dataWest>
+                <dataEast>
+                    <offset>(0.0, 0.15, 0.29)</offset>
+                </dataEast>
+                <!--<scale>1.5</scale> Uncomment these to increase size while equipped
+                <childScale>1.5</childScale>-->
+            </drawData>
+            <wornGraphicPath>Things/Apparel/LionArmor/LionC_backpack</wornGraphicPath>
+			<tags>
+                <li>GW_LionArmor</li>
+			</tags>
+		</apparel>
+		<modExtensions>
+			<li Class="VEF.Apparels.ApparelExtension">
+                <isUnifiedApparel>true</isUnifiedApparel>
+				<hideHead>false</hideHead>
+            </li>
+        </modExtensions>
+		<comps>
+			<li Class="CompProperties_Biocodable">
+				<biocodeOnEquip>True</biocodeOnEquip>
+			</li>
+			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
+		</comps>
+    </ThingDef>
+</Defs>

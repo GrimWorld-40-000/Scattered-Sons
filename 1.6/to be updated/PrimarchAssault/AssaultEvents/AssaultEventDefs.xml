@@ -1,0 +1,137 @@
+<Defs>
+    <PrimarchAssault.External.AssaultEventDef>
+        <defName>GWPA_ShortEMP</defName>
+        <label>short emp</label>
+        <actionProperties>
+            <li Class="PrimarchAssault.AssaultEvent.GameConditionEventProperties">
+                <!-- 30 seconds -->
+                <tickDuration>1800</tickDuration>
+                <condition>GWPA_EMPNet</condition>
+                <endsWhenChampionLeaves>true</endsWhenChampionLeaves>
+                <actionName>emp net</actionName>
+                <eventNotificationText>An EMP net is being cast over your colony!</eventNotificationText>
+            </li>
+        </actionProperties>
+    </PrimarchAssault.External.AssaultEventDef>
+    <PrimarchAssault.External.AssaultEventDef>
+        <defName>GWPA_TeleportIntoMountainBase</defName>
+        <label>teleport into mountain base</label>
+        <actionProperties>
+            <li Class="PrimarchAssault.AssaultEvent.TeleportIntoMountainEventProperties">
+                <actionName>teleport into mountain</actionName>
+                <eventNotificationText>The enemy force is teleporting into your mountain!</eventNotificationText>
+            </li>
+        </actionProperties>
+    </PrimarchAssault.External.AssaultEventDef>
+
+
+
+    <PrimarchAssault.External.AssaultEventDef>
+        <defName>GWPA_OrbitalBombardment</defName>
+        <label>orbital bombardment</label>
+        <actionProperties>
+            <li Class="PrimarchAssault.AssaultEvent.GameConditionEventProperties">
+                <!-- 30 seconds -->
+                <tickDuration>1800</tickDuration>
+                <condition>GWPA_OrbitalBombardment</condition>
+                <endsWhenChampionLeaves>true</endsWhenChampionLeaves>
+                <actionName>orbital bombardment</actionName>
+                <eventNotificationText>A bombardment has begun on your colony!</eventNotificationText>
+            </li>
+        </actionProperties>
+    </PrimarchAssault.External.AssaultEventDef>
+    <PrimarchAssault.External.AssaultEventDef>
+        <defName>GWPA_LaserBombardment</defName>
+        <label>laser bombardment</label>
+        <actionProperties>
+            <li Class="PrimarchAssault.AssaultEvent.GameConditionEventProperties">
+                <!-- 120 seconds -->
+                <tickDuration>7200</tickDuration>
+                <condition>GWPA_LaserBombardment</condition>
+                <endsWhenChampionLeaves>true</endsWhenChampionLeaves>
+                <actionName>laser bombardment</actionName>
+                <eventNotificationText>A laser bombardment has begun on your colony!</eventNotificationText>
+            </li>
+        </actionProperties>
+    </PrimarchAssault.External.AssaultEventDef>
+    <PrimarchAssault.External.AssaultEventDef>
+        <defName>GWPA_RefillShields</defName>
+        <label>refill shields</label>
+        <actionProperties>
+            <li Class="PrimarchAssault.AssaultEvent.RefillShieldsEventProperties">
+                <actionName>refill shields</actionName>
+                <eventNotificationText>The primarch's shield power is spiking!</eventNotificationText>
+            </li>
+        </actionProperties>
+    </PrimarchAssault.External.AssaultEventDef>
+    <PrimarchAssault.External.AssaultEventDef>
+        <defName>GWPA_PowerHealing</defName>
+        <label>power healing</label>
+        <actionProperties>
+            <li Class="PrimarchAssault.AssaultEvent.GiveHediffEventProperties">
+                <actionName>power healing</actionName>
+                <eventNotificationText>The primarch is healing rapidly!</eventNotificationText>
+                <def>GWPA_PowerHealing</def>
+            </li>
+        </actionProperties>
+    </PrimarchAssault.External.AssaultEventDef>
+    <PrimarchAssault.External.AssaultEventDef>
+        <defName>GWPA_PsychicStorm</defName>
+        <label>psychic storm</label>
+        <actionProperties>
+            <li Class="PrimarchAssault.AssaultEvent.GameConditionEventProperties">
+                <!-- 2 hours -->
+                <tickDuration>72000</tickDuration>
+                <condition>GWPA_PsychicStorm</condition>
+                <endsWhenChampionLeaves>true</endsWhenChampionLeaves>
+                <actionName>psychic storm</actionName>
+                <eventNotificationText>A psychic storm has started!</eventNotificationText>
+                <fleckOnChampion>PsychicApplyNeuroquake</fleckOnChampion>
+                <sound>Psycast_Neuroquake_Effect</sound>
+            </li>
+        </actionProperties>
+    </PrimarchAssault.External.AssaultEventDef>
+
+
+
+    <!-- All events except EMP and teleport -->
+    <PrimarchAssault.External.AssaultEventDef>
+        <defName>GWPA_StandardAnyEvent</defName>
+        <label>random standard event</label>
+        <triggerAllActions>false</triggerAllActions>
+        <actionProperties>
+            <li Class="PrimarchAssault.AssaultEvent.GameConditionEventProperties">
+                <!-- 480 seconds -->
+                <tickDuration>7200</tickDuration>
+                <condition>GWPA_LaserBombardment</condition>
+                <actionName>laser bombardment</actionName>
+                <eventNotificationText>A laser bombardment has begun on your colony!</eventNotificationText>
+            </li>
+            <li Class="PrimarchAssault.AssaultEvent.GameConditionEventProperties">
+                <!-- 30 seconds -->
+                <tickDuration>1800</tickDuration>
+                <condition>GWPA_OrbitalBombardment</condition>
+                <actionName>orbital bombardment</actionName>
+                <eventNotificationText>A bombardment has begun on your colony!</eventNotificationText>
+            </li>
+            <li Class="PrimarchAssault.AssaultEvent.RefillShieldsEventProperties">
+                <actionName>refill shields</actionName>
+                <eventNotificationText>The primarch's shield power is spiking!</eventNotificationText>
+            </li>
+            <li Class="PrimarchAssault.AssaultEvent.GiveHediffEventProperties">
+                <actionName>power healing</actionName>
+                <eventNotificationText>The primarch is healing rapidly!</eventNotificationText>
+                <def>GWPA_PowerHealing</def>
+            </li>
+            <li Class="PrimarchAssault.AssaultEvent.GameConditionEventProperties">
+                <!-- 2 hours -->
+                <tickDuration>72000</tickDuration>
+                <condition>GWPA_PsychicStorm</condition>
+                <actionName>psychic storm</actionName>
+                <eventNotificationText>A psychic storm has started!</eventNotificationText>
+                <fleckOnChampion>PsychicApplyNeuroquake</fleckOnChampion>
+                <sound>Psycast_Neuroquake_Effect</sound>
+            </li>
+        </actionProperties>
+    </PrimarchAssault.External.AssaultEventDef>
+</Defs>

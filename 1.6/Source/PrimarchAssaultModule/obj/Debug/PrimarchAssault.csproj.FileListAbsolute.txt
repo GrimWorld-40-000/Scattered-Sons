@@ -1,0 +1,12 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Assemblies\PrimarchAssault.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Assemblies\PrimarchAssault.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Source\PrimarchAssault\obj\Debug\PrimarchAssault.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Source\PrimarchAssault\obj\Debug\PrimarchAssault.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Source\PrimarchAssault\obj\Debug\PrimarchAssault.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Source\PrimarchAssault\obj\Debug\PrimarchAssault.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Scattered-Sons\1.5\Assemblies\PrimarchAssault.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Scattered-Sons\1.5\Assemblies\PrimarchAssault.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Scattered-Sons\1.5\Source\PrimarchAssaultModule\obj\Debug\PrimarchAssault.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Scattered-Sons\1.5\Source\PrimarchAssaultModule\obj\Debug\PrimarchAssault.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Scattered-Sons\1.5\Source\PrimarchAssaultModule\obj\Debug\PrimarchAssault.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Scattered-Sons\1.5\Source\PrimarchAssaultModule\obj\Debug\PrimarchAssault.pdb
