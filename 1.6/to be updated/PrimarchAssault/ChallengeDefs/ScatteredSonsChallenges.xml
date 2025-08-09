@@ -1,0 +1,365 @@
+<Defs>
+    <PrimarchAssault.External.ChallengeDef>
+        <defName>PASS_LionAssault</defName>
+        <label>primarch assault: Lion El'Jonson</label>
+        <championName>Lion El'Jonson</championName>
+        <description>Summons the Primarch of the Dark Angels, Lion El'Jonson.</description>
+        <iconPath>Icons/Lion</iconPath>
+        <healthBarPath>Healthbars/HealthBar</healthBarPath>
+        <healthBarX>100</healthBarX>
+        <healthBarY>75</healthBarY>
+        <healthBarWidth>1080</healthBarWidth>
+        <healthBarHeight>17</healthBarHeight>
+        <shieldBarX>238</shieldBarX>
+        <shieldBarY>88</shieldBarY>
+        <shieldBarWidth>804</shieldBarWidth>
+        <shieldBarHeight>9</shieldBarHeight>
+
+        <primarchColor>(16, 97, 56)</primarchColor>
+        
+        <researchRequirements>
+            <li>GW_Primarchfabrication</li>
+        </researchRequirements>
+        <effectorDef>GWPA_PrimarchAssaultStarted</effectorDef>
+        <arrivalText>The Lion is here! Prepare to fight!</arrivalText>
+        <announcementSound>GWPA_LionIntro</announcementSound>
+        <playlist>
+            <li>GWPA_PrimarchAssault</li>
+        </playlist>
+        <championDetails>
+            <forcedName>Lion</forcedName>
+            <forcedLastname>El'Jonson</forcedLastname>
+            <forcedNickname>The Lion</forcedNickname>
+            <forcedChronologicalAge>12000</forcedChronologicalAge>
+            <forcedBiologicalAge>12000</forcedBiologicalAge>
+            <forcedTraits>
+                <li>Bloodlust</li>
+                <li>Psychopath</li>
+            </forcedTraits>
+            <forcedGender>Male</forcedGender>
+            <possiblePawnKinds>
+                <li>GWPA_LionHooded</li>
+                <li>GWPA_LionHelmed</li>
+            </possiblePawnKinds>
+            <forcedXenotypesInOrder>
+                <li MayRequire="Phonicmas.40kGenes">BEWH_Primarch</li>
+            </forcedXenotypesInOrder>
+            <forcedSpawnFactionsInOrder>
+                <li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AdeptusAstartes</li>
+                <li MayRequire="HappyPurging.AgeofDarknessLite">GW_SM_AdeptusAstartes</li>
+                <li>AncientsHostile</li>
+            </forcedSpawnFactionsInOrder>
+        </championDetails>
+
+        <phaseOneWavesInPriority>
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness, HappyPurging.AgeofDarknessLite">
+                <pawnKinds>
+                    <li>GW_SM_DA_SniperScout</li>
+                    <li>GW_SM_DA_ShotgunScout</li>
+                    <li>GW_SM_DA_BolterScout</li>
+                    <li>GW_SM_DA_PlasmaScout</li>
+                    <li>GW_SM_DA_RangedTier1</li>
+                    <li>GW_SM_DA_MeleeTier1</li>
+                    <li>GW_SM_DA_RangedTier2</li>
+                    <li>GW_SM_DA_MeleeTier2</li>
+                    <li>GW_SM_DA_RangedTier3</li>
+                    <li>GW_SM_DA_MeleeTier3</li>
+                </pawnKinds>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.02</wealthMultiplier>
+            </li>
+            <!--Fallback to ancient soldiers-->
+            <li>
+                <pawnKinds>
+                    <li>AncientSoldier</li>
+                </pawnKinds>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.02</wealthMultiplier>
+            </li>
+        </phaseOneWavesInPriority>
+        <phaseTwoWavesInPriority>
+            <li MayRequire="grimworld.talonOfTheEmperor">
+                <pawnKinds>
+                    <li>GW_TotE_CustodesGuard</li>
+                    <li>GW_TotE_CustodesWarden</li>
+                    <li>GW_TotE_Allarus</li>
+                    <li>GW_TotE_Castellan</li>
+                </pawnKinds>
+                <flinchSeverity>0.01</flinchSeverity>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+                <pawnKinds>
+                    <li>GW_SM_DA_RangedTier4</li>
+                    <li>GW_SM_DA_MeleeTier4</li>
+                    <li>GW_SM_DA_RangedTier5</li>
+                    <li>GW_SM_DA_MeleeTier5</li>
+                </pawnKinds>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+            <!--Fallback to ancient soldiers-->
+            <li>
+                <pawnKinds>
+                    <li>AncientSoldier</li>
+                </pawnKinds>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+        </phaseTwoWavesInPriority>
+        <escortWavesInPriority>
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+                <pawnKinds>
+                    <li>GW_SM_DA_RangedTier4</li>
+                    <li>GW_SM_DA_MeleeTier4</li>
+                    <li>GW_SM_DA_RangedTier5</li>
+                    <li>GW_SM_DA_MeleeTier5</li>
+                </pawnKinds>
+                <wealthCap>1000000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+            <!--Fallback to ancient soldiers-->
+            <li>
+                <pawnKinds>
+                    <li>AncientSoldier</li>
+                </pawnKinds>
+                <wealthCap>1000000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+        </escortWavesInPriority>
+
+        <championFlinchSeverity>0.3</championFlinchSeverity>
+        
+        <championDrop>PASS_LionSTC</championDrop>
+
+        <abilityStages>
+            <li>
+                <stage>.5</stage>
+                <abilitiesToGain>
+                    <li>GWPA_TacticalBombardment</li>
+                </abilitiesToGain>
+            </li>
+        </abilityStages>
+
+        <hediffStages>
+            <li>
+                <stage>.25</stage>
+                <hediffsToGain>
+                    <li>GWPA_Rage</li>
+                </hediffsToGain>
+            </li>
+        </hediffStages>
+
+        <eventStages>
+            <li>
+                <triggerOnAssaultStart>true</triggerOnAssaultStart>
+                <assaultEventDef>GWPA_ShortEMP</assaultEventDef>
+            </li>
+        
+            <li>
+                <stage>.95</stage>
+                <assaultEventDef>GWPA_TeleportIntoMountainBase</assaultEventDef>
+            </li>
+
+            <li>
+                <stage>.75</stage>
+                <assaultEventDef>GWPA_StandardAnyEvent</assaultEventDef>
+            </li>
+            <li>
+                <stage>.5</stage>
+                <assaultEventDef>GWPA_StandardAnyEvent</assaultEventDef>
+            </li>
+            <li>
+                <stage>.25</stage>
+                <assaultEventDef>GWPA_StandardAnyEvent</assaultEventDef>
+            </li>
+        </eventStages>
+
+    </PrimarchAssault.External.ChallengeDef>
+    
+    <PrimarchAssault.External.ChallengeDef>
+        <defName>PASS_GuillimanAssault</defName>
+        <label>primarch assault: Roboute Guilliman</label>
+        <championName>Roboute Guilliman, Lord of Ultramar</championName>
+        <description>Summons the Lord of Ultramar and leader of the Ultramarines, Roboute Guilliman.</description>
+        <iconPath>Icons/Guilliman</iconPath>
+        <healthBarPath>Healthbars/HealthBar</healthBarPath>
+        <healthBarX>100</healthBarX>
+        <healthBarY>75</healthBarY>
+        <healthBarWidth>1080</healthBarWidth>
+        <healthBarHeight>17</healthBarHeight>
+        <shieldBarX>238</shieldBarX>
+        <shieldBarY>88</shieldBarY>
+        <shieldBarWidth>804</shieldBarWidth>
+        <shieldBarHeight>9</shieldBarHeight>
+
+        <primarchColor>(56, 93, 162)</primarchColor>
+
+        <researchRequirements>
+            <li>GW_Primarchfabrication</li>
+        </researchRequirements>
+        <effectorDef>GWPA_PrimarchAssaultStarted</effectorDef>
+        <arrivalText>Guilliman is here! Prepare to fight!</arrivalText>
+        <announcementSound>GWPA_GuillimanIntro</announcementSound>
+        <playlist>
+            <li>GWPA_PrimarchAssault</li>
+        </playlist>
+        <championDetails>
+            <forcedName>Roboute</forcedName>
+            <forcedLastname>Guilliman</forcedLastname>
+            <forcedNickname>Guilliman</forcedNickname>
+            <forcedChronologicalAge>12000</forcedChronologicalAge>
+            <forcedBiologicalAge>2000</forcedBiologicalAge>
+            <forcedTraits>
+                <li>Bloodlust</li>
+            </forcedTraits>
+            <forcedGender>Male</forcedGender>
+            <possiblePawnKinds>
+                <li>GWPA_Guilliman</li>
+            </possiblePawnKinds>
+            <forcedXenotypesInOrder>
+                <li MayRequire="Phonicmas.40kGenes">BEWH_Primarch</li>
+            </forcedXenotypesInOrder>
+            <forcedSpawnFactionsInOrder>
+                <li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AdeptusAstartes</li>
+                <li MayRequire="HappyPurging.AgeofDarknessLite">GW_SM_AdeptusAstartes</li>
+                <li>AncientsHostile</li>
+            </forcedSpawnFactionsInOrder>
+        </championDetails>
+
+        <phaseOneWavesInPriority>
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+                <pawnKinds>
+                    <li>GW_SM_UM_SniperScout</li>
+                    <li>GW_SM_UM_ShotgunScout</li>
+                    <li>GW_SM_UM_BolterScout</li>
+                    <li>GW_SM_UM_PlasmaScout</li>
+                    <li>GW_SM_UM_RangedTier1</li>
+                    <li>GW_SM_UM_MeleeTier1</li>
+                    <li>GW_SM_UM_RangedTier2</li>
+                    <li>GW_SM_UM_MeleeTier2</li>
+                    <li>GW_SM_UM_RangedTier3</li>
+                    <li>GW_SM_UM_MeleeTier3</li>
+                </pawnKinds>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.02</wealthMultiplier>
+            </li>
+            <!--Fallback to ancient soldiers-->
+            <li>
+                <pawnKinds>
+                    <li>AncientSoldier</li>
+                </pawnKinds>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.02</wealthMultiplier>
+            </li>
+        </phaseOneWavesInPriority>
+        <phaseTwoWavesInPriority>
+            <li MayRequire="grimworld.talonOfTheEmperor">
+                <pawnKinds>
+                    <li>GW_TotE_CustodesGuard</li>
+                    <li>GW_TotE_CustodesWarden</li>
+                    <li>GW_TotE_Allarus</li>
+                    <li>GW_TotE_Castellan</li>
+                </pawnKinds>
+                <flinchSeverity>0.01</flinchSeverity>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+                <pawnKinds>
+                    <li>GW_SM_UM_RangedTier4</li>
+                    <li>GW_SM_UM_MeleeTier4</li>
+                    <li>GW_SM_UM_RangedTier5</li>
+                    <li>GW_SM_UM_MeleeTier5</li>
+                </pawnKinds>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+            <!--Fallback to ancient soldiers-->
+            <li>
+                <pawnKinds>
+                    <li>AncientSoldier</li>
+                </pawnKinds>
+                <wealthCap>500000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+        </phaseTwoWavesInPriority>
+        <escortWavesInPriority>
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+                <pawnKinds>
+                    <li>GW_SM_UM_RangedTier4</li>
+                    <li>GW_SM_UM_MeleeTier4</li>
+                    <li>GW_SM_UM_RangedTier5</li>
+                    <li>GW_SM_UM_MeleeTier5</li>
+                </pawnKinds>
+                <wealthCap>1000000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+            <!--Fallback to ancient soldiers-->
+            <li>
+                <pawnKinds>
+                    <li>AncientSoldier</li>
+                </pawnKinds>
+                <wealthCap>1000000</wealthCap>
+                <wealthMultiplier>.03</wealthMultiplier>
+            </li>
+        </escortWavesInPriority>
+
+        <championFlinchSeverity>0.3</championFlinchSeverity>
+        
+        <championDrop>PASS_GuillimanSTC</championDrop>
+
+        
+        <hediffStages>
+            <li>
+                <stage>.75</stage>
+                <hediffsToGain>
+                    <li>GWPA_RallyingCry</li>
+                </hediffsToGain>
+            </li>
+            <li>
+                <stage>.25</stage>
+                <hediffsToGain>
+                    <li>GWPA_Rage</li>
+                </hediffsToGain>
+            </li>
+        </hediffStages>
+
+        <abilityStages>
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+                <stage>.75</stage>
+                <abilitiesToGain>
+                    <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">GWPA_GuillimanReinforcement</li>
+                </abilitiesToGain>
+            </li>
+        </abilityStages>
+
+        <eventStages>
+            <li>
+                <triggerOnAssaultStart>true</triggerOnAssaultStart>
+                <assaultEventDef>GWPA_ShortEMP</assaultEventDef>
+            </li>
+        
+            <li>
+                <stage>.95</stage>
+                <assaultEventDef>GWPA_TeleportIntoMountainBase</assaultEventDef>
+            </li>
+
+            <li>
+                <stage>.75</stage>
+                <assaultEventDef>GWPA_StandardAnyEvent</assaultEventDef>
+            </li>
+            <li>
+                <stage>.5</stage>
+                <assaultEventDef>GWPA_StandardAnyEvent</assaultEventDef>
+            </li>
+            <li>
+                <stage>.25</stage>
+                <assaultEventDef>GWPA_StandardAnyEvent</assaultEventDef>
+            </li>
+        </eventStages>
+
+
+    </PrimarchAssault.External.ChallengeDef>
+</Defs>

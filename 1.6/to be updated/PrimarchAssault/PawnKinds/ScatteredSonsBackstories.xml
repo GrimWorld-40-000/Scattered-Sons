@@ -1,0 +1,101 @@
+<Defs>
+    <!-- Lion -->
+    <BackstoryDef>
+        <defName>GWPA_LionChildhood</defName>
+        <title>primarch</title>
+        <titleShort>primarch</titleShort>
+        <titleFemale>primarch</titleFemale>
+        <titleShortFemale>primarch</titleShortFemale>
+        <slot>Childhood</slot>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+        <description>[PAWN_nameDef] spent [PAWN_possessive] early life training directly after spawning from [PAWN_possessive] pod, being the first primarch to be created. [PAWN_pronoun] was known to excel at combat, even killing Warp Daemons with [PAWN_possessive] bare hands.</description>
+        <spawnCategories>
+            <li>GWPA_Lion</li>
+        </spawnCategories>
+        <skillGains>
+            <Intellectual>6</Intellectual>
+            <Shooting>10</Shooting>
+            <Melee>10</Melee>
+        </skillGains>
+        <requiredWorkTags>
+            <li>Social</li>
+            <li>Violent</li>
+        </requiredWorkTags>
+    </BackstoryDef>
+    <BackstoryDef>
+        <defName>GWPA_LionAdulthood</defName>
+        <title>primarch</title>
+        <titleShort>primarch</titleShort>
+        <titleFemale>primarch</titleFemale>
+        <titleShortFemale>primarch</titleShortFemale>
+        <slot>Adulthood</slot>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+        <description>[PAWN_possessive] achievements are too numerous to mention. [PAWN_nameDef] is a master tactician and warrior, having served the Imperium of Man as the primarch of the Dark Angels.</description>
+        <spawnCategories>
+            <li>GWPA_Lion</li>
+        </spawnCategories>
+        <skillGains>
+            <Social>13</Social>
+            <Intellectual>13</Intellectual>
+            <Shooting>10</Shooting>
+            <Melee>10</Melee>
+        </skillGains>
+        <requiredWorkTags>
+            <li>Social</li>
+            <li>Violent</li>
+        </requiredWorkTags>
+    </BackstoryDef>
+
+
+    
+    <!-- Guilliman -->
+    <BackstoryDef>
+        <defName>GWPA_GuillimanChildhood</defName>
+        <title>primarch</title>
+        <titleShort>primarch</titleShort>
+        <titleFemale>primarch</titleFemale>
+        <titleShortFemale>primarch</titleShortFemale>
+        <slot>Childhood</slot>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+        <description>[PAWN_nameDef] spent [PAWN_possessive] early life training directly after spawning from [PAWN_possessive] pod. [PAWN_nameDef] was sent to Macragge by the Dark Gods of Chaos, being raised by an adoptive father.</description>
+        <spawnCategories>
+            <li>GWPA_Guilliman</li>
+        </spawnCategories>
+        <skillGains>
+            <Intellectual>7</Intellectual>
+            <Shooting>10</Shooting>
+            <Melee>10</Melee>
+        </skillGains>
+        <requiredWorkTags>
+            <li>Social</li>
+            <li>Violent</li>
+        </requiredWorkTags>
+    </BackstoryDef>
+    <BackstoryDef>
+        <defName>GWPA_GuillimanAdulthood</defName>
+        <title>primarch</title>
+        <titleShort>primarch</titleShort>
+        <titleFemale>primarch</titleFemale>
+        <titleShortFemale>primarch</titleShortFemale>
+        <slot>Adulthood</slot>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+        <description>[PAWN_possessive] achievements are too numerous to mention. [PAWN_nameDef] is a master tactician and warrior, having served the Imperium of Man as the primarch of the Ultramarines.</description>
+        <spawnCategories>
+            <li>GWPA_Guilliman</li>
+        </spawnCategories>
+        <skillGains>
+            <Social>13</Social>
+            <Intellectual>13</Intellectual>
+            <Shooting>10</Shooting>
+            <Melee>10</Melee>
+        </skillGains>
+        <requiredWorkTags>
+            <li>Social</li>
+            <li>Violent</li>
+        </requiredWorkTags>
+    </BackstoryDef>
+</Defs>

@@ -1,0 +1,103 @@
+<Defs>
+
+	<ThingDef ParentName="GrimworldFabricationBenchBase">
+		<defName>GW_SM_ScatteredSons_ArmorBench</defName>
+		<label>Scattered Sons armor workbench</label>
+		<description>A workbench for assembling armor fit for a Primarch. \n\nEvery piece of armor leaving this workbench is a great investment and an arduous labor, but the result will be near-unassailable by bullet, blade, or blast. A full suit of this is the armor of demigods, striding the battlefield like titans of myth.</description>
+		<graphicData>
+            <texPath>Things/Building/Production/ScatteredSonsArmorWorkbench/PrimarchBench_Armor</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(7,7)</drawSize>
+			<drawOffset>(0,0.05,-0.25)</drawOffset>
+        </graphicData>
+        <tickerType>Normal</tickerType>
+        <size>(5,3)</size>
+		<interactionCellOffset>(0,0,2)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<!-- <rotatable>false</rotatable> -->
+		<costList>
+            <Steel>100</Steel>
+            <Plasteel>50</Plasteel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+            <HP_Ceramite>15</HP_Ceramite>
+        </costList>
+        <researchPrerequisites>
+			<li>GW_Primarchfabrication</li>
+		</researchPrerequisites>
+		<recipes>
+
+        </recipes>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>15</glowRadius>
+                <glowColor>(252,187,113,0)</glowColor>
+            </li>
+            <!-- <li Class="CompProperties_Refuelable"> -->
+                <!-- <fuelConsumptionRate>10.0</fuelConsumptionRate> -->
+                <!-- <fuelCapacity>200.0</fuelCapacity> -->
+                <!-- <fuelFilter> -->
+                    <!-- <thingDefs> -->
+                        <!-- <li>Chemfuel</li> -->
+                    <!-- </thingDefs> -->
+                <!-- </fuelFilter> -->
+                <!-- <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle> -->
+            <!-- </li> -->
+        </comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="GrimworldFabricationBenchBase">
+		<defName>GW_SM_ScatteredSons_WeaponBench</defName>
+		<label>Scattered Sons weapon workbench</label>
+		<description>A workbench for assembling weapons fit for a Primarch. \n\nTo anyone but the most masterful of the craft, these armaments are more akin to magic than technology. Lesser things have been worshipped by whole civilisations - and have been the end of them as well.</description>
+		<graphicData>
+            <texPath>Things/Building/Production/ScatteredSonsArmorWorkbench/PrimarchBench_Weapon</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(7,7)</drawSize>
+			<drawOffset>(0,0.05,-0.25)</drawOffset>
+        </graphicData>
+        <tickerType>Normal</tickerType>
+        <size>(5,3)</size>
+		<interactionCellOffset>(0,0,2)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<!-- <rotatable>false</rotatable> -->
+		<costList>
+            <Steel>100</Steel>
+            <Plasteel>50</Plasteel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <ComponentSpacer>1</ComponentSpacer>
+            <HP_Ceramite>15</HP_Ceramite>
+        </costList>
+        <researchPrerequisites>
+			<li>GW_Primarchfabrication</li>
+		</researchPrerequisites>
+		<recipes>
+		
+        </recipes>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>15</glowRadius>
+                <glowColor>(252,187,113,0)</glowColor>
+            </li>
+            <!-- <li Class="CompProperties_Refuelable"> -->
+                <!-- <fuelConsumptionRate>10.0</fuelConsumptionRate> -->
+                <!-- <fuelCapacity>200.0</fuelCapacity> -->
+                <!-- <fuelFilter> -->
+                    <!-- <thingDefs> -->
+                        <!-- <li>Chemfuel</li> -->
+                    <!-- </thingDefs> -->
+                <!-- </fuelFilter> -->
+                <!-- <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle> -->
+            <!-- </li> -->
+        </comps>
+	</ThingDef>
+	
+	<WorkGiverDef ParentName="GWFabricationWorkGiverBase">
+        <defName>DoBillsScatteredSonsArmorBench</defName>
+        <fixedBillGiverDefs>
+            <li>GW_SM_ScatteredSons_ArmorBench</li>
+            <li>GW_SM_ScatteredSons_WeaponBench</li>
+        </fixedBillGiverDefs>
+    </WorkGiverDef>
+
+</Defs>

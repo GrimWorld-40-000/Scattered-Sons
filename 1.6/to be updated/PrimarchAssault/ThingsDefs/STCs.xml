@@ -1,0 +1,55 @@
+<Defs>
+    <ThingDef ParentName="ResourceBase" Name="GWPA_ChampionSTCBase" Abstract="True">
+        <description>In Warhammer 40.000, STC fragments represent salvaged fragments from an ancient Standard Template Construct, offering a unique and invaluable source of technological knowledge. Functioning as the game's equivalent of techprints, these fragments can be utilized by colonists to unlock advanced technologies, granting the community access to new and sophisticated innovations. As precious relics of a forgotten era, STC fragments serve as a bridge between the past and the present, allowing RimWorld colonies to harness the secrets of advanced technologies for their survival and prosperity. \n\nThis special STC belonged to someone whom you have bested in combat, allowing you to replicate their unique equipment.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GW_Cogitator</ThingDef>
+        </descriptionHyperlinks>
+        <possessionCount>2</possessionCount>
+        <graphicData>
+            <texPath>Things/Resource/STC</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <stackLimit>50</stackLimit>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MaxHitPoints>7000</MaxHitPoints>
+            <MarketValue>25000</MarketValue>
+            <Mass>0.6</Mass>
+            <Flammability>0.6</Flammability>
+            <DeteriorationRate>0.1</DeteriorationRate>
+        </statBases>
+        <intricate>true</intricate>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <allowedArchonexusCount>10</allowedArchonexusCount>
+    </ThingDef>
+
+
+
+
+
+
+
+
+    <ThingDef ParentName="GWPA_ChampionSTCBase">
+        <defName>PASS_LionSTC</defName>
+        <label>Lion's STC fragment</label>
+        <uiIconPath>STCs/DAComponent/DAComponent_a</uiIconPath>
+        <graphicData>
+            <texPath>STCs/DAComponent</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+    <ThingDef ParentName="GWPA_ChampionSTCBase">
+        <defName>PASS_GuillimanSTC</defName>
+        <label>Guilliman's STC fragment</label>
+        <uiIconPath>STCs/UMComponent/UMComponent_a</uiIconPath>
+        <graphicData>
+            <texPath>STCs/UMComponent</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+    </ThingDef>
+</Defs>

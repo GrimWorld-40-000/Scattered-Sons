@@ -1,0 +1,96 @@
+<Defs>
+
+	<ResearchProjectDef Abstract="True" Name="GW_SM_SSTechBase" ParentName="GW_ImperiumTechBase">
+		<techLevel>Ultra</techLevel>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="GW_SM_SSTechBase">
+		<defName>GW_SM_Guilliman</defName>
+		<label>Imperial Regent</label>
+		<description>Replicate the armor and weapons of the revived Imperial Regent, Roboute Guilliman.</description>
+        <baseCost>7800</baseCost>
+		<prerequisites>
+			<li>AdvancedFabrication</li>
+			<li MayRequire="happypurging.ageofdarkness">GW_Primarchfabrication</li>
+		</prerequisites>
+            <researchViewX>8.00</researchViewX>
+            <researchViewY>3.20</researchViewY>
+		<modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>9</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+		<!-- Temporarily does not require the special STC -->
+
+		<!-- <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>PASS_GuillimanSTC</StudyObject>
+                        <NumberRequired>1</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions> -->
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef ParentName="GW_SM_SSTechBase">
+		<defName>GW_SM_LionArmor</defName>
+		<label>Imperial Warden</label>
+		<description>Replicate the armor and weapons of Lion El’Jonson, the Primarch of the Dark Angels.</description>
+        <baseCost>7800</baseCost>
+		<prerequisites>
+			<li>AdvancedFabrication</li>
+			<li MayRequire="happypurging.ageofdarkness">GW_Primarchfabrication</li>
+		</prerequisites>
+            <researchViewX>8.00</researchViewX>
+            <researchViewY>3.70</researchViewY>
+		<modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>GW_STC_Fragment</StudyObject>
+                        <NumberRequired>9</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions>
+		<!-- <modExtensions>
+            <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
+                <StudyLocation>GW_Cogitator</StudyLocation>
+                <ItemStudyRequirements>
+                    <li Class="GW_Frame.StudyRequirement">
+                        <StudyObject>PASS_LionSTC</StudyObject>
+                        <NumberRequired>1</NumberRequired>
+                    </li>    
+                </ItemStudyRequirements>
+            </li>
+        </modExtensions> -->
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="GW_SM_SSTechBase">
+		<defName>GW_Primarchfabrication</defName>
+		<label>Primarch fabrication</label>
+		<description>Set up workbenches to prepare for constructing the equipment of the legendary Primarchs - the gene-fathers of the Space Marines.</description>
+        <baseCost>2000</baseCost>
+		<prerequisites>
+			<li>AdvancedFabrication</li>
+			<li MayRequire="grimworld.talonoftheemperor">GW_TotE_CustodesFabrication</li>
+			<li MayRequire="happypurging.ageofdarkness">GW_SM_CodexAstartes</li>
+		</prerequisites>
+            <researchViewX>7.00</researchViewX>
+            <researchViewY>3.40</researchViewY>
+	</ResearchProjectDef>
+  
+
+
+
+</Defs>

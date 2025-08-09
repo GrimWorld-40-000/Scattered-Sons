@@ -1,0 +1,6 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Assemblies\RimworldModding.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Assemblies\RimworldModding.pdb
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Source\PrimarchAssault\obj\Debug\RimworldModding.csproj.AssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Source\PrimarchAssault\obj\Debug\RimworldModding.csproj.CoreCompileInputs.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Source\PrimarchAssault\obj\Debug\RimworldModding.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Primarch-Assault\1.5\Source\PrimarchAssault\obj\Debug\RimworldModding.pdb

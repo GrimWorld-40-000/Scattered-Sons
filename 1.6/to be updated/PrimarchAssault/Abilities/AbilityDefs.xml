@@ -1,0 +1,115 @@
+<!--
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_HellsphereCannonGun</defaultProjectile>
+        <warmupTime>7.5</warmupTime>
+        <range>18.9</range>
+        <soundCast>Shot_HellsphereCannonGun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <ai_AvoidFriendlyFireRadius>6</ai_AvoidFriendlyFireRadius>
+        <ai_RangedAlawaysShootGroundBelowTarget>true</ai_RangedAlawaysShootGroundBelowTarget>
+        <ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+        <minRange>5.9</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+        </targetParams>
+        <aimingLineMote>Mote_HellsphereCannon_Aim</aimingLineMote>
+        <aimingChargeMote>Mote_HellsphereCannon_Charge</aimingChargeMote>
+        <aimingChargeMoteOffset>1.07</aimingChargeMoteOffset>
+        <aimingLineMoteFixedLength>15.9</aimingLineMoteFixedLength>
+        <aimingTargetMote>Mote_HellsphereCannon_Target</aimingTargetMote>
+        <burstShotCount>1</burstShotCount>
+        <beamTargetsGround>true</beamTargetsGround>
+        <soundAiming>HellsphereCannon_Aiming</soundAiming>
+        <canGoWild>false</canGoWild>
+      </li>
+    </verbs>-->
+
+<Defs>
+  <AbilityDef>
+    <defName>GWPA_TacticalBombardment</defName>
+    <label>tactical bombardment</label>
+    <description>Drop an aerial strike, focusing on landing on mortars and encampments.</description>
+    <cooldownTicksRange>3600</cooldownTicksRange> <!-- 60 seconds -->
+    <ai_IsOffensive>true</ai_IsOffensive>
+    <aiCanUse>true</aiCanUse>
+    <verbProperties>
+        <verbClass>Verb_CastAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>7.5</warmupTime>
+        <range>18.9</range>
+        <ai_ProjectileLaunchingIgnoresMeleeThreats>true</ai_ProjectileLaunchingIgnoresMeleeThreats>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <ai_TargetHasRangedAttackScoreOffset>50</ai_TargetHasRangedAttackScoreOffset>
+        <minRange>5.9</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+          <canTargetPawns>false</canTargetPawns>
+        </targetParams>
+        <canGoWild>false</canGoWild>
+    </verbProperties>
+    <comps>
+      <li Class="PrimarchAssault.Abilities.CompProperties_TacticalBombardment">
+        <bombCount>3</bombCount>
+        <maxRange>50</maxRange>
+        <tickBeforeFirstLand>1500</tickBeforeFirstLand>
+        <targetMortarChance>0.7</targetMortarChance>
+        <targetPawnChance>0.5</targetPawnChance>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+
+
+
+  
+    
+    <AbilityDef Abstract="True" Name="GWPA_SummonReinforcementsBase">
+        <label>summon reinforcements</label>
+        <description>Summon nearby aerial reinforcements to help fight.</description>
+        <cooldownTicksRange>1200</cooldownTicksRange> <!-- 20 seconds -->
+        <ai_IsOffensive>true</ai_IsOffensive>
+        <aiCanUse>true</aiCanUse>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <hasStandardCommand>true</hasStandardCommand>
+            <warmupTime>2.5</warmupTime>
+            <targetable>false</targetable>
+            <targetParams>
+              <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+    
+    <AbilityDef ParentName="GWPA_SummonReinforcementsBase" MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+        <defName>GWPA_GuillimanReinforcement</defName>
+        <comps>
+            <li Class="PrimarchAssault.Abilities.CompProperties_DropTroops">
+                <pawnKinds>
+                    <li>GW_SM_UM_RangedTier2</li>
+                    <li>GW_SM_UM_MeleeTier2</li>
+                    <li>GW_SM_UM_RangedTier3</li>
+                    <li>GW_SM_UM_MeleeTier3</li>
+                    <li>GW_SM_UM_RangedTier4</li>
+                    <li>GW_SM_UM_MeleeTier4</li>
+                    <li>GW_SM_UM_RangedTier5</li>
+                    <li>GW_SM_UM_MeleeTier5</li>
+                </pawnKinds>
+                <combatScore>1500</combatScore>
+            </li>
+        </comps>
+    </AbilityDef>
+
+    
+
+</Defs>

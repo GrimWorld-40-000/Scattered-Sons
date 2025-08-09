@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
+            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{9F385C34-E1F4-4600-A3DC-A82EB16F12DC}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>RimworldModding</RootNamespace>
+        <AssemblyName>PrimarchAssault</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>..\..\Assemblies\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>..\..\Assemblies\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="0Harmony">
+          <HintPath>..\..\..\..\..\..\..\..\..\RimworldModding\References\0Harmony.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Assembly-CSharp">
+          <HintPath>..\..\..\..\..\..\..\..\..\RimworldModding\References\Assembly-CSharp.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="GrimWorld_Framework">
+          <HintPath>..\..\..\..\GrimWorld-Framework\1.5\Assemblies\GrimWorld_Framework.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Xml"/>
+        <Reference Include="UnityEngine">
+          <HintPath>..\..\..\..\..\..\..\..\..\RimworldModding\References\UnityEngine.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+          <HintPath>..\..\..\..\..\..\..\..\..\RimworldModding\References\UnityEngine.CoreModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+          <HintPath>..\..\..\..\..\..\..\..\..\RimworldModding\References\UnityEngine.IMGUIModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+          <HintPath>..\..\..\..\..\..\..\..\..\RimworldModding\References\UnityEngine.TextRenderingModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Abilities\DropTroops.cs" />
+        <Compile Include="Abilities\Rage.cs" />
+        <Compile Include="Abilities\RallyingCry.cs" />
+        <Compile Include="Abilities\TacticalBombardment.cs" />
+        <Compile Include="Alert_ChallengeIncoming.cs" />
+        <Compile Include="AssaultEvent\AssaultEventAction.cs" />
+        <Compile Include="AssaultEvent\AssaultEventActionProperties.cs" />
+        <Compile Include="AssaultEvent\GameConditionEvent.cs" />
+        <Compile Include="AssaultEvent\GiveHediffEvent.cs" />
+        <Compile Include="AssaultEvent\RefillShieldsEvent.cs" />
+        <Compile Include="AssaultEvent\TeleportIntoMountainEvent.cs" />
+        <Compile Include="ChallengeUtilities.cs" />
+        <Compile Include="DebugActions.cs" />
+        <Compile Include="External\AssaultEventDef.cs" />
+        <Compile Include="External\ChallengeDef.cs" />
+        <Compile Include="External\ChampionDetails.cs" />
+        <Compile Include="External\Comp_Aura.cs" />
+        <Compile Include="External\HediffComp_PsychicStormSuppression.cs" />
+        <Compile Include="External\Hediff_ArmorFlinch.cs" />
+        <Compile Include="External\Hediff_Champion.cs" />
+        <Compile Include="External\WaveDetails.cs" />
+        <Compile Include="GameComponent_ChallengeManager.cs" />
+        <Compile Include="GameConditions\BombardmentParent.cs" />
+        <Compile Include="GameConditions\LaserBombardment.cs" />
+        <Compile Include="GameConditions\OrbitalBombardment.cs" />
+        <Compile Include="GameConditions\PsychicStorm.cs" />
+        <Compile Include="HealthBarWindow.cs" />
+        <Compile Include="PADefsOf.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="External\Comp_SummoningFocus.cs" />
+        <Compile Include="Settings\SettingsRecord_PrimarchAssault.cs" />
+        <Compile Include="Settings\SettingsTabRecord_PrimarchAssault.cs" />
+        <Compile Include="Stages.cs" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>

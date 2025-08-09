@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!--Melee weapons-->
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>GW_SS_LionSword</defName>
+		<label>Fealty</label>
+        <description>A mysterious power sword wielded by Lion El'Jonson upon his return in the 41st Millennium. Drawn from the stones of Mirror-Caliban, this blade stops for no opponent - no traitor, no xenos, and no daemon.\n\nMirror-Caliban appears as a forest without end, inhabited by Watchers in the Dark (the diminutive servants of the Dark Angels) and Great Beasts of Caliban. The Lion discovered Fealty and the Emperor's Shield within the realm, and was able to use it as a passageway through space.\n\nLike its wielder, however, this Fealty is a replica, well-crafted as it is.</description>
+        <graphicData>
+            <texPath>Things/Weapons/GW_LionSword</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+            <drawSize>1.5</drawSize>
+			<onGroundRandomRotateAngle>55</onGroundRandomRotateAngle>
+        </graphicData>
+		<weaponTags Inherit="False">
+			<li>GW_EmperorWep</li>
+			<li>GW_LionSword</li>
+		</weaponTags>
+		<uiIconPath>Things/Weapons/GW_LionSword</uiIconPath>
+        <techLevel>Spacer</techLevel>
+        <tradeability>Sellable</tradeability>
+        <generateCommonality>0.01</generateCommonality>
+        <statBases>
+			<MaxHitPoints>5000</MaxHitPoints>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>4</Mass>
+			<MarketValue>4000</MarketValue>
+        </statBases>
+		<equippedStatOffsets>
+			<MeleeHitChance>1</MeleeHitChance>
+        </equippedStatOffsets>
+		<relicChance>1</relicChance>
+		<thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <equippedAngleOffset>0</equippedAngleOffset>
+        <recipeMaker IsNull="True" />
+		<costList>
+			<ComponentSpacer>40</ComponentSpacer>
+			<ComponentIndustrial>75</ComponentIndustrial>
+			<GW_ComponentRelic>10</GW_ComponentRelic>
+			<Plasteel>1100</Plasteel>
+			<Steel>2000</Steel>
+			<Gold>80</Gold>
+			<HP_Ceramite>900</HP_Ceramite>
+			<HP_Adamantium>440</HP_Adamantium>
+			<HP_Auramite>300</HP_Auramite>
+		</costList>
+		<stuffCategories>
+			<li>Imperial_Metals</li>
+		</stuffCategories>
+		<costStuffCount>900</costStuffCount>
+        <tools>
+            <li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>2</cooldownTime>
+				<chanceFactor>0.07</chanceFactor>
+				<armorPenetration>0.17</armorPenetration>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>50</power>
+                <cooldownTime>2.8</cooldownTime>
+				<chanceFactor>0.5</chanceFactor>
+				<armorPenetration>0.85</armorPenetration>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>46</power>
+                <cooldownTime>3.0</cooldownTime>
+				<chanceFactor>1</chanceFactor>
+				<armorPenetration>0.8</armorPenetration>
+            </li>
+        </tools>
+        <comps>
+            <li Class="CompProperties_Biocodable">
+                <biocodeOnEquip>True</biocodeOnEquip>
+            </li>
+            <!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
+        </comps>
+    </ThingDef>
+
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>GW_SM_Melee_FlameSword</defName>
+		<label>Emperor's sword</label>
+		<description>The Emperor's Sword is a giant, flaming sword that was created and wielded by the God-Emperor of Mankind Himself. Not only can no armor withstand its sundering stroke, but His blade can also destroy daemons permanently, instead of merely banishing them back to the Warp.\n\nThousands of daemons were felled by this blade, and thousands more were felled by Roboute Guilliman, the Imperial Regent, who wielded the Emperor's Sword during the Thirteenth Black Crusade of the 41st Millennium.\n\nOf course, this blade is a mere replica - a fine one it is, but the true Emperor's Sword and its wielder are too important to leave Terra except for the most imperative tasks.</description>
+		<possessionCount>1</possessionCount>
+		<graphicData>
+			<texPath>Things/Weapons/FlameSword</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5, 1.5</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<weaponTags Inherit="False">
+			<li>GW_EmperorWep</li>
+			<li>GW_GuillimanSword</li>
+		</weaponTags>
+		<recipeMaker IsNull="True" />
+		<costList>
+			<ComponentSpacer>40</ComponentSpacer>
+			<ComponentIndustrial>75</ComponentIndustrial>
+			<GW_ComponentRelic>10</GW_ComponentRelic>
+			<Plasteel>1100</Plasteel>
+			<Steel>2000</Steel>
+			<Gold>80</Gold>
+			<HP_Ceramite>900</HP_Ceramite>
+			<HP_Adamantium>440</HP_Adamantium>
+			<HP_Auramite>300</HP_Auramite>
+		</costList>
+		<stuffCategories>
+			<li>Imperial_Metals</li>
+		</stuffCategories>
+		<costStuffCount>900</costStuffCount>
+		<tradeability>Sellable</tradeability>
+		<uiIconScale>1.2</uiIconScale>
+		<smeltable>false</smeltable>
+		<burnableByRecipe>false</burnableByRecipe>
+		<statBases>
+			<MaxHitPoints>5000</MaxHitPoints>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>12</Mass>
+			<MarketValue>4000</MarketValue>
+        </statBases>
+		<equippedStatOffsets>
+            <MoveSpeed>0.50</MoveSpeed>
+			<Beauty>150</Beauty> 
+        </equippedStatOffsets>
+		<techLevel>Archotech</techLevel>
+		<relicChance>3</relicChance>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>Ultratech</li>
+		</weaponClasses>
+		<tools>
+			<li>
+                <label>handle</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>18</power>
+                <cooldownTime>2</cooldownTime>
+				<chanceFactor>0.07</chanceFactor>
+				<armorPenetration>0.17</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>point</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>45</power>
+                <cooldownTime>2.5</cooldownTime>
+				<chanceFactor>0.5</chanceFactor>
+				<armorPenetration>0.70</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+            </li>
+            <li>
+                <label>edge</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>42</power>
+                <cooldownTime>2.8</cooldownTime>
+				<chanceFactor>1</chanceFactor>
+				<armorPenetration>0.65</armorPenetration>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>10</amount>
+						<chance>0.2</chance>
+					</li>
+				</extraMeleeDamages>
+            </li>
+		</tools>
+        <comps>
+            <li Class="CompProperties_Biocodable">
+                <biocodeOnEquip>True</biocodeOnEquip>
+            </li>
+            <!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit"></li> -->
+        </comps>
+		<thingSetMakerTags>
+			<li>RewardStandardLowFreq</li>
+		</thingSetMakerTags>
+	</ThingDef>
+</Defs>
