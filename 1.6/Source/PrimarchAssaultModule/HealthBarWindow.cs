@@ -13,8 +13,9 @@ namespace PrimarchAssault
             doWindowBackground = false;
             doCloseX = false;
             windowRect = new Rect(Current.Camera.scaledPixelWidth / (float)2 - 1000, 30, 2000, 150);
-            draggable = SettingsTabRecord_PrimarchAssault.SettingsRecord.CanHealthbarBeMoved;
-            resizeable = SettingsTabRecord_PrimarchAssault.SettingsRecord.CanHealthbarBeMoved;
+            //TODO once settings are working again
+            // draggable = SettingsTabRecord_PrimarchAssault.SettingsRecord.CanHealthbarBeMoved;
+            // resizeable = SettingsTabRecord_PrimarchAssault.SettingsRecord.CanHealthbarBeMoved;
             absorbInputAroundWindow = false;
             closeOnAccept = false;
             closeOnCancel = false;
@@ -76,7 +77,7 @@ namespace PrimarchAssault
         public void UpdateIfWilling(int championId, float healthPercent, float shieldPercent, Rect healthBarRelative, Rect shieldBarRelative)
         {
             if (championId != CurrentPawn) return; 
-            _healthPercent = healthPercent;
+            _healthPercent = Mathf.Max(healthPercent, 0);
             _shieldPercent = shieldPercent;
             _healthBarRelative = healthBarRelative;
             _shieldBarRelative = shieldBarRelative;

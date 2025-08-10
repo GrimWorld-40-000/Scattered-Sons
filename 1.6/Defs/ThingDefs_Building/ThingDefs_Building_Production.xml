@@ -22,9 +22,9 @@
             <ComponentSpacer>1</ComponentSpacer>
             <HP_Ceramite>15</HP_Ceramite>
         </costList>
-        <researchPrerequisites>
+        <!-- <researchPrerequisites>
 			<li>GW_Primarchfabrication</li>
-		</researchPrerequisites>
+		</researchPrerequisites> -->
 		<recipes>
 
         </recipes>
@@ -68,9 +68,9 @@
             <ComponentSpacer>1</ComponentSpacer>
             <HP_Ceramite>15</HP_Ceramite>
         </costList>
-        <researchPrerequisites>
+        <!-- <researchPrerequisites>
 			<li>GW_Primarchfabrication</li>
-		</researchPrerequisites>
+		</researchPrerequisites> -->
 		<recipes>
 		
         </recipes>

@@ -1,0 +1,18 @@
+<Defs>
+    <MentalStateDef ParentName="BaseMentalState">
+        <defName>GWPA_Dueling</defName>
+        <label>dueling</label>
+        <category>Misc</category>
+        <blockInteractionInitiationExcept></blockInteractionInitiationExcept>
+        <blockInteractionRecipientExcept></blockInteractionRecipientExcept>
+        <blockRandomInteraction>true</blockRandomInteraction>
+        <colonistsOnly>true</colonistsOnly>
+        <minTicksBeforeRecovery>9999999</minTicksBeforeRecovery>
+        <maxTicksBeforeRecovery>9999999</maxTicksBeforeRecovery>
+        <nameColor>(0.88,0.48,0.16)</nameColor>
+        <beginLetter>{0} has begun a duel, and will fight at [PAWN_possessive] own will.</beginLetter>
+        <beginLetterDef>NeutralEvent</beginLetterDef>
+        <baseInspectLine>Mental state: Dueling</baseInspectLine>
+        <allowBeatfire>false</allowBeatfire>
+    </MentalStateDef>
+</Defs>

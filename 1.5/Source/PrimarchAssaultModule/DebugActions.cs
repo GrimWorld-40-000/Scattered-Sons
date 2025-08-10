@@ -12,7 +12,7 @@ namespace PrimarchAssault
         [DebugAction("Primarch Assault", "Hasten revenge assaults", allowedGameStates = AllowedGameStates.PlayingOnMap)]
         public static void StartPhaseTwos()
         {
-            GameComponent_ChallengeManager.Instance.StartAllPhaseTwos();
+            GameComponent_ChallengeManager.Instance.StartAllAssaults();
         }
 
         [DebugAction("Primarch Assault", "Fire assault event", allowedGameStates = AllowedGameStates.PlayingOnMap)]

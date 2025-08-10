@@ -17,6 +17,37 @@
 			</li>
 		</stages>
 	</HediffDef>
+	
+	<HediffDef>
+		<defName>GWPA_Duelist</defName>
+		<label>duelist</label>
+		<description>This pawn is going to duel the leader of a champion assault.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+                <becomeVisible>false</becomeVisible>
+				<minSeverity>1</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>GWPA_DuelVictor</defName>
+		<label>duel victor</label>
+		<description>This pawn has defeated the leader of a champion assault.</description>
+		<initialSeverity>1</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+                <becomeVisible>false</becomeVisible>
+				<minSeverity>1</minSeverity>
+        		<regeneration>1</regeneration>
+			</li>
+		</stages>
+	</HediffDef>
 
 	<HediffDef>
 		<defName>GWPA_ArmorFlinch</defName>

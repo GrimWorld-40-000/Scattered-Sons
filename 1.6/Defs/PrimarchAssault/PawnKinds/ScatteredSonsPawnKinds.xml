@@ -43,15 +43,15 @@
 		<initialWillRange>100~100</initialWillRange>
 		<initialResistanceRange>100~100</initialResistanceRange>
 		<humanPregnancyChance>0</humanPregnancyChance>
-        <modExtensions>
-            <!-- <li Class="GW4KArmor.DefaultPaletteExtension"> -->
-                <!-- <defaultPalette> -->
-                    <!-- <colorA>(16, 97, 56)</colorA> -->
-                    <!-- <colorB>(16, 97, 56)</colorB> -->
-                    <!-- <colorC>(255, 255, 255)</colorC> -->
-                <!-- </defaultPalette> -->
-            <!-- </li> -->
-        </modExtensions>
+        <!-- <modExtensions>
+            <li Class="GW4KArmor.DefaultPaletteExtension">
+                <defaultPalette>
+                    <colorA>(16, 97, 56)</colorA>
+                    <colorB>(16, 97, 56)</colorB>
+                    <colorC>(255, 255, 255)</colorC>
+                </defaultPalette>
+            </li>
+        </modExtensions> -->
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="GWPA_LionBase">
@@ -115,15 +115,15 @@
 		<initialWillRange>100~100</initialWillRange>
 		<initialResistanceRange>100~100</initialResistanceRange>
 		<humanPregnancyChance>0</humanPregnancyChance>
-        <modExtensions>
-            <!-- <li Class="GW4KArmor.DefaultPaletteExtension"> -->
-                <!-- <defaultPalette> -->
-                    <!-- <colorA>(56, 93, 162)</colorA> -->
-                    <!-- <colorB>(56, 93, 162)</colorB> -->
-                    <!-- <colorC>(192, 157, 88)</colorC> -->
-                <!-- </defaultPalette> -->
-            <!-- </li> -->
-        </modExtensions>
+        <!-- <modExtensions>
+            <li Class="GW4KArmor.DefaultPaletteExtension">
+                <defaultPalette>
+                    <colorA>(56, 93, 162)</colorA>
+                    <colorB>(56, 93, 162)</colorB>
+                    <colorC>(192, 157, 88)</colorC>
+                </defaultPalette>
+            </li>
+        </modExtensions> -->
 	</PawnKindDef>
 	
 

@@ -76,7 +76,7 @@ namespace PrimarchAssault
         public void UpdateIfWilling(int championId, float healthPercent, float shieldPercent, Rect healthBarRelative, Rect shieldBarRelative)
         {
             if (championId != CurrentPawn) return; 
-            _healthPercent = healthPercent;
+            _healthPercent = Mathf.Max(healthPercent, 0);
             _shieldPercent = shieldPercent;
             _healthBarRelative = healthBarRelative;
             _shieldBarRelative = shieldBarRelative;

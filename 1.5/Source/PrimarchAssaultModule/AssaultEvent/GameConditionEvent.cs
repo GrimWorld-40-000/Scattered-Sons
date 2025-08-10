@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -8,6 +10,7 @@ namespace PrimarchAssault.AssaultEvent
     {
         public int tickDuration;
         public GameConditionDef condition;
+        public bool endsWhenChampionLeaves;
         public override Type AssaultEventClass() => typeof(GameConditionEvent);
     }
     
@@ -18,6 +21,20 @@ namespace PrimarchAssault.AssaultEvent
         {
             base.Apply(map);
             map.gameConditionManager.RegisterCondition(GameConditionMaker.MakeCondition(Props.condition, Props.tickDuration));
+
+            if (Props.endsWhenChampionLeaves)
+            {
+
+	            if (!GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent.ContainsKey(map.Tile) || GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent[map.Tile] == null)
+	            {
+		            GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent[map.Tile] =
+			            new List<GameConditionDef>();
+	            }
+	            
+	            List<GameConditionDef> conditions = GameComponent_ChallengeManager.Instance.ConditionsCreatedByEvent.GetValueSafe(map.Tile);
+
+	            conditions.Add(Props.condition);
+            }
         }
     }
 }

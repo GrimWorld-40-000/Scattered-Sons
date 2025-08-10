@@ -1,0 +1,35 @@
+<Defs>
+    <DutyDef>
+        <defName>GWPA_GuardDuelDuty</defName>
+        <thinkNode Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="PrimarchAssault.Jobs.JobGiver_GuardDuel"/>
+            </subNodes>
+        </thinkNode>
+    </DutyDef>
+    
+    <DutyDef>
+        <defName>GWPA_PrepareToDuelDuty</defName>
+        <thinkNode Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="PrimarchAssault.Jobs.JobGiver_AwaitDuel"/>
+            </subNodes>
+        </thinkNode>
+    </DutyDef>
+
+    
+    <DutyDef>
+        <defName>GWPA_PrimarchDuel</defName>
+        <alwaysShowWeapon>true</alwaysShowWeapon>
+        <threatDisabled>true</threatDisabled>
+        <thinkNode Class="ThinkNode_Priority">
+            <subNodes>
+                <li Class="PrimarchAssault.Jobs.JobGiver_PrimarchDuel"/>
+
+                <li Class="JobGiver_Idle">
+                <ticks>60</ticks>
+                </li>
+            </subNodes>
+        </thinkNode>
+    </DutyDef>
+</Defs>
