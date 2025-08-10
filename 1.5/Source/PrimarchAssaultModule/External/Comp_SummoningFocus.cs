@@ -77,7 +77,7 @@ namespace PrimarchAssault.External
             
             //TODO Phase one is removed
             //GameComponent_ChallengeManager.Instance.StartPhaseOne(challengeDef);
-            GameComponent_ChallengeManager.Instance.StartPhaseTwo(challengeDef);
+            GameComponent_ChallengeManager.Instance.QueueAssault(challengeDef);
         }
     }
 }

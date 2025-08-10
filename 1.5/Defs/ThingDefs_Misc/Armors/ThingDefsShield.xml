@@ -110,10 +110,10 @@
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<!-- <li Class="VEF.ApparelDrawPosExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
-			</li>
+			</li> -->
 			<li Class="CombatExtended.ShieldDefExtension" MayRequire="CETeam.CombatExtended">
 				<shieldCoverage>
 					<li>Hands</li>
@@ -239,10 +239,10 @@ The paint has been stripped for recoloring.</description>
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<!-- <li Class="VEF.ApparelDrawPosExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
-			</li>
+			</li> -->
 			<li Class="CombatExtended.ShieldDefExtension" MayRequire="CETeam.CombatExtended">
 				<shieldCoverage>
 					<li>Hands</li>

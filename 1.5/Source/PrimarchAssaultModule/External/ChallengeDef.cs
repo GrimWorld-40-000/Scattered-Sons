@@ -26,9 +26,7 @@ namespace PrimarchAssault.External
 
         public ChampionDetails championDetails;
 
-        public List<WaveDetails> phaseOneWavesInPriority;
-        public List<WaveDetails> phaseTwoWavesInPriority;
-        public List<WaveDetails> escortWavesInPriority;
+        public List<WaveBlueprint> waves;
 
         public List<ChampionAbilityStage> abilityStages;
         public List<ChampionHediffStage> hediffStages;
@@ -61,7 +59,7 @@ namespace PrimarchAssault.External
         //2 quadrums to 1 year
         public IntRange ticksUntilRevenge = new IntRange(1800000, 3600000);
 
-        public int ticksUntilChampionArrives = 1500;
+        public int ticksBetweenWaves = 1500;
 
         public float championFlinchSeverity;
         
@@ -154,14 +152,28 @@ namespace PrimarchAssault.External
             }
         }
 
-        public void FirePhaseOne()
+        public void SpawnWave(int waveIndex)
         {
-            SpawnAssault(false, phaseOneWavesInPriority.First());
-        }
-        
-        public void FirePhaseTwo()
-        {
-            SpawnAssault(true, phaseTwoWavesInPriority.First());
+	        if (waveIndex == 0)
+	        {
+		        Find.MusicManagerPlay.ForcePlaySong(playlist.RandomElement(), false);
+            
+		        Faction faction = championDetails.GetFirstValidFactionOrNull();
+            
+		        if (!faction.HostileTo(Faction.OfPlayer))
+		        {
+			        faction.TryAffectGoodwillWith(Faction.OfPlayer, -200);
+		        }
+	        }
+	        WaveBlueprint blueprint = waves[waveIndex];
+	        if (blueprint.spawnsChampion)
+	        {
+		        SpawnChampionWave(blueprint.possibleWavesInPriorityOrder.First(), blueprint.lordJobOverrideType);
+	        }
+	        else
+	        {
+		        SpawnAssault(true, blueprint.possibleWavesInPriorityOrder.First());
+	        }
         }
 
         private IEnumerable<Pawn> CreateWave(WaveDetails details, Map map, Faction faction)
@@ -189,7 +201,7 @@ namespace PrimarchAssault.External
             }
         }
 
-        public void SpawnChampion(bool isPhaseTwo, List<ThingDefCountClass> championsChampionDrop)
+        public void SpawnChampionWave(WaveDetails wave, Type lordJobType)
         {
             announcementSound.PlayOneShotOnCamera();
             
@@ -226,7 +238,7 @@ namespace PrimarchAssault.External
                 stages.AddRange(eventStages);
             }
             
-            championHediff.SetupHediff(championsChampionDrop, stages, this, !isPhaseTwo);
+            championHediff.SetupHediff(championDrops, stages, this);
             champion.health.AddHediff(championHediff);
 
             if (championFlinchSeverity > 0)
@@ -243,7 +255,7 @@ namespace PrimarchAssault.External
             
             if (allOfFaction.NullOrEmpty())
             {
-                if (!CellFinder.TryFindRandomCellNear(map.Center, map, 5,
+                if (!CellFinder.TryFindRandomCellNear(map.Center, map, 15,
                         vec3 => map.reachability.CanReachColony(vec3), out epicenter))
                 {
                     return;
@@ -272,15 +284,29 @@ namespace PrimarchAssault.External
                 }
             }
             
-            List<Pawn> pawnsToGenerate = CreateWave(escortWavesInPriority.First(), map, faction).ToList();
+            List<Pawn> pawnsToGenerate = CreateWave(wave, map, faction).ToList();
             pawnsToGenerate.Add(champion);
             allOfFaction.AddRange(pawnsToGenerate);
 
             //ColorDropPodsNext(primarchColor);
             DropPodUtility.DropThingsNear(epicenter, map, pawnsToGenerate, faction: faction);
             //ColorDropPodsOnMap(map, primarchColor);
+
+            LordJob waveLord;
+
+            if (lordJobType == null)
+            {
+	            waveLord = new LordJob_AssaultColony();
+            }
+            else
+            {
+	            List<Pawn> allWithoutChampion = new List<Pawn>(allOfFaction);
+	            allWithoutChampion.Remove(champion);
+	            
+	            waveLord = (LordJob) Activator.CreateInstance(lordJobType, args: [champion, allWithoutChampion]);
+            }
             
-            LordMaker.MakeNewLord(faction, new LordJob_AssaultColony(), map, allOfFaction);
+            LordMaker.MakeNewLord(faction, waveLord, map, allOfFaction);
             
             GameComponent_ChallengeManager.Instance.RegisterActiveChampion(champion.thingIDNumber, this);
             
@@ -295,13 +321,6 @@ namespace PrimarchAssault.External
             Faction faction = championDetails.GetFirstValidFactionOrNull();
             
               
-            Find.MusicManagerPlay.ForcePlaySong(playlist.RandomElement(), false);
-            
-            
-            if (!faction.HostileTo(Faction.OfPlayer))
-            {
-                faction.TryAffectGoodwillWith(Faction.OfPlayer, -200);
-            }
 
             bool mustUseDropPods = false;
             if (useCenterByDefault || !CellFinder.TryFindRandomEdgeCellWith(vec3 => map.reachability.CanReachColony(vec3), map,
@@ -341,7 +360,7 @@ namespace PrimarchAssault.External
                     GenSpawn.Spawn(pawn, spawnPointForIndividual, map);
                 }
             }
-
+            
             LordMaker.MakeNewLord(faction, new LordJob_AssaultColony(), map, pawnsToGenerate);
             
             Find.LetterStack.ReceiveLetter(LabelCap, arrivalText, LetterDefOf.ThreatBig, new LookTargets(pawnsToGenerate));

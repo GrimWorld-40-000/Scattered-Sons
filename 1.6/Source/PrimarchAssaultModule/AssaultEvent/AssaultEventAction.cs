@@ -20,8 +20,10 @@ namespace PrimarchAssault.AssaultEvent
         {
             yield break;
         }
-        
-        public bool Enabled => !SettingsTabRecord_PrimarchAssault.SettingsRecord.DisabledEventActions.Contains(props.actionName);
+
+        public bool Enabled => true;
+        //TODO once settings work again
+        // public bool Enabled => !SettingsTabRecord_PrimarchAssault.SettingsRecord.DisabledEventActions.Contains(props.actionName);
 
         public virtual void Initialize(AssaultEventActionProperties loadingProps)
         {

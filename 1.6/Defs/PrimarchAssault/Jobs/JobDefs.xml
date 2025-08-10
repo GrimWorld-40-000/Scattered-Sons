@@ -1,0 +1,14 @@
+<Defs>
+    <JobDef>
+        <defName>GWPA_GuardDuel</defName>
+        <driverClass>PrimarchAssault.Jobs.JobDriver_GuardDuel</driverClass>
+        <reportString>guarding duel.</reportString>
+        <casualInterruptible>false</casualInterruptible>
+    </JobDef>
+    <JobDef>
+        <defName>GWPA_AwaitDuel</defName>
+        <driverClass>PrimarchAssault.Jobs.JobDriver_AwaitDuel</driverClass>
+        <reportString>preparing to duel.</reportString>
+        <casualInterruptible>false</casualInterruptible>
+    </JobDef>
+</Defs>

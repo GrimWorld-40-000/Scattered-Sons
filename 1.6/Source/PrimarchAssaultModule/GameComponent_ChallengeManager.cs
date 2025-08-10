@@ -22,15 +22,11 @@ namespace PrimarchAssault
 
         public readonly Dictionary<int, List<GameConditionDef>> ConditionsCreatedByEvent = new Dictionary<int, List<GameConditionDef>>();
         
-        public ChallengeDef QueuedPhaseOne => _queuedPhaseOne;
 
-        private ChallengeDef _queuedPhaseOne;
-        private int _queuedPhaseOneTick = -1;
-
-        private Dictionary<ChallengeDef, int> QueuedPhaseTwos => _queuedPhaseTwos ??= new Dictionary<ChallengeDef, int>();
-        private Dictionary<ChallengeDef, int> _queuedPhaseTwos;
+        private Dictionary<ChallengeDef, int> QueuedAssaults => _queuedAssaults ??= new Dictionary<ChallengeDef, int>();
+        private Dictionary<ChallengeDef, int> _queuedAssaults;
         private readonly List<ChallengeDef> _tmpChallengesToDo = new List<ChallengeDef>();
-        private List<ChampionSpawnData> QueuedChampions => _queuedChampions ??= new List<ChampionSpawnData>();
+        private List<ChampionSpawnData> QueuedWaves => _queuedChampions ??= new List<ChampionSpawnData>();
         private List<ChampionSpawnData> _queuedChampions;
         private List<ChampionTrackerData> ActiveChampions => _activeChampions ??= new List<ChampionTrackerData>();
         private List<ChampionTrackerData> _activeChampions = new List<ChampionTrackerData>();
@@ -39,9 +35,7 @@ namespace PrimarchAssault
         public override void ExposeData()
         {
             Scribe_Collections.Look(ref _activeChampions, "activeChampions", LookMode.Deep);
-            Scribe_Defs.Look(ref _queuedPhaseOne, "queuedPhaseOne");
-            Scribe_Values.Look(ref _queuedPhaseOneTick, "queuedPhaseOneTick");
-            Scribe_Collections.Look(ref _queuedPhaseTwos, "queuedPhaseTwos", LookMode.Def, LookMode.Value);
+            Scribe_Collections.Look(ref _queuedAssaults, "queuedAssaults", LookMode.Def, LookMode.Value);
             Scribe_Collections.Look(ref _queuedChampions,  "queuedChampions", true, LookMode.Deep);
             base.ExposeData();
         }
@@ -65,33 +59,24 @@ namespace PrimarchAssault
             }
         }
 
-        public bool IsPhaseOneQueued => _queuedPhaseOne != null;
+        public bool IsAnyAssaultQueued => !_queuedAssaults.NullOrEmpty();
 
+        public ChallengeDef FirstQueuedAssault => _queuedAssaults.NullOrEmpty() ? null : _queuedAssaults.First().Key;
 
         /// <summary>
-        /// Cannot start a challenge if any phase 1 is queued, or its phase 2 is queued
+        /// Cannot start a challenge if its already queued
         /// </summary>
         /// <param name="def"></param>
         /// <returns></returns>
         public bool CanStartNewChallenge(ChallengeDef def)
         {
-            if (IsPhaseOneQueued)
-            {
-                return false;
-            }
-
-            return !QueuedPhaseTwos.ContainsKey(def);
+            return !QueuedAssaults.ContainsKey(def);
         }
 
-        public void StartPhaseOne(ChallengeDef def)
-        {
-            _queuedPhaseOne = def;
-            _queuedPhaseOneTick = Find.TickManager.TicksGame + def.ticksUntilArrival.RandomInRange;
-        }
         
-        public void StartPhaseTwo(ChallengeDef def)
+        public void QueueAssault(ChallengeDef def)
         {
-            QueuedPhaseTwos[def] = Find.TickManager.TicksGame + def.ticksUntilRevenge.RandomInRange;
+            QueuedAssaults[def] = Find.TickManager.TicksGame + def.ticksUntilArrival.RandomInRange;
         }
 
         public override void GameComponentTick()
@@ -125,52 +110,57 @@ namespace PrimarchAssault
             }
             
             
-            if (IsPhaseOneQueued && tickNow > _queuedPhaseOneTick)
-            {
-                _queuedPhaseOne.FirePhaseOne();
-                QueuedChampions.Add(new ChampionSpawnData(Find.TickManager.TicksGame + _queuedPhaseOne.ticksUntilChampionArrives, false, _queuedPhaseOne));
-                _queuedPhaseOne = null;
-            }
-            
             _tmpChallengesToDo.Clear();
             
-            foreach (var (challengeDef, tick) in QueuedPhaseTwos)
+            foreach (var (challengeDef, tick) in QueuedAssaults)
             {
                 if (tickNow <= tick) continue;
-                challengeDef.FirePhaseTwo();
-                QueuedChampions.Add(new ChampionSpawnData(Find.TickManager.TicksGame + challengeDef.ticksUntilChampionArrives, true, challengeDef));
+                challengeDef.SpawnWave(0);
+                if (challengeDef.waves.Count > 1)
+                {
+	                QueuedWaves.Add(new ChampionSpawnData(Find.TickManager.TicksGame + challengeDef.ticksBetweenWaves, challengeDef, 1));
+                }
                 _tmpChallengesToDo.Add(challengeDef);
             }
 
             foreach (ChallengeDef challengeDef in _tmpChallengesToDo)
             {
-                QueuedPhaseTwos.Remove(challengeDef);
+                QueuedAssaults.Remove(challengeDef);
             }
 
-            if (QueuedChampions.NullOrEmpty()) return;
+            if (QueuedWaves.NullOrEmpty()) return;
             
-            var data = QueuedChampions.First();
+            var data = QueuedWaves.First();
             
             if (data == null)
             {
                 Log.Error("Champion spawn data was null. Champion cannot spawn.");
-                QueuedChampions.RemoveAt(0);
+                QueuedWaves.RemoveAt(0);
                 return;
             }
             
             if (tickNow <= data.TickToSpawn) return;
             
-            data.ChallengeDef.SpawnChampion(data.IsPhaseTwo, data.IsPhaseTwo? data.ChallengeDef.championDrop: null);
+            //Spawn the wave
+            data.ChallengeDef.SpawnWave(data.Wave);
             
-            QueuedChampions.Remove(data);
+            //And increment the wave system
+            data.Wave += 1;
+            data.TickToSpawn += data.ChallengeDef.ticksBetweenWaves;
+            
+            //And if we have no more waves, then be rid of it
+            if (data.ChallengeDef.waves.Count >= data.Wave)
+            {
+	            QueuedWaves.Remove(data);
+            }
         }
 
-        public void StartAllPhaseTwos()
+        public void StartAllAssaults()
         {
-            List <ChallengeDef> challenges = QueuedPhaseTwos.Keys.ToList();
+            List <ChallengeDef> challenges = QueuedAssaults.Keys.ToList();
             foreach (var challengeDef in challenges)
             {
-                QueuedPhaseTwos[challengeDef] = Find.TickManager.TicksGame;
+                QueuedAssaults[challengeDef] = Find.TickManager.TicksGame;
             }
         }
     }
@@ -182,21 +172,21 @@ namespace PrimarchAssault
             
         }
         
-        public ChampionSpawnData(int tickToSpawn, bool isPhaseTwo, ChallengeDef challengeDef)
+        public ChampionSpawnData(int tickToSpawn, ChallengeDef challengeDef, int wave)
         {
             TickToSpawn = tickToSpawn;
-            IsPhaseTwo = isPhaseTwo;
             ChallengeDef = challengeDef;
+            Wave = wave;
         }
         
         public int TickToSpawn;
-        public bool IsPhaseTwo;
         public ChallengeDef ChallengeDef;
+        public int Wave;
         public void ExposeData()
         {
             Scribe_Values.Look(ref TickToSpawn, "ticksToSpawn");
-            Scribe_Values.Look(ref IsPhaseTwo, "isPhaseTwo");
             Scribe_Defs.Look(ref ChallengeDef, "challengeDef");
+            Scribe_Values.Look(ref Wave, "wave");
         }
     }
 

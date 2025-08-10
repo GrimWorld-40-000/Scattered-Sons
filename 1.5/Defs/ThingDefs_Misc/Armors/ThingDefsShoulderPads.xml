@@ -79,10 +79,10 @@
                     </li>
                 </stats>
             </li>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<!-- <li Class="VEF.ApparelDrawPosExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
-            </li>
+            </li> -->
 	    </modExtensions>
     </ThingDef>
 	

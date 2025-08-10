@@ -1,0 +1,27 @@
+<Defs>
+    <MentalStateDef ParentName="BaseMentalState">
+        <defName>GWPA_Dueling</defName>
+        <!-- <stateClass>MentalState_Slaughterer</stateClass>
+        <workerClass>MentalStateWorker_Slaughterer</workerClass> -->
+        <label>dueling</label>
+        <category>Misc</category>
+        <blockInteractionInitiationExcept>
+        </blockInteractionInitiationExcept>
+        <blockInteractionRecipientExcept>
+        </blockInteractionRecipientExcept>
+        <blockRandomInteraction>true</blockRandomInteraction>
+        <colonistsOnly>true</colonistsOnly>
+        <minTicksBeforeRecovery>9999999</minTicksBeforeRecovery>
+        <maxTicksBeforeRecovery>9999999</maxTicksBeforeRecovery>
+        <!-- <recoveryMtbDays>0.033</recoveryMtbDays>
+        <recoverFromSleep>true</recoverFromSleep> -->
+        <nameColor>(0.88,0.48,0.16)</nameColor>
+        <!-- <moodRecoveryThought>Catharsis</moodRecoveryThought>
+        <blockNormalThoughts>true</blockNormalThoughts> -->
+        <!-- <recoveryMessage>{0} is no longer slaughtering random animals.</recoveryMessage> -->
+        <beginLetter>{0} has begun a duel, and will fight at [PAWN_possessive] own will.</beginLetter>
+        <beginLetterDef>NeutralEvent</beginLetterDef>
+        <baseInspectLine>Mental state: Dueling</baseInspectLine>
+        <allowBeatfire>false</allowBeatfire>
+    </MentalStateDef>
+</Defs>

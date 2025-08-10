@@ -14,18 +14,17 @@ namespace PrimarchAssault.External
         private List<ChampionStage> _stages = new List<ChampionStage>();
         private List<ThingDefCountClass> _droppedThings;
         private ChallengeDef _challenge;
-        private bool _doesQueuePhaseTwo;
         private float _currentHp;
+        public bool CanBeKilled;
 
 
 
         private List<ChampionStage> _tmpStagesToRemove = new List<ChampionStage>();
-        public void SetupHediff(List<ThingDefCountClass> droppedThings, List<ChampionStage> stages, ChallengeDef challenge, bool doesQueuePhaseTwo = false)
+        public void SetupHediff(List<ThingDefCountClass> droppedThings, List<ChampionStage> stages, ChallengeDef challenge)
         {
             _droppedThings = droppedThings;
             _stages = stages;
             _challenge = challenge;
-            _doesQueuePhaseTwo = doesQueuePhaseTwo;
             _currentHp = challenge.championHp;
         }
 
@@ -35,8 +34,13 @@ namespace PrimarchAssault.External
             Scribe_Collections.Look(ref _stages, "stages", LookMode.Deep);
             Scribe_Collections.Look(ref _droppedThings, "droppedThings", LookMode.Deep);
             Scribe_Defs.Look(ref _challenge, "challenge");
-            Scribe_Values.Look(ref _doesQueuePhaseTwo, "doesQueuePhaseTwo");
             Scribe_Values.Look(ref _currentHp, "currentHp");
+            Scribe_Values.Look(ref CanBeKilled, "canBeKilled");
+        }
+
+        public List<ThingDefCountClass> GetDroppedThings()
+        {
+	        return _droppedThings;
         }
 
         public override void Notify_PawnDied(DamageInfo? dinfo, Hediff culprit = null)
@@ -81,21 +85,27 @@ namespace PrimarchAssault.External
 
             }
 
-            if (_doesQueuePhaseTwo)
-            {
-                GameComponent_ChallengeManager.Instance.StartPhaseTwo(_challenge);
-                Find.LetterStack.ReceiveLetter("GWPA.EscapedTitle".Translate(), "GWPA.Escaped".Translate(_challenge.championName), LetterDefOf.ThreatSmall);
-            }
-            else
-            {
-                Find.LetterStack.ReceiveLetter("GWPA.GivenUpTitle".Translate(), "GWPA.GivenUp".Translate(), LetterDefOf.PositiveEvent);
-            }
             
-            //Get rid of the corpse
-            EffecterDefOf.Skip_EntryNoDelay.Spawn(pawn.Corpse, pawn.Corpse.MapHeld).Cleanup();
-            pawn.Corpse.DeSpawn();
+            FinalizeAndRemove();
+        }
+
+        public void FinalizeAndRemove()
+        {
+	        Find.LetterStack.ReceiveLetter("GWPA.GivenUpTitle".Translate(), "GWPA.GivenUp".Translate(), LetterDefOf.PositiveEvent);
+	        
+	        //Get rid of the corpse
+	        if (pawn.Dead)
+	        {
+		        EffecterDefOf.Skip_EntryNoDelay.Spawn(pawn.Corpse, pawn.Corpse.MapHeld).Cleanup();
+		        pawn.Corpse.DeSpawn();
+	        }
+	        else
+	        {
+		        EffecterDefOf.Skip_EntryNoDelay.Spawn(pawn, pawn.MapHeld).Cleanup();
+		        pawn.DeSpawn();
+	        }
             
-            GameComponent_ChallengeManager.Instance.RemoveActiveChampion(pawn.thingIDNumber);
+	        GameComponent_ChallengeManager.Instance.RemoveActiveChampion(pawn.thingIDNumber);
         }
 
         public void DamageHealthBar(float amount, DamageInfo dinfo)
@@ -106,12 +116,6 @@ namespace PrimarchAssault.External
         public override void Tick()
         {
             base.Tick();
-            
-            if (_currentHp <= 0)
-            {
-	            pawn.Kill(null);
-	            return;
-            }
             
             float percent = GetChampionStage(out float shieldValue, out float healthValue);
 
@@ -129,6 +133,14 @@ namespace PrimarchAssault.External
             
             
             
+            if (_currentHp <= 0)
+            {
+	            if (CanBeKilled)
+	            {
+		            pawn.Kill(null);
+	            }
+	            return;
+            }
             
             if (!pawn.IsHashIntervalTick(100)) return;
             
@@ -141,12 +153,14 @@ namespace PrimarchAssault.External
 
             _stages.RemoveAll(stage => _tmpStagesToRemove.Contains(stage));
         }
+        
+        public float HealthPercent => _currentHp / _challenge.championHp;
 
 
         private float GetChampionStage(out float apparelValue, out float healthValue)
         {
             apparelValue = (float)pawn.apparel.WornApparel.Select(apparel => apparel.HitPoints / (double)apparel.MaxHitPoints).Average();
-            healthValue = _currentHp / _challenge.championHp;
+            healthValue = HealthPercent;
             
             return Math.Min(apparelValue, healthValue);
         }

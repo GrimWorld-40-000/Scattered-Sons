@@ -124,12 +124,12 @@
                 </defaultPalette>
             </li>
         </comps>
-		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+		<!-- <modExtensions>
+			<li Class="VEF.ApparelDrawPosExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
             </li>
-        </modExtensions>
+        </modExtensions> -->
     </ThingDef>
 	
 	<ThingDef ParentName="GW_SM_ImperialWardenrBackpack">
@@ -226,12 +226,12 @@ The paint has been stripped for recoloring.</description>
                 <li>GW_Guilliman</li>
 			</tags>
 		</apparel>
-		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+		<!-- <modExtensions>
+			<li Class="VEF.ApparelDrawPosExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
             </li>
-        </modExtensions>
+        </modExtensions> -->
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
@@ -344,12 +344,12 @@ The paint has been stripped for recoloring.</description>
                 </defaultPalette>
             </li>
         </comps>
-		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+		<!-- <modExtensions>
+			<li Class="VEF.ApparelDrawPosExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
             </li>
-        </modExtensions>
+        </modExtensions> -->
     </ThingDef>
 	
 	<ThingDef ParentName="GW_SM_ImperialWardenrBackpack">
@@ -446,12 +446,12 @@ The paint has been stripped for recoloring.</description>
                 <li>GW_LionArmor</li>
 			</tags>
 		</apparel>
-		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+		<!-- <modExtensions>
+			<li Class="VEF.ApparelDrawPosExtension">
                 <isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
             </li>
-        </modExtensions>
+        </modExtensions> -->
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>

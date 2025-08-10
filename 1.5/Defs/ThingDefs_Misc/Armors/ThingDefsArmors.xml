@@ -72,10 +72,10 @@
 			</li>
 		</comps>
 		<modExtensions>
-			<li Class="VFECore.ApparelDrawPosExtension">
+			<!-- <li Class="VEF.ApparelDrawPosExtension">
 				<isUnifiedApparel>true</isUnifiedApparel>
 				<hideHead>false</hideHead>
-			</li>
+			</li> -->
 			<li Class="CombatExtended.PartialArmorExt" MayRequire="ceteam.combatextended">
 				<stats>
 					<li>

@@ -8,6 +8,12 @@
     <GWPA.Escaped>{0} has escaped. They are certain to return for revenge someday.</GWPA.Escaped>
     <GWPA.GivenUpTitle>Given up.</GWPA.GivenUpTitle>
     <GWPA.GivenUp>You have bested your foe in combat. Hopefully they have given up.</GWPA.GivenUp>
+    <GWPA.DuelFailedTitle>Duel lost.</GWPA.DuelFailedTitle>
+    <GWPA.DuelFailed>Your foe has bested you in combat. They have left with their victory.</GWPA.DuelFailed>
+    <GWPA.DuelWonTitle>Duel victory.</GWPA.DuelWonTitle>
+    <GWPA.DuelWon>You have bested your foe combat. They have left amicably.</GWPA.DuelWon>
+    <GWPA.DuelDisrespectedTitle>Duel disrespected.</GWPA.DuelDisrespectedTitle>
+    <GWPA.DuelDisrespected>Your have aggravated your opponent by violating the rules of the duel!</GWPA.DuelDisrespected>
     
     <GWPA.HealthbarMoveable>Is healthbar moveable?</GWPA.HealthbarMoveable> 
 </LanguageData>
