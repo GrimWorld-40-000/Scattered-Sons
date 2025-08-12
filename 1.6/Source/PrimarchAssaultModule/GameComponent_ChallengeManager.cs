@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using PrimarchAssault.External;
+using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI;
@@ -143,15 +144,34 @@ namespace PrimarchAssault
             
             //Spawn the wave
             data.ChallengeDef.SpawnWave(data.Wave);
+
+            bool onRepeat = false;
             
             //And increment the wave system
-            data.Wave += 1;
+            if (!data.ChallengeDef.waves[data.Wave].repeat)
+            {
+	            data.Wave += 1;
+            }
+            else
+            {
+	            onRepeat = true;
+            }
             data.TickToSpawn += data.ChallengeDef.ticksBetweenWaves;
             
+            
             //And if we have no more waves, then be rid of it
-            if (data.ChallengeDef.waves.Count >= data.Wave)
+            if (data.ChallengeDef.waves.Count <= data.Wave)
             {
 	            QueuedWaves.Remove(data);
+            }
+            else if (onRepeat)
+            {
+	            //If on repeat, look for a champion. If none, remove.
+	            if (!PawnsFinder.AllMapsAndWorld_Alive.Any(pawn =>
+		                pawn.health.hediffSet.HasHediff(PADefsOf.GWPA_Champion)))
+	            {
+		            QueuedWaves.Remove(data);
+	            }
             }
         }
 

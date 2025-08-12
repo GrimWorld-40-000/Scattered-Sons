@@ -172,7 +172,7 @@ namespace PrimarchAssault.External
 	        }
 	        else
 	        {
-		        SpawnAssault(true, blueprint.possibleWavesInPriorityOrder.First());
+		        SpawnAssault(true, blueprint.possibleWavesInPriorityOrder.First(), waveIndex == 0);
 	        }
         }
 
@@ -314,10 +314,9 @@ namespace PrimarchAssault.External
             eventStages?.DoIf(stage => stage.triggerOnChampionArrive, stage => stage.Apply(null, map));
         }
 
-        private void SpawnAssault(bool useCenterByDefault, WaveDetails details)
+        private void SpawnAssault(bool useCenterByDefault, WaveDetails details, bool sendAlert)
         {
             Map map = Find.AnyPlayerHomeMap;
-            Find.TickManager.slower.SignalForceNormalSpeedShort();
             Faction faction = championDetails.GetFirstValidFactionOrNull();
             
               
@@ -362,8 +361,12 @@ namespace PrimarchAssault.External
             }
             
             LordMaker.MakeNewLord(faction, new LordJob_AssaultColony(), map, pawnsToGenerate);
-            
-            Find.LetterStack.ReceiveLetter(LabelCap, arrivalText, LetterDefOf.ThreatBig, new LookTargets(pawnsToGenerate));
+
+            if (sendAlert)
+            {
+	            Find.TickManager.slower.SignalForceNormalSpeedShort();
+	            Find.LetterStack.ReceiveLetter(LabelCap, arrivalText, LetterDefOf.ThreatBig, new LookTargets(pawnsToGenerate));
+            }
 
             eventStages?.DoIf(stage => stage.triggerOnAssaultStart, stage => stage.Apply(null, map));
         }
