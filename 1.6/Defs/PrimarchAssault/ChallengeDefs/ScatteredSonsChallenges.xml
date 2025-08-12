@@ -273,6 +273,8 @@
                 <wealthMultiplier>.02</wealthMultiplier>
             </li> -->
             <li>
+                <spawnsChampion>true</spawnsChampion>
+                <lordJobOverrideType>PrimarchAssault.LordJob_AuraFarm</lordJobOverrideType>
                 <possibleWavesInPriorityOrder>
                     <li MayRequire="grimworld.talonOfTheEmperor">
                         <pawnKinds>
@@ -292,7 +294,7 @@
                             <li>GW_SM_UM_RangedTier5</li>
                             <li>GW_SM_UM_MeleeTier5</li>
                         </pawnKinds>
-                        <wealthCap>500000</wealthCap>
+                        <wealthCap>1000000</wealthCap>
                         <wealthMultiplier>.03</wealthMultiplier>
                     </li>
                     <!--Fallback to ancient soldiers-->
@@ -300,31 +302,31 @@
                         <pawnKinds>
                             <li>AncientSoldier</li>
                         </pawnKinds>
-                        <wealthCap>500000</wealthCap>
+                        <wealthCap>1000000</wealthCap>
                         <wealthMultiplier>.03</wealthMultiplier>
                     </li>
                 </possibleWavesInPriorityOrder>
             </li>
             <li>
-                <spawnsChampion>true</spawnsChampion>
+                <repeat>true</repeat>
                 <possibleWavesInPriorityOrder>
                     <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
                         <pawnKinds>
-                            <li>GW_SM_UM_RangedTier4</li>
-                            <li>GW_SM_UM_MeleeTier4</li>
-                            <li>GW_SM_UM_RangedTier5</li>
-                            <li>GW_SM_UM_MeleeTier5</li>
+                            <li>GW_SM_UM_RangedTier1</li>
+                            <li>GW_SM_UM_MeleeTier1</li>
+                            <li>GW_SM_UM_RangedTier2</li>
+                            <li>GW_SM_UM_MeleeTier2</li>
                         </pawnKinds>
-                        <wealthCap>1000000</wealthCap>
-                        <wealthMultiplier>.03</wealthMultiplier>
+                        <wealthCap>500000</wealthCap>
+                        <wealthMultiplier>.003</wealthMultiplier>
                     </li>
                     <!--Fallback to ancient soldiers-->
                     <li>
                         <pawnKinds>
                             <li>AncientSoldier</li>
                         </pawnKinds>
-                        <wealthCap>1000000</wealthCap>
-                        <wealthMultiplier>.03</wealthMultiplier>
+                        <wealthCap>500000</wealthCap>
+                        <wealthMultiplier>.003</wealthMultiplier>
                     </li>
                 </possibleWavesInPriorityOrder>
             </li>

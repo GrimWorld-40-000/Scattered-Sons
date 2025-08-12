@@ -112,6 +112,7 @@
         <Compile Include="Jobs\Trigger_HostilePawnNearby.cs" />
         <Compile Include="Jobs\Trigger_NewHostilePawnNearPoint.cs" />
         <Compile Include="Jobs\Trigger_ValidDuelistNear.cs" />
+        <Compile Include="LordJob_AuraFarm.cs" />
         <Compile Include="LordJob_Duel.cs" />
         <Compile Include="LordJob_Champion.cs" />
         <Compile Include="PADefsOf.cs" />

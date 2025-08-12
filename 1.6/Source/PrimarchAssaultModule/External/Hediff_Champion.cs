@@ -191,6 +191,7 @@ namespace PrimarchAssault.External
 	            return;
             }
             
+            
             if (!pawn.IsHashIntervalTick(100)) return;
             
             _tmpStagesToRemove.Clear();
