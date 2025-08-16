@@ -46,10 +46,8 @@
 			<HP_Adamantium>440</HP_Adamantium>
 			<HP_Auramite>300</HP_Auramite>
 		</costList>
-		<stuffCategories>
-			<li>Imperial_Metals</li>
-		</stuffCategories>
-		<costStuffCount>900</costStuffCount>
+		<stuffCategories IsNull="True" />
+		<costStuffCount Inherit="False" />
         <tools>
             <li>
                 <label>handle</label>
