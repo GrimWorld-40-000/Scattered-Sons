@@ -43,6 +43,7 @@
 			<recipeUsers Inherit="false">
 				<li>GW_SM_ScatteredSons_WeaponBench</li>
 			</recipeUsers>
+			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
 		</recipeMaker>
 		<costList>
 			<ComponentSpacer>40</ComponentSpacer>
@@ -121,6 +122,7 @@
 			<recipeUsers Inherit="false">
 				<li>GW_SM_ScatteredSons_WeaponBench</li>
 			</recipeUsers>
+			<researchPrerequisite>GW_SM_Guilliman</researchPrerequisite>
 		</recipeMaker>
 		<costList>
 			<ComponentSpacer>40</ComponentSpacer>
