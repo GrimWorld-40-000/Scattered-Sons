@@ -82,14 +82,12 @@
 			<MoveSpeed>0.8</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<GW_ComponentRelic>2</GW_ComponentRelic>
-			<Plasteel>330</Plasteel>
-			<Steel>690</Steel>
-			<Uranium>150</Uranium>
-			<HP_Ceramite>200</HP_Ceramite>
-			<HP_Adamantium>170</HP_Adamantium>
+			<ComponentSpacer>10</ComponentSpacer>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>300</Plasteel>
+			<Steel>350</Steel>
+			<HP_Ceramite>250</HP_Ceramite>
+			<HP_Adamantium>130</HP_Adamantium>
 			<HP_Auramite>50</HP_Auramite>
 		</costList>
 		<apparel>
@@ -163,14 +161,12 @@
 		</equippedStatOffsets>
 		<tickerType>Normal</tickerType> 
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<GW_ComponentRelic>2</GW_ComponentRelic>
-			<Plasteel>330</Plasteel>
-			<Steel>690</Steel>
-			<Uranium>150</Uranium>
-			<HP_Ceramite>200</HP_Ceramite>
-			<HP_Adamantium>170</HP_Adamantium>
+			<ComponentSpacer>10</ComponentSpacer>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>300</Plasteel>
+			<Steel>350</Steel>
+			<HP_Ceramite>250</HP_Ceramite>
+			<HP_Adamantium>130</HP_Adamantium>
 			<HP_Auramite>50</HP_Auramite>
 		</costList>
 		<apparel>
@@ -236,14 +232,12 @@
 			<MoveSpeed>0.8</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<GW_ComponentRelic>2</GW_ComponentRelic>
-			<Plasteel>330</Plasteel>
-			<Steel>690</Steel>
-			<Uranium>150</Uranium>
-			<HP_Ceramite>200</HP_Ceramite>
-			<HP_Adamantium>170</HP_Adamantium>
+			<ComponentSpacer>10</ComponentSpacer>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>300</Plasteel>
+			<Steel>350</Steel>
+			<HP_Ceramite>250</HP_Ceramite>
+			<HP_Adamantium>130</HP_Adamantium>
 			<HP_Auramite>50</HP_Auramite>
 		</costList>
 		<apparel>
@@ -317,14 +311,12 @@
 		</equippedStatOffsets>
 		<tickerType>Normal</tickerType> 
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<GW_ComponentRelic>2</GW_ComponentRelic>
-			<Plasteel>330</Plasteel>
-			<Steel>690</Steel>
-			<Uranium>150</Uranium>
-			<HP_Ceramite>200</HP_Ceramite>
-			<HP_Adamantium>170</HP_Adamantium>
+			<ComponentSpacer>10</ComponentSpacer>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>300</Plasteel>
+			<Steel>350</Steel>
+			<HP_Ceramite>250</HP_Ceramite>
+			<HP_Adamantium>130</HP_Adamantium>
 			<HP_Auramite>50</HP_Auramite>
 		</costList>
 		<apparel>
