@@ -34,7 +34,16 @@
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
         <equippedAngleOffset>0</equippedAngleOffset>
-        <recipeMaker IsNull="True" />
+        <recipeMaker>
+			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>20</Crafting>
+				<Intellectual>15</Intellectual>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_WeaponBench</li>
+			</recipeUsers>
+		</recipeMaker>
 		<costList>
 			<ComponentSpacer>40</ComponentSpacer>
 			<ComponentIndustrial>75</ComponentIndustrial>
@@ -103,7 +112,16 @@
 			<li>GW_EmperorWep</li>
 			<li>GW_GuillimanSword</li>
 		</weaponTags>
-		<recipeMaker IsNull="True" />
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+			<skillRequirements>
+				<Crafting>20</Crafting>
+				<Intellectual>15</Intellectual>
+			</skillRequirements>
+			<recipeUsers Inherit="false">
+				<li>GW_SM_ScatteredSons_WeaponBench</li>
+			</recipeUsers>
+		</recipeMaker>
 		<costList>
 			<ComponentSpacer>40</ComponentSpacer>
 			<ComponentIndustrial>75</ComponentIndustrial>
