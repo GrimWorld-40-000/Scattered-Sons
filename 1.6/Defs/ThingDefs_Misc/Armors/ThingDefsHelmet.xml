@@ -84,14 +84,12 @@
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>10</ComponentSpacer>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<ComponentIndustrial>16</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>200</Plasteel>
+			<HP_Ceramite>150</HP_Ceramite>
+			<HP_Adamantium>90</HP_Adamantium>
+			<HP_Auramite>30</HP_Auramite>
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
@@ -143,15 +141,13 @@
 		</equippedStatOffsets>
 		<tickerType>Normal</tickerType> 
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<ComponentIndustrial>45</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>16</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>200</Plasteel>
+			<HP_Ceramite>150</HP_Ceramite>
+			<HP_Adamantium>90</HP_Adamantium>
+			<HP_Auramite>30</HP_Auramite>
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
@@ -196,15 +192,13 @@
 			<SocialImpact>1.00</SocialImpact>
 		</equippedStatOffsets>
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<ComponentIndustrial>45</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>16</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>200</Plasteel>
+			<HP_Ceramite>150</HP_Ceramite>
+			<HP_Adamantium>90</HP_Adamantium>
+			<HP_Auramite>30</HP_Auramite>
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
@@ -258,14 +252,12 @@
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>10</ComponentSpacer>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<ComponentIndustrial>16</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>200</Plasteel>
+			<HP_Ceramite>150</HP_Ceramite>
+			<HP_Adamantium>90</HP_Adamantium>
+			<HP_Auramite>30</HP_Auramite>
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
@@ -332,14 +324,12 @@
 		</equippedStatOffsets>
 		<costList>
 			<ComponentSpacer>10</ComponentSpacer>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<ComponentIndustrial>16</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>200</Plasteel>
+			<HP_Ceramite>150</HP_Ceramite>
+			<HP_Adamantium>90</HP_Adamantium>
+			<HP_Auramite>30</HP_Auramite>
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
@@ -390,15 +380,13 @@
 			<MoveSpeed>0.1</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<ComponentIndustrial>45</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>16</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>200</Plasteel>
+			<HP_Ceramite>150</HP_Ceramite>
+			<HP_Adamantium>90</HP_Adamantium>
+			<HP_Auramite>30</HP_Auramite>
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
@@ -444,15 +432,13 @@
 			<MoveSpeed>0.1</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<ComponentIndustrial>45</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>16</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>200</Plasteel>
+			<HP_Ceramite>150</HP_Ceramite>
+			<HP_Adamantium>90</HP_Adamantium>
+			<HP_Auramite>30</HP_Auramite>
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>
@@ -511,15 +497,13 @@
 			<MoveSpeed>0.1</MoveSpeed>
 		</equippedStatOffsets>
 		<costList>
-			<ComponentSpacer>20</ComponentSpacer>
-			<ComponentIndustrial>45</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<ComponentSpacer>10</ComponentSpacer>
+			<ComponentIndustrial>16</ComponentIndustrial>
+			<GW_ComponentRelic>3</GW_ComponentRelic>
+			<Plasteel>200</Plasteel>
+			<HP_Ceramite>150</HP_Ceramite>
+			<HP_Adamantium>90</HP_Adamantium>
+			<HP_Auramite>30</HP_Auramite>
 		</costList>
 		<statBases>
 			<WorkToMake>60000</WorkToMake>

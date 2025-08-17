@@ -33,15 +33,10 @@
 		</graphicData>
 		<!-- <costStuffCount>400</costStuffCount> -->
 		<costList>
-			<ComponentSpacer>10</ComponentSpacer>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<Plasteel>300</Plasteel>
+			<HP_Ceramite>250</HP_Ceramite>
+			<HP_Adamantium>140</HP_Adamantium>
+			<HP_Auramite>45</HP_Auramite>
 		</costList>
 		<statBases>
 			<!-- <StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor> -->
@@ -144,15 +139,10 @@
 		</graphicData>
 		<!-- <costStuffCount>400</costStuffCount> -->
 		<costList>
-			<ComponentSpacer>10</ComponentSpacer>
-			<ComponentIndustrial>25</ComponentIndustrial>
-			<GW_ComponentRelic>1</GW_ComponentRelic>
-			<Plasteel>400</Plasteel>
-			<Steel>600</Steel>
-			<Uranium>100</Uranium>
-			<HP_Ceramite>300</HP_Ceramite>
-			<HP_Adamantium>240</HP_Adamantium>
-			<HP_Auramite>110</HP_Auramite>
+			<Plasteel>300</Plasteel>
+			<HP_Ceramite>250</HP_Ceramite>
+			<HP_Adamantium>140</HP_Adamantium>
+			<HP_Auramite>45</HP_Auramite>
 		</costList>
 		<statBases>
 			<StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor>
