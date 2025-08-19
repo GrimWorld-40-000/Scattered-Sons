@@ -279,26 +279,26 @@
 					<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
 				</apparelSetEffect>
 			</li>
-			<li Class="BM_ApparelSet.CompProperties_ApparelSet">
-				<apparelSetEffect>
-					<allApparels>
-						<li>GW_SM_ImperialWardenrBackpack</li>
-						<li>GW_SM_ImperialWardenHood</li>
-						<li>GW_SM_ImperialWardenrShoulderPads</li>
-					</allApparels>
-					<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
-				</apparelSetEffect>
-			</li>
-			<li Class="BM_ApparelSet.CompProperties_ApparelSet">
-				<apparelSetEffect>
-					<allApparels>
-						<li>GW_SM_ImperialWardenrBackpack</li>
-						<li>GW_SM_ImperialWardenHooded</li>
-						<li>GW_SM_ImperialWardenrShoulderPads</li>
-					</allApparels>
-					<hediff>GW40k_SS_BattleFrenzy_Melee</hediff>
-				</apparelSetEffect>
-			</li>
+			<!-- <li Class="BM_ApparelSet.CompProperties_ApparelSet"> -->
+				<!-- <apparelSetEffect> -->
+					<!-- <allApparels> -->
+						<!-- <li>GW_SM_ImperialWardenrBackpack</li> -->
+						<!-- <li>GW_SM_ImperialWardenHood</li> -->
+						<!-- <li>GW_SM_ImperialWardenrShoulderPads</li> -->
+					<!-- </allApparels> -->
+					<!-- <hediff>GW40k_SS_BattleFrenzy_Melee</hediff> -->
+				<!-- </apparelSetEffect> -->
+			<!-- </li> -->
+			<!-- <li Class="BM_ApparelSet.CompProperties_ApparelSet"> -->
+				<!-- <apparelSetEffect> -->
+					<!-- <allApparels> -->
+						<!-- <li>GW_SM_ImperialWardenrBackpack</li> -->
+						<!-- <li>GW_SM_ImperialWardenHooded</li> -->
+						<!-- <li>GW_SM_ImperialWardenrShoulderPads</li> -->
+					<!-- </allApparels> -->
+					<!-- <hediff>GW40k_SS_BattleFrenzy_Melee</hediff> -->
+				<!-- </apparelSetEffect> -->
+			<!-- </li> -->
 		</comps>
 	</ThingDef>
 	
