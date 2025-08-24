@@ -37,9 +37,10 @@
 		</v1.5>
 		<v1.6>
 			<li>
-				<packageId>cvngrimworld.framework</packageId>
-				<displayName>CVN/GrimWorld 40,000 - Ocularis Terribus</displayName>
-				<downloadUrl>https://github.com/ShunTheWitch/Chaos-core</downloadUrl>
+				<packageId>Grimworld.Framework</packageId>
+				<displayName>GrimWorld 40,000 - Framework</displayName>
+				<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=3119805903</steamWorkshopUrl>
+				<downloadUrl>https://github.com/GrimWorld-40-000/GrimWorld-Framework</downloadUrl>
 			</li>
 			<li>
 			<packageId>Grimworld.Core</packageId>
