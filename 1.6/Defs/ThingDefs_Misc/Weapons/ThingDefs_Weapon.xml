@@ -9,7 +9,7 @@
             <texPath>Things/Weapons/GW_LionSword</texPath>
             <graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-            <drawSize>1.5</drawSize>
+            <drawSize>1.0</drawSize>
 			<onGroundRandomRotateAngle>55</onGroundRandomRotateAngle>
         </graphicData>
 		<weaponTags Inherit="False">
@@ -106,7 +106,7 @@
 		<graphicData>
 			<texPath>Things/Weapons/FlameSword</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.5, 1.5</drawSize>
+			<drawSize>1.0</drawSize>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<weaponTags Inherit="False">
