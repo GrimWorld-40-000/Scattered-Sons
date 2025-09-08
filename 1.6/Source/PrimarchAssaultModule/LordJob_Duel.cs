@@ -157,8 +157,6 @@ namespace PrimarchAssault
 			Find.LetterStack.ReceiveLetter("GWPA.DuelDisrespectedTitle".Translate(), "GWPA.DuelDisrespected".Translate(), LetterDefOf.NegativeEvent);	
 			
 			lord.Notify_SignalReceived(new Signal(lord.inSignalLeave));
-			
-			
 		}
 
 		public override void LordJobTick()

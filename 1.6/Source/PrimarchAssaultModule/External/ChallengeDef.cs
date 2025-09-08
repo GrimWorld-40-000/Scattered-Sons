@@ -5,6 +5,7 @@ using System.Text;
 using HarmonyLib;
 using RimWorld;
 using PrimarchAssault;
+using RimworldModding;
 using UnityEngine;
 using Verse;
 using Verse.AI.Group;
@@ -62,6 +63,8 @@ namespace PrimarchAssault.External
         public int ticksBetweenWaves = 1500;
 
         public float championFlinchSeverity;
+
+        public PrimarchArrivalMode arrivalMode = PrimarchArrivalMode.NearEdge;
         
         public List<ResearchProjectDef> researchRequirements = new List<ResearchProjectDef>();
         
@@ -255,7 +258,27 @@ namespace PrimarchAssault.External
             
             if (allOfFaction.NullOrEmpty())
             {
-                if (!CellFinder.TryFindRandomCellNear(map.Center, map, 15,
+	            IntVec3 desiredCenter;
+
+	            switch (arrivalMode)
+	            {
+		            case PrimarchArrivalMode.NearEdge:
+			            CellFinder.TryFindRandomEdgeCellWith(
+				            p =>
+					            (map.TileInfo.AllowRoofedEdgeWalkIn || !map.roofGrid.Roofed(p)) && p.Walkable(map),
+				            map, CellFinder.EdgeRoadChance_Hostile, out desiredCenter);
+			            break;
+		            case PrimarchArrivalMode.InCenter:
+			            desiredCenter = map.Center;
+			            break;
+		            default:
+			            throw new ArgumentOutOfRangeException();
+		            
+			            
+	            }
+
+	            
+                if (!CellFinder.TryFindRandomCellNear(desiredCenter, map, 15,
                         vec3 => map.reachability.CanReachColony(vec3), out epicenter))
                 {
                     return;
@@ -304,6 +327,11 @@ namespace PrimarchAssault.External
 	            allWithoutChampion.Remove(champion);
 	            
 	            waveLord = (LordJob) Activator.CreateInstance(lordJobType, args: [champion, allWithoutChampion]);
+
+	            if (waveLord is LordJob_Duel)
+	            {
+		            LessonAutoActivator.TeachOpportunity(PADefsOf.GWPA_LionDuel, champion, OpportunityType.Critical);
+	            }
             }
             
             LordMaker.MakeNewLord(faction, waveLord, map, allOfFaction);

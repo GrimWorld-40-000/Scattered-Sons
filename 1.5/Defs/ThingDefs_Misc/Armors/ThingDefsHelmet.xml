@@ -285,9 +285,9 @@ The paint has been stripped for recoloring.</description>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<!-- <recipeMaker>
+		<recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker> -->
+		</recipeMaker>
 		<comps>
 			<li Class="GW4KArmor.CompProperties_TriColorMask">
 				<maskCount>2</maskCount>
@@ -379,9 +379,9 @@ The paint has been stripped for recoloring.</description>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<!-- <recipeMaker>
+		<recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker> -->
+		</recipeMaker>
 		<comps>
 			<li Class="GW4KArmor.CompProperties_TriColorMask">
 				<maskCount>3</maskCount>
@@ -486,9 +486,9 @@ The paint has been stripped for recoloring.</description>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<!-- <recipeMaker>
+		<recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker> -->
+		</recipeMaker>
 		<comps>
 			<li Class="GW4KArmor.CompProperties_TriColorMask">
 				<maskCount>6</maskCount>
@@ -577,9 +577,9 @@ The paint has been stripped for recoloring.</description>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
-		<!-- <recipeMaker>
+		<recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker> -->
+		</recipeMaker>
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
@@ -665,9 +665,9 @@ The paint has been stripped for recoloring.</description>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
-		<!-- <recipeMaker>
+		<recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker> -->
+		</recipeMaker>
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>
@@ -766,9 +766,9 @@ The paint has been stripped for recoloring.</description>
 			<EquipDelay>2</EquipDelay>
 		</statBases>
 		<tickerType>Normal</tickerType> 
-		<!-- <recipeMaker>
+		<recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker> -->
+		</recipeMaker>
 		<comps>
 			<li Class="CompProperties_Biocodable">
 				<biocodeOnEquip>True</biocodeOnEquip>

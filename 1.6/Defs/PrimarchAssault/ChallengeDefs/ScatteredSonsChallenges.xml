@@ -144,12 +144,13 @@
         <championFlinchSeverity>0.3</championFlinchSeverity>
 
         <championDrops>
-            <GW_SM_LionArmorHelmet>1</GW_SM_LionArmorHelmet>
+            <!-- <GW_SM_LionArmorHelmet>1</GW_SM_LionArmorHelmet>
             <GW_SM_LionArmor>1</GW_SM_LionArmor>
             <GW_SM_LionArmorBackpack>1</GW_SM_LionArmorBackpack>
             <GW_SM_LionArmorShoulderPads>1</GW_SM_LionArmorShoulderPads>
             <GM_SS_ShieldLionsW>1</GM_SS_ShieldLionsW>
-            <GW_SS_LionSword>1</GW_SS_LionSword>
+            <GW_SS_LionSword>1</GW_SS_LionSword> -->
+            <PASS_LionSTC>1</PASS_LionSTC>
         </championDrops>
 
         <abilityStages>
@@ -335,11 +336,12 @@
         <championFlinchSeverity>0.3</championFlinchSeverity>
         
         <championDrops>
-            <GW_SM_GuillimanArmor>1</GW_SM_GuillimanArmor>
+            <!-- <GW_SM_GuillimanArmor>1</GW_SM_GuillimanArmor>
             <GW_SM_GuillimanBackpack>1</GW_SM_GuillimanBackpack>
             <GW_SM_GuillimanShoulderPads>1</GW_SM_GuillimanShoulderPads>
-            <GW_SM_GuillimanHelmet>1</GW_SM_GuillimanHelmet>
+            <GW_SM_GuillimanHelmet>1</GW_SM_GuillimanHelmet> -->
             <!-- <GW_SM_Melee_FlameSword>1</GW_SM_Melee_FlameSword> -->
+            <PASS_GuillimanSTC>1</PASS_GuillimanSTC>
         </championDrops>
 
 

@@ -1,0 +1,14 @@
+<Defs>
+  <ConceptDef>
+    <defName>GWPA_LionDuel</defName>
+    <label>dueling</label>
+    <helpText>Approach the challenger to automatically activate a duel. Careful not to accidentally attack the bodyguards. If you attempt to dogpile The Lion, the duel will be called off and he will call for backup.\n\nIf a pawn has dueled The Lion and won in the past he will still duel, but will not reward you with any more loot.</helpText>
+    <priority>20</priority>
+    <needsOpportunity>True</needsOpportunity>
+    <!-- <highlightTags>
+      <li>MainTab-Architect-Closed</li>
+      <li>DesignationCategoryButton-Anomaly-Closed</li>
+      <li>Designator-Build-HoldingPlatform</li>
+    </highlightTags> -->
+  </ConceptDef>
+</Defs>

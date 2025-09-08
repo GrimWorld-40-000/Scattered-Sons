@@ -20,7 +20,8 @@ namespace PrimarchAssault
         public static DutyDef GWPA_PrepareToDuelDuty;
         public static DutyDef GWPA_PrimarchDuel;
         public static MentalStateDef GWPA_Dueling;
-
+        public static ConceptDef GWPA_LionDuel;
+        
         [MayRequire("HappyPurging.AgeofDarkness")]
         public static ThingDef GW_SM_DropPodIncomingImperial;
         //[MayRequire("HappyPurging.AgeofDarkness")]
