@@ -3,7 +3,7 @@
         <defName>GWPA_EMPNet</defName>
         <conditionClass>GameCondition_DisableElectricity</conditionClass>
         <label>emp net</label>
-        <description>Some device is being used to blast your colony with EMP rays. It will shut down all electronics until the wave has ended.</description>
+        <description>Some device is being used to blast your colony with EMP waves. It will shut down all electronics until the wave has ended.</description>
         <endMessage>The emp wave is ending.</endMessage>
         <letterText>An EMP network is bombarding your colony, shutting off all electronics. Artificial EMPs such as this one are short-lived, but always signal incoming shock troops.</letterText>
         <letterDef>NegativeEvent</letterDef>

@@ -44,11 +44,12 @@
                 <li>GWPA_LionHelmed</li>
             </possiblePawnKinds>
             <forcedXenotypesInOrder>
-                <!-- <li MayRequire="Phonicmas.40kGenes">BEWH_Primarch</li> -->
+                <li MayRequire="Phonicmas.RimDark.MankindsFinest">BEWH_Primarch</li>
             </forcedXenotypesInOrder>
             <forcedSpawnFactionsInOrder>
                 <li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AdeptusAstartes</li>
                 <li MayRequire="HappyPurging.AgeofDarknessLite">GW_SM_AdeptusAstartes</li>
+                
                 <li>AncientsHostile</li>
             </forcedSpawnFactionsInOrder>
         </championDetails>
