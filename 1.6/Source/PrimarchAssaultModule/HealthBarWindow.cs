@@ -13,9 +13,8 @@ namespace PrimarchAssault
             doWindowBackground = false;
             doCloseX = false;
             windowRect = new Rect(Current.Camera.scaledPixelWidth / (float)2 - 1000, 30, 2000, 150);
-            //TODO once settings are working again
-            // draggable = SettingsTabRecord_PrimarchAssault.SettingsRecord.CanHealthbarBeMoved;
-            // resizeable = SettingsTabRecord_PrimarchAssault.SettingsRecord.CanHealthbarBeMoved;
+            draggable = SettingsTabRecord_PrimarchAssault.SettingsRecord.CanHealthbarBeMoved;
+            resizeable = SettingsTabRecord_PrimarchAssault.SettingsRecord.CanHealthbarBeMoved;
             absorbInputAroundWindow = false;
             closeOnAccept = false;
             closeOnCancel = false;
