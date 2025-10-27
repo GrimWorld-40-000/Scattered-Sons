@@ -82,7 +82,7 @@
                     </li>
                 </possibleWavesInPriorityOrder>
             </li> -->
-            <!-- <li>
+             <li>
                 <possibleWavesInPriorityOrder>
                     <li MayRequire="grimworld.talonOfTheEmperor">
                         <pawnKinds>
@@ -104,9 +104,9 @@
                         </pawnKinds>
                         <wealthCap>500000</wealthCap>
                         <wealthMultiplier>.03</wealthMultiplier>
-                    </li> -->
+                    </li> 
                     <!--Fallback to ancient soldiers-->
-                    <!-- <li>
+                     <li>
                         <pawnKinds>
                             <li>AncientSoldier</li>
                         </pawnKinds>
@@ -114,7 +114,7 @@
                         <wealthMultiplier>.03</wealthMultiplier>
                     </li>
                 </possibleWavesInPriorityOrder>
-            </li> -->
+            </li> 
             <li>
                 <spawnsChampion>true</spawnsChampion>
                 <lordJobOverrideType>PrimarchAssault.LordJob_Duel</lordJobOverrideType>
@@ -240,7 +240,7 @@
                 <li>GWPA_Guilliman</li>
             </possiblePawnKinds>
             <forcedXenotypesInOrder>
-                <!-- <li MayRequire="Phonicmas.40kGenes">BEWH_Primarch</li> -->
+                <li MayRequire="Phonicmas.RimDark.MankindsFinest">BEWH_Primarch</li>
             </forcedXenotypesInOrder>
             <forcedSpawnFactionsInOrder>
                 <li MayRequire="HappyPurging.AgeofDarkness">GW_SM_AdeptusAstartes</li>
@@ -250,7 +250,7 @@
         </championDetails>
 
         <waves>
-            <!-- <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
                 <pawnKinds>
                     <li>GW_SM_UM_SniperScout</li>
                     <li>GW_SM_UM_ShotgunScout</li>
@@ -272,7 +272,7 @@
                 </pawnKinds>
                 <wealthCap>500000</wealthCap>
                 <wealthMultiplier>.02</wealthMultiplier>
-            </li> -->
+            </li>
             <li>
                 <spawnsChampion>true</spawnsChampion>
                 <lordJobOverrideType>PrimarchAssault.LordJob_AuraFarm</lordJobOverrideType>
@@ -362,14 +362,14 @@
             </li>
         </hediffStages>
 
-        <abilityStages>
+     <!-- i need to see if this exits <abilityStages>
             <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
                 <stage>.75</stage>
                 <abilitiesToGain>
                     <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">GWPA_GuillimanReinforcement</li>
                 </abilitiesToGain>
             </li>
-        </abilityStages>
+        </abilityStages> -->
 
         <eventStages>
             <li>
