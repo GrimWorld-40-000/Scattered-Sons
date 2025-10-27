@@ -250,28 +250,32 @@
         </championDetails>
 
         <waves>
-            <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
-                <pawnKinds>
-                    <li>GW_SM_UM_SniperScout</li>
-                    <li>GW_SM_UM_ShotgunScout</li>
-                    <li>GW_SM_UM_BolterScout</li>
-                    <li>GW_SM_UM_PlasmaScout</li>
-                    <li>GW_SM_UM_RangedTier1</li>
-                    <li>GW_SM_UM_MeleeTier1</li>
-                    <li>GW_SM_UM_RangedTier2</li>
-                    <li>GW_SM_UM_MeleeTier2</li>
-                    <li>GW_SM_UM_RangedTier3</li>
-                    <li>GW_SM_UM_MeleeTier3</li>
-                </pawnKinds>
-                <wealthCap>500000</wealthCap>
-                <wealthMultiplier>.02</wealthMultiplier>
-            </li>
             <li>
-                <pawnKinds>
-                    <li>AncientSoldier</li>
-                </pawnKinds>
-                <wealthCap>500000</wealthCap>
-                <wealthMultiplier>.02</wealthMultiplier>
+                <possibleWavesInPriorityOrder>
+                    <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
+                        <pawnKinds>
+                            <li>GW_SM_UM_SniperScout</li>
+                            <li>GW_SM_UM_ShotgunScout</li>
+                            <li>GW_SM_UM_BolterScout</li>
+                            <li>GW_SM_UM_PlasmaScout</li>
+                            <li>GW_SM_UM_RangedTier1</li>
+                            <li>GW_SM_UM_MeleeTier1</li>
+                            <li>GW_SM_UM_RangedTier2</li>
+                            <li>GW_SM_UM_MeleeTier2</li>
+                            <li>GW_SM_UM_RangedTier3</li>
+                            <li>GW_SM_UM_MeleeTier3</li>
+                        </pawnKinds>
+                        <wealthCap>500000</wealthCap>
+                        <wealthMultiplier>.02</wealthMultiplier>
+                    </li>
+                    <li>
+                        <pawnKinds>
+                            <li>AncientSoldier</li>
+                        </pawnKinds>
+                        <wealthCap>500000</wealthCap>
+                        <wealthMultiplier>.02</wealthMultiplier>
+                    </li>
+                </possibleWavesInPriorityOrder>
             </li>
             <li>
                 <spawnsChampion>true</spawnsChampion>
@@ -362,14 +366,14 @@
             </li>
         </hediffStages>
 
-     <!-- i need to see if this exits <abilityStages>
+    <abilityStages>
             <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">
                 <stage>.75</stage>
                 <abilitiesToGain>
                     <li MayRequireAnyOf="HappyPurging.AgeofDarkness,HappyPurging.AgeofDarknessLite">GWPA_GuillimanReinforcement</li>
                 </abilitiesToGain>
             </li>
-        </abilityStages> -->
+        </abilityStages> 
 
         <eventStages>
             <li>
