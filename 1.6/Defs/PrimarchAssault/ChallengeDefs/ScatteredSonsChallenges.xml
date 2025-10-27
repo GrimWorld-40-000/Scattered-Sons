@@ -19,7 +19,7 @@
 
         <primarchColor>(16, 97, 56)</primarchColor>
         
-        <!-- <researchRequirements>
+        <!-- <resear`chRequirements>
             <li>GW_Primarchfabrication</li>
         </researchRequirements> -->
         <effectorDef>GWPA_PrimarchAssaultStarted</effectorDef>
@@ -82,7 +82,7 @@
                     </li>
                 </possibleWavesInPriorityOrder>
             </li> -->
-             <li>
+            <li>
                 <possibleWavesInPriorityOrder>
                     <li MayRequire="grimworld.talonOfTheEmperor">
                         <pawnKinds>
