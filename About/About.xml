@@ -38,12 +38,15 @@
 		<v1.6>
 			<li>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 				<packageId>Grimworld.Framework</packageId>
 				<displayName>GrimWorld 40,000 - Framework</displayName>
 				<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=3119805903</steamWorkshopUrl>
 				<downloadUrl>https://github.com/GrimWorld-40-000/GrimWorld-Framework</downloadUrl>
 			</li>
 			<li>
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 			<packageId>Grimworld.Core</packageId>
