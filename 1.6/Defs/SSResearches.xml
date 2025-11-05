@@ -15,7 +15,7 @@
 		</prerequisites>
             <researchViewX>8.00</researchViewX>
             <researchViewY>3.20</researchViewY>
-		<modExtensions>
+		<!-- <modExtensions>
             <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
                 <StudyLocation>GW_Cogitator</StudyLocation>
                 <ItemStudyRequirements>
@@ -25,10 +25,8 @@
                     </li>    
                 </ItemStudyRequirements>
             </li>
-        </modExtensions>
-		<!-- Temporarily does not require the special STC -->
-
-		<!-- <modExtensions>
+        </modExtensions> -->
+		<modExtensions>
             <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
                 <StudyLocation>GW_Cogitator</StudyLocation>
                 <ItemStudyRequirements>
@@ -38,7 +36,7 @@
                     </li>    
                 </ItemStudyRequirements>
             </li>
-        </modExtensions> -->
+        </modExtensions>
 	</ResearchProjectDef>
 	
 	<ResearchProjectDef ParentName="GW_SM_SSTechBase">
@@ -52,7 +50,7 @@
 		</prerequisites>
             <researchViewX>8.00</researchViewX>
             <researchViewY>3.70</researchViewY>
-		<modExtensions>
+		<!-- <modExtensions>
             <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
                 <StudyLocation>GW_Cogitator</StudyLocation>
                 <ItemStudyRequirements>
@@ -62,8 +60,8 @@
                     </li>    
                 </ItemStudyRequirements>
             </li>
-        </modExtensions>
-		<!-- <modExtensions>
+        </modExtensions> -->
+		<modExtensions>
             <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
                 <StudyLocation>GW_Cogitator</StudyLocation>
                 <ItemStudyRequirements>
@@ -73,7 +71,7 @@
                     </li>    
                 </ItemStudyRequirements>
             </li>
-        </modExtensions> -->
+        </modExtensions>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_SM_SSTechBase">

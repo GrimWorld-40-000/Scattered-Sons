@@ -4,7 +4,7 @@
 		<techLevel>Ultra</techLevel>
 	</ResearchProjectDef>
 	
-	<!-- <ResearchProjectDef ParentName="GW_SM_SSTechBase">
+	<ResearchProjectDef ParentName="GW_SM_SSTechBase">
 		<defName>GW_SM_Guilliman</defName>
 		<label>Imperial Regent</label>
 		<description>Replicate the armor and weapons of the revived Imperial Regent, Roboute Guilliman.</description>
@@ -13,8 +13,8 @@
 			<li>AdvancedFabrication</li>
 			<li MayRequire="happypurging.ageofdarkness">GW_Primarchfabrication</li>
 		</prerequisites>
-            <researchViewX>8.00</researchViewX>
-            <researchViewY>3.20</researchViewY>
+        <researchViewX>8.00</researchViewX>
+        <researchViewY>3.20</researchViewY>
 		<modExtensions>
             <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
                 <StudyLocation>GW_Cogitator</StudyLocation>
@@ -48,8 +48,8 @@
 			<li>AdvancedFabrication</li>
 			<li MayRequire="happypurging.ageofdarkness">GW_Primarchfabrication</li>
 		</prerequisites>
-            <researchViewX>8.00</researchViewX>
-            <researchViewY>3.70</researchViewY>
+        <researchViewX>8.00</researchViewX>
+        <researchViewY>3.70</researchViewY>
 		<modExtensions>
             <li Class="GW_Frame.DefModExtension_ExtraPrerequisiteActions">
                 <StudyLocation>GW_Cogitator</StudyLocation>
@@ -72,7 +72,7 @@
                 </ItemStudyRequirements>
             </li>
         </modExtensions>
-	</ResearchProjectDef> -->
+	</ResearchProjectDef>
 
 	<ResearchProjectDef ParentName="GW_SM_SSTechBase">
 		<defName>GW_Primarchfabrication</defName>

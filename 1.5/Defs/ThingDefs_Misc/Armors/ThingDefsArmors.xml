@@ -292,9 +292,9 @@ The paint has been stripped for recoloring.</description>
 		<graphicData>
 			<texPath>Things/Apparel/ImperialWardenr/Display/LionW_torso</texPath>
 		</graphicData>
-		<!-- <recipeMaker>
+		<recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker> -->
+		</recipeMaker>
 		<statBases>
 			<WorkToMake>150000</WorkToMake>
 			<MaxHitPoints>2500</MaxHitPoints>
@@ -409,9 +409,9 @@ The paint has been stripped for recoloring.</description>
 		<graphicData>
 			<texPath>Things/Apparel/LionArmor/LionC_torso</texPath>
 		</graphicData>
-		<!-- <recipeMaker>
+		<recipeMaker>
 			<researchPrerequisite>GW_SM_LionArmor</researchPrerequisite>
-		</recipeMaker> -->
+		</recipeMaker>
 		<statBases>
 			<WorkToMake>150000</WorkToMake>
 			<MaxHitPoints>2500</MaxHitPoints>
