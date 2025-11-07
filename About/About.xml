@@ -37,16 +37,11 @@
 		</v1.5>
 		<v1.6>
 			<li>
-				<packageId>cvngrimworld.framework</packageId>
-				<displayName>CVN/GrimWorld 40,000 - Ocularis Terribus</displayName>
-				<downloadUrl>https://github.com/ShunTheWitch/Chaos-core</downloadUrl>
-			</li>
-			<li>
 			<packageId>Grimworld.Core</packageId>
 			<displayName>Grimworld 40,000 - Core Imperialis</displayName>
 			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3018671708</steamWorkshopUrl>
 			<downloadUrl>https://github.com/GrimWorld-40-000/Core-Imperialis</downloadUrl>
-		</li>
+			</li>
 		</v1.6>
 	</modDependenciesByVersion>
 	<loadAfter>
