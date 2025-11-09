@@ -126,15 +126,15 @@
 			</tags>
 		</apparel>
 		<comps>
-			<!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
-				<!-- <maskCount>2</maskCount> -->
-				<!-- <palettePresets>GW_SM_ShoulderChapterPalettes</palettePresets> -->
-				<!-- <defaultPalette> -->
-					<!-- <colorA>(250, 176, 67)</colorA> -->
-					<!-- <colorB>(250, 176, 67)</colorB> -->
-					<!-- <colorC>(180, 65, 74)</colorC> -->
-				<!-- </defaultPalette> -->
-			<!-- </li> -->
+			<li Class="GW4KArmor.CompProperties_TriColorMask">
+				<maskCount>2</maskCount>
+				<palettePresets>GW_SM_ShoulderChapterPalettes</palettePresets>
+				<defaultPalette>
+					<colorA>(250, 176, 67)</colorA>
+					<colorB>(250, 176, 67)</colorB>
+					<colorC>(180, 65, 74)</colorC>
+				</defaultPalette>
+			</li>
 		</comps>
 	</ThingDef>
 	
@@ -226,15 +226,15 @@
 			</tags>
 		</apparel>
 		<comps>
-			<!-- <li Class="GW4KArmor.CompProperties_TriColorMask"> -->
-				<!-- <maskCount>3</maskCount> -->
-				<!-- <palettePresets>GW_SM_ShoulderChapterPalettes</palettePresets> -->
-				<!-- <defaultPalette> -->
-					<!-- <colorA>(250, 176, 67)</colorA> -->
-					<!-- <colorB>(250, 176, 67)</colorB> -->
-					<!-- <colorC>(180, 65, 74)</colorC> -->
-				<!-- </defaultPalette> -->
-			<!-- </li> -->
+			<li Class="GW4KArmor.CompProperties_TriColorMask">
+				<maskCount>3</maskCount>
+				<palettePresets>GW_SM_ShoulderChapterPalettes</palettePresets>
+				<defaultPalette>
+					<colorA>(250, 176, 67)</colorA>
+					<colorB>(250, 176, 67)</colorB>
+					<colorC>(180, 65, 74)</colorC>
+				</defaultPalette>
+			</li>
 		</comps>
 	</ThingDef>
 	
