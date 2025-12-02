@@ -9,9 +9,10 @@
             <texPath>Things/Weapons/GW_LionSword</texPath>
             <graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-            <drawSize>1.0</drawSize>
+            <drawSize>2.3</drawSize>
 			<onGroundRandomRotateAngle>55</onGroundRandomRotateAngle>
         </graphicData>
+		<uiIconScale>1</uiIconScale>
 		<weaponTags Inherit="False">
 			<li>GW_EmperorWep</li>
 			<li>GW_LionSword</li>
@@ -106,9 +107,10 @@
 		<graphicData>
 			<texPath>Things/Weapons/FlameSword</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.0</drawSize>
+			<drawSize>2.3</drawSize>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
+		<uiIconScale>0.4</uiIconScale>
 		<weaponTags Inherit="False">
 			<li>GW_EmperorWep</li>
 			<li>GW_GuillimanSword</li>
@@ -138,7 +140,6 @@
 		<stuffCategories Inherit="False" IsNull="True" />
 		<costStuffCount />
 		<tradeability>Sellable</tradeability>
-		<uiIconScale>1.2</uiIconScale>
 		<smeltable>false</smeltable>
 		<burnableByRecipe>false</burnableByRecipe>
 		<statBases>
