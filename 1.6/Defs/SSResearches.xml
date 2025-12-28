@@ -6,7 +6,7 @@
 	
 	<ResearchProjectDef ParentName="GW_SM_SSTechBase">
 		<defName>GW_SM_Guilliman</defName>
-		<label>Imperial Regent</label>
+		<label>Imperial regent</label>
 		<description>Replicate the armor and weapons of the revived Imperial Regent, Roboute Guilliman.</description>
         <baseCost>7800</baseCost>
 		<prerequisites>
@@ -43,7 +43,7 @@
 	
 	<ResearchProjectDef ParentName="GW_SM_SSTechBase">
 		<defName>GW_SM_LionArmor</defName>
-		<label>Imperial Warden</label>
+		<label>Imperial warden</label>
 		<description>Replicate the armor and weapons of Lion El’Jonson, the Primarch of the Dark Angels.</description>
         <baseCost>7800</baseCost>
 		<prerequisites>
