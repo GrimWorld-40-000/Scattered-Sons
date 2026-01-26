@@ -23,7 +23,8 @@
 		</thingCategories>
 		<uiIconScale>1</uiIconScale>
 		<equippedStatOffsets>
-			<Beauty>50</Beauty>			
+			<Beauty>50</Beauty>	
+			<HypoxiaResistance MayRequire="kentington.saveourship2">0.75</HypoxiaResistance>
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
 			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">4</VacuumSpeedMultiplier>
 			<VacuumResistance MayRequire="ludeon.rimworld.odyssey">0.6</VacuumResistance>
