@@ -95,7 +95,7 @@
 			</li>
 			<!-- <li Class="GrimworldItemLimit.CompProperties_ItemCraftingLimit" /> -->
 			<li Class="GW4KArmor.CompProperties_TriColorMask">
-				<maskCount>3</maskCount>
+				<!-- <maskCount>3</maskCount> -->
 				<palettePresets>GW_CS_ShoulderChapterPalettesCustodes</palettePresets>
 				<defaultPalette>
 					<colorA>(199, 160, 82)</colorA>
